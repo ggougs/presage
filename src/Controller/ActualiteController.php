@@ -45,7 +45,7 @@ class ActualiteController extends AbstractController
      
      */
 
-    public function addActualite(Actualite $actualite=null,Request $request, ObjectManager $manager, FileUploader $fileUploader )
+    public function ajoutActualite(Actualite $actualite=null,Request $request, ObjectManager $manager, FileUploader $fileUploader )
     {
         
         if(is_null($actualite)) 
