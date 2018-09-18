@@ -3,6 +3,9 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -17,26 +20,47 @@ class Contact
     private $id;
 
     /**
+     *@Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     *      minMessage = "votre nom doit comporter au moins {{ limit }} lettres",
+     *      maxMessage = "votre nom ne doit pas comporter plus de {{ limit }} lettres"
+     * )
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $nom;
 
     /**
+     *@Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     *      minMessage = "votre prenom doit comporter au moins {{ limit }} lettres",
+     *      maxMessage = "votre prénom ne doit pas comporter plus de {{ limit }} lettres"
+     *)
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $prenom;
 
-    /**
+   /**
+     * @Assert\NotBlank()
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true
+     * )
      * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $sujet;
 
     /**
+     * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $message;
