@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ActualiteRepository")
@@ -27,6 +28,7 @@ class Actualite
     private $contenu;
 
     /**
+     * @Assert\File(mimeTypes={ "image/png" ,"image/jpg","image/jpeg" })
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
