@@ -25,9 +25,6 @@ class ContactController extends AbstractController
             'controller_name' => 'ContactController',
         ]);
     }
-<<<<<<< HEAD
-}
-=======
 
 
 /**
@@ -79,5 +76,3 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
     }
 
 }
-?>
->>>>>>> 00497d4c7f5a995da60f8d06f481672ac3a48d67
