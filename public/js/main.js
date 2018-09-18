@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-console.log("toto"); 
+console.log("tutu"); 
 
     //Fonction appelée lorsque l'on clique sur le lien Afficher la fenêtre
     $('.read-more').on('click', function(){
