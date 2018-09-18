@@ -5,9 +5,44 @@
         {% block stylesheets %}
         <link href="{{ asset('css/accueilStyle.css') }}" type="text/css" rel="stylesheet" />
         {% endblock %}
+        {% block javascripts %}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            <script src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
+
     </head>
     <body>
-        <h1>Le Présage</h1>
+        <div id="titreContent">
+            <h1>Le Présage</h1>
+        </div>
+
+        <div id="actuContent">
+        {% for actu in actualite %}
+            <div class="actualite">
+                <img src={{ actu.image}}>
+                <div class="actualiteTexte">
+                    <h3>{{ actu.titre }}</h3>
+                    <p>{{ actu.contenu }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <div id="actualitePopup">
+            </div>
+        
+        </div>
+
+        <div id="presoContent">
+            <div id="perso">
+            </div>
+            <div id="persoPopup">
+            </div>
+        </div>
+
     {% endblock %}
     
 
