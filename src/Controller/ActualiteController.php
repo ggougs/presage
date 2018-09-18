@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Actualite;
 use App\Service\FileUploader;
+use App\Repository\ActualiteRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,13 +16,28 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ActualiteController extends AbstractController
 {
-    /**
+  
+
+     /**
      * @Route("/actualite", name="actualite")
      */
-    public function index()
-    {
+    public function afficherActualité(ActualiteRepository $repository){
+
+        $actualiteArray = $repository->findAll();
         return $this->render('actualite/index.html.twig', [
             'controller_name' => 'ActualiteController',
+            'actualite' => $actualiteArray,
+        ]);
+
+    }
+     /**
+     * @Route("/accueil", name="accueil")
+     */
+    public function acutaliteMiseEnAvant(ActualiteRepository $repository){
+        $actuAvantArray = $repository->findOneById(1);
+        return $this->render('accueil/index.html.twig', [
+            'controller_name' => 'ActualiteController',
+            'actuAvant' => $actuAvantArray,
         ]);
     }
     /**
