@@ -1,9 +1,11 @@
-{% extends "base.html.twig" %}
- 
+{% extends 'base.html.twig' %}
+
     {% block body %}
     <head>
         {% block stylesheets %}
         <link href="{{ asset('css/accueilStyle.css') }}" type="text/css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         {% endblock %}
         {% block javascripts %}
             <script
@@ -13,38 +15,41 @@
             </script>
             <script src="{{ asset('js/main.js') }}"></script>
         {% endblock %}
-
     </head>
     <body>
-        <div id="titreContent">
-            <h1>Le Présage</h1>
-        </div>
+        <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
 
-        <div id="actuContent">
-        {% for actu in actualite %}
-            <div class="actualite">
-                <img src={{ actu.image}}>
-                <div class="actualiteTexte">
-                    <h3>{{ actu.titre }}</h3>
-                    <p>{{ actu.contenu }}</p>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="title">{{ actuAvant.titre }}</h3>
+                    <p class="description">
+                        {{ actuAvant.contenu }}
+                    </p>
                 </div>
+                <a class="read-more" href="">Afficher Plus</a>
             </div>
-            {% endfor %}
-            
-            <div id="actualitePopup">
-            </div>
+        </div>
+    </div>
+
+    <div class="contenu popup">
+        <p>Ce message va être affiché dans la popup.</p>
+        <p><a class="close" href=/>Fermer la fenêtre</a></p>
+    </div>
+
+    <div class="next-icon">
+    {# <a href="#"> #}
+       <i class="fas fa-chevron-circle-right"></i>
+    {# </a> #}
+    </div>
+
+
+
         
-        </div>
-
-        <div id="presoContent">
-            <div id="perso">
-            </div>
-            <div id="persoPopup">
-            </div>
-        </div>
-
-    {% endblock %}
-    
-
-
-    
+    </body>
+{% endblock %}
