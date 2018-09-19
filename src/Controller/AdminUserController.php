@@ -21,7 +21,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class AdminUserController extends AbstractController
 {
     /**
-     * @Route("/administrateur/adminuser", name="admin_user")
+     * @Route("/admin/interface", name="admin_interface")
      */
     public function index()
     {
@@ -31,7 +31,7 @@ class AdminUserController extends AbstractController
     }
 
     /**
-     * @Route("/administrateur/ajout", name="admin_user")
+     * @Route("/admin/user/ajout", name="admin_user")
      */
 
     public function addAdminUser(AdminUser $adminUser=null,Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder)
@@ -65,7 +65,7 @@ class AdminUserController extends AbstractController
                 $manager->flush();
 
          
-                 return $this->redirectToRoute('form');
+                 return $this->redirectToRoute('admin_user/index.html.twig');
              }
  
    
