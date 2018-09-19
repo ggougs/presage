@@ -58,7 +58,7 @@ class ActualiteController extends AbstractController
      
      */
 
-    public function addActualite(Actualite $actualite=null,Request $request, ObjectManager $manager, FileUploader $fileUploader )
+    public function ajoutActualite(Actualite $actualite=null,Request $request, ObjectManager $manager, FileUploader $fileUploader )
     {
         
         if(is_null($actualite)) 
@@ -90,10 +90,17 @@ class ActualiteController extends AbstractController
         return $this->render('actualite/ajoutActualites.html.twig', array(
             'form' => $form->createView(),
         ));
-     
-
-
-       
-
     }
+
+/**
+     * @Route("/admin/actualite/delete/{id}", name="deleteActu",requirements={"id"="\d+"})
+     */
+
+public function deleteActualite(Actualite $actualite, ObjectManager $manager){
+        $manager -> remove ($actualite);
+        $manager->flush();
+        return $this->redirectToRoute('accueil');
+}
+
+
 }

@@ -28,10 +28,10 @@ class ContactController extends AbstractController
 
 
 /**
-* @Route("/formulaire", name="form")
+* @Route("/formulaire_contact", name="form")
 */
 
-public function contactForm (Contact $contact=null, Request $request, ObjectManager $manager)
+public function contactForm (Contact $contact=null, Request $request, ObjectManager $manager,\Swift_Mailer $mailer)
     {
         
         if(is_null($contact)) 
@@ -44,13 +44,29 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
             ->add('prenom', TextType::class)
             ->add('email', TextType::class)
             ->add('sujet', TextType::class)
-            ->add('message', TextType::class)
+            ->add('message', TextareaType::class)
             ->add('save', SubmitType::class, array('label' => "Valider "))
             ->getForm();
 
             $form->handleRequest($request);
-
+            
             if ($form->isSubmitted() && $form->isValid())  {
+
+                $message = (new \Swift_Message())
+                ->setSubject('Formulaire de contact')
+                ->setFrom('garabedian.g@gmail.com')
+                ->setTo('garabedian.g@gmail.com');
+                
+                $message->setBody(
+                    $this->renderView(
+                       
+                        'emails/contact.html.twig',array('nom' => $contact->getNom(),'prenom'=>$contact->getPrenom(),'email'=>$contact->getEmail(),'message'=>$contact->getMessage())
+                    ),
+                    'text/html'
+                );
+
+ 
+                    $mailer->send($message);
                     $manager->persist( $contact );
                     $manager->flush();
         
@@ -59,8 +75,8 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
 
         return $this->render('contact/formulaire.html.twig', array(
             'form' => $form->createView(),
+           
         ));
     }
 
 }
-?>
