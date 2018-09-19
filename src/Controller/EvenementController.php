@@ -23,9 +23,9 @@ class EvenementController extends AbstractController
     public function afficherActualité(EvenementRepository $repository){
 
         $evenementArray = $repository->findAll();
-        return $this->render('actualite/index.html.twig', [
+        return $this->render('evenement/listeEvenement.html.twig', [
             'controller_name' => 'ActualiteController',
-            'evenement' => $actualiteArray,
+            'evenement' => $evenementArray,
         ]);
 
     }

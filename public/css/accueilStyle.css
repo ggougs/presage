@@ -17,7 +17,7 @@
 .serviceBox{
     color: #606060;
     padding: 0 10px 60px;
-    background-color: #A0CAF0;
+    background-color: #4CAF50;
     border: 1px solid transparent;
     border-radius: 20px;
     margin: 80px 0 30px;
@@ -51,7 +51,7 @@
 }
 .serviceBox .service-icon{
     display: inline-block;
-    color: #A0CAF0;
+    color: #4CAF50;
     font-size: 90px;
     margin-bottom: 10px;
     transition: all 0.3s ease 0s;
@@ -79,7 +79,7 @@
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    color: #A0CAF0;
+    color: #4CAF50;
     padding: 10px 0;
     background-color: #FEFE76;
     border-radius: 15px;
@@ -108,7 +108,7 @@
     display: none; 
     color: #606060;
     padding: 0 10px 60px;
-    background-color: #A0CAF0;
+    background-color: #4CAF50;
     border: 1px solid transparent;
     border-radius: 20px;
     margin: 80px 0 30px;
@@ -143,7 +143,7 @@
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    color: #A0CAF0;
+    color: #4CAF50;
     padding: 10px 0;
     background-color: #FEFE76;
     border-radius: 15px;
@@ -188,7 +188,7 @@
     .serviceBox{
         color: #606060;
         padding: 0 10px 60px;
-        background-color: #A0CAF0;
+        background-color: #4CAF50;
         border: 1px solid transparent;
         border-radius: 20px;
         margin: 80px 0 30px; 
@@ -221,7 +221,7 @@
     }
     .serviceBox .service-icon{
         display: inline-block;
-        color: #A0CAF0;
+        color: #4CAF50;
         font-size: 90px;
         margin-bottom: 10px;
         transition: all 0.3s ease 0s;
@@ -248,7 +248,7 @@
         font-weight: 600;
         text-transform: uppercase;
         text-align: center;
-        color: #A0CAF0;
+        color: #4CAF50;
         padding: 10px 0;
         background-color: #FEFE76;
         border-radius: 15px;
@@ -333,7 +333,7 @@
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    color: #A0CAF0;
+    color: #4CAF50;
     padding: 10px 0;
     background-color: #FEFE76;
     border-radius: 15px;
