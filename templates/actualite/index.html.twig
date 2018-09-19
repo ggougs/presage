@@ -1,13 +1,50 @@
 {% extends 'base.html.twig' %}
-
-
-
-{% block body %}
-{% extends 'base.html.twig' %}
-
 {% block body %}
 
+<head>
+        {% block stylesheets %}
+        <link href="{{ asset('css/actualiteStyle.css') }}" type="text/css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        {% endblock %}
+        {% block javascripts %}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            <script src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
+</head>
+<body>
+{% for actu in actualite %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="title">{{ actu.titre }}</h3>
+                    <p class="description">
+                        {{ actu.contenu }}
+                    </p>
+                </div>
+                <a class="read-more" href="">Afficher Plus</a>
+            </div>
+        </div>
+    </div>
 
+    <div class="contenu popup">
+        <h3 class="popupTitle">{{ actu.titre }}</h3>
+         <p class="popupDescription">
+                        {{ actu.contenu }}
+                    </p>
+        <p><a class="close" href=/>Fermer la fenêtre</a></p>
+    </div>
+{% endfor %}
+</body>
 
 
 

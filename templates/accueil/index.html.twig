@@ -17,8 +17,9 @@
         {% endblock %}
     </head>
     <body>
+    <div id="background">
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
-
+    </div>
     <div class="container">
     <div class="row">
         <div class="col-md-3 col-sm-6">
@@ -38,14 +39,16 @@
     </div>
 
     <div class="contenu popup">
-        <p>Ce message va être affiché dans la popup.</p>
+        <h3 class="popupTitle">{{ actuAvant.titre }}</h3>
+         <p class="popupDescription">
+                        {{ actuAvant.contenu }}
+                    </p>
+        <img class="popupImage" src={{ asset('img/'~actuAvant.image)}}>
         <p><a class="close" href=/>Fermer la fenêtre</a></p>
     </div>
 
     <div class="next-icon">
-    {# <a href="#"> #}
        <i class="fas fa-chevron-circle-right"></i>
-    {# </a> #}
     </div>
 
 

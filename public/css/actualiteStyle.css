@@ -1,14 +1,168 @@
-h1{
-    margin-left: 40%; 
-   padding-top:10%;
-}
-
-#titreContent{
-    height: 1000px; 
-    width: 100%; 
-    background: url(); 
-}
-.actualite{
-    display:  flex; 
- 
-}
+@media screen and (max-width: 1280px){ 
+    /* responsive mobile */
+    /* css de la box responsive */
+        .demo{ background: #e2e2e2; }
+        .serviceBox{
+            color: #606060;
+            padding: 0 10px 60px;
+            background-color: #A0CAF0;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            margin: 80px 0 30px;
+            position: relative;
+            width: 600px;
+            margin-top: 300px;
+            margin-left: 50px;      
+         }
+         .serviceBox .service-content{
+           text-align: center;
+            padding: 15px 20px 30px;
+            margin-top: -80px;
+            border-radius: 25px;
+            background-color: #fff;
+            position: relative;
+            transition:all 0.3s;  
+            border: #000 1px solid;      
+         }
+         .serviceBox .service-content:hover{
+           box-shadow: 0 0 20px -5px #000;
+         }
+         .serviceBox .service-content:after{
+            content: '';
+            height: 50px;
+            width: 50px;
+            border: 25px solid transparent;
+            border-top: 25px solid #fff;
+            transform:translateX(-50%);
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+        }
+        .serviceBox .service-icon{
+            display: inline-block;
+            color: #A0CAF0;
+            font-size: 90px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease 0s;
+        }
+        .serviceBox:hover .service-icon{
+            transform:rotateX(360deg);
+        }
+        .serviceBox .title{
+            font-size: 48px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin:0 0 10px;
+        }
+        .serviceBox .description{
+            font-size: 28px;
+            font-family: 'Quicksand', sans-serif;
+            line-height: 25px;
+            margin: 0;
+        }
+        .serviceBox .read-more{
+            display: block;
+            width: 60%;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            color: #A0CAF0;
+            padding: 10px 0;
+            background-color: #FEFE76;
+            border-radius: 15px;
+            transform:translateX(-50%);
+            transition:all 0.3s ease 0s;
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            font-size: 28px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .serviceBox .read-more:hover{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            box-shadow: 0 0 10px #000;
+            background-color: black;
+        }
+        .next-icon{
+            text-decoration: none; 
+            display: inline-block;
+            color: #FEFE76;
+            font-size: 90px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease 0s;
+            margin-left: 42%;     
+        }
+        .next-icon:hover{
+            color: black; 
+        }
+        /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    /* popup responsive */
+    .serviceBox.selected
+    {
+        display: none; 
+    }
+    
+    .contenu{
+        display: none; 
+        color: #606060;
+        padding: 0 10px 60px;
+        background-color: #A0CAF0;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        margin: 80px 0 30px;
+        position: relative;
+        width: 600px;
+        margin-left: 50px;  
+        height: 900px;  
+        box-shadow: 0 0 10px #000;
+    }
+    .contenu.selected{
+        display: block; 
+    
+    }
+    
+    .popupTitle{
+        font-size: 48px;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+    }
+    .popupDescription{
+        font-size: 28px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .close{
+        display: block;
+        width: 60%;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        color: #A0CAF0;
+        padding: 10px 0;
+        background-color: #FEFE76;
+        border-radius: 15px;
+        transform:translateX(-50%);
+        transition:all 0.3s ease 0s;
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        font-size: 28px;
+        font-family: 'Quicksand', sans-serif;
+        opacity: 1.0;  
+    }
+    
+    .close:hover{
+        color: white;
+        text-decoration: none;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px #000;
+        background-color: black;
+        opacity: 1.0;  
+    }
+    
+    }

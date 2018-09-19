@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Evenement;
 use App\Service\FileUploader;
+use App\Repository\EvenementRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,16 +15,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EvenementController extends AbstractController
-{
-    /**
-     * @Route("/evenement", name="evenement")
-     */
-    public function index()
-    {
-        return $this->render('evenement/index.html.twig', [
-            'controller_name' => 'EvenementController',
-        ]);
-    }
+ {
+ 
     /**
      * @Route("admin/evenement/ajout", name="ajoutEvenement")
      

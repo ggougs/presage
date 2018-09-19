@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Actualite;
 use App\Service\FileUploader;
 use App\Repository\ActualiteRepository;
+use App\Repository\EvenementRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,7 +17,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ActualiteController extends AbstractController
 {
-  
+    //       /**
+    //  * @Route("/evenement", name="evenement")
+    //  */
+    // public function afficherActualité(EvenementRepository $repository){
+
+    //     $evenementArray = $repository->findAll();
+    //     return $this->render('actualite/index.html.twig', [
+    //         'controller_name' => 'ActualiteController',
+    //         'evenement' => $actualiteArray,
+    //     ]);
+
+    // }
 
      /**
      * @Route("/actualite", name="actualite")
@@ -30,15 +42,27 @@ class ActualiteController extends AbstractController
         ]);
 
     }
+
      /**
      * @Route("/accueil", name="accueil")
      */
-    public function acutaliteMiseEnAvant(ActualiteRepository $repository){
-        $actuAvantArray = $repository->findOneById(1);
-        return $this->render('accueil/index.html.twig', [
-            'controller_name' => 'ActualiteController',
-            'actuAvant' => $actuAvantArray,
-        ]);
+    public function acutaliteMiseEnAvant(ActualiteRepository $repository, EvenementRepository $evenementRepository){
+        $idActu=1;
+        $idEvent=null;
+        if($idActu == null){
+            $evenementAvantArray = $evenementRepository->findOneById($idEvent);
+            return $this->render('evenement/index.html.twig', [
+                'controller_name' => 'ActualiteController',
+                'evenementAvant' => $evenementAvantArray,
+                ]);
+        }else{
+            $actuAvantArray = $repository->findOneById($idActu);
+            return $this->render('accueil/index.html.twig', [
+                'controller_name' => 'ActualiteController',
+                'actuAvant' => $actuAvantArray,
+            ]);
+        } 
+       
     }
     /**
      * @Route("admin/actualite/ajout", name="ajoutActualite")
