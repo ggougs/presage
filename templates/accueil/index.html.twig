@@ -13,13 +13,12 @@
                 integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
                 crossorigin="anonymous">
             </script>
-            <script src="{{ asset('js/accueil.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
         {% endblock %}
     </head>
     <body>
-    <div id="background">
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
-    </div>
+
     <div class="container">
     <div class="row">
         <div class="col-md-3 col-sm-6">
@@ -39,16 +38,14 @@
     </div>
 
     <div class="contenu popup">
-        <h3 class="popupTitle">{{ actuAvant.titre }}</h3>
-         <p class="popupDescription">
-                        {{ actuAvant.contenu }}
-                    </p>
-        <img class="popupImage" src={{ asset('img/'~actuAvant.image)}}>
+        <p>Ce message va être affiché dans la popup.</p>
         <p><a class="close" href=/>Fermer la fenêtre</a></p>
     </div>
 
     <div class="next-icon">
+    {# <a href="#"> #}
        <i class="fas fa-chevron-circle-right"></i>
+    {# </a> #}
     </div>
 
 

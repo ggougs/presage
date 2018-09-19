@@ -68,10 +68,14 @@ class EvenementController extends AbstractController
         return $this->render('evenement/ajoutEvenements.html.twig', array(
             'form' => $form->createView(),
         ));
-     
-
-
-       
-
     }
+/**
+     * @Route("/admin/evenement/delete/{id}", name="deleteEvenement",requirements={"id"="\d+"})
+     */
+
+    public function deleteEvenement(Evenement $evenement, ObjectManager $manager){
+        $manager -> remove ($evenement);
+        $manager->flush();
+        return $this->redirectToRoute('accueil');
+}
 }
