@@ -36,8 +36,8 @@ class ActualiteController extends AbstractController
      * @Route("/accueil", name="accueil")
      */
     public function acutaliteMiseEnAvant(ActualiteRepository $repository, EvenementRepository $evenementRepository){
-        $idActu=null;
-        $idEvent=1;
+        $idActu=1;
+        $idEvent=null;
         if($idActu == null){
             $evenementAvantArray = $evenementRepository->findOneById($idEvent);
             return $this->render('evenement/index.html.twig', [

@@ -1,9 +1,8 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-<<<<<<< HEAD
-=======
+
 logout:
     path: /logout
 
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
+
