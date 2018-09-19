@@ -25,11 +25,7 @@ security:
             form_login: 
                 login_path: login
                 check_path: login
-<<<<<<< HEAD
-                default_target_path: form
-=======
                 default_target_path: admin_interface
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
                 always_use_default_target_path: true
             logout: true
          
@@ -46,11 +42,7 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-<<<<<<< HEAD
-        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-=======
         
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
         - { path: ^/admin, roles: ROLE_ADMIN }
       
    
