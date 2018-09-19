@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Evenement;
 use App\Service\FileUploader;
+use App\Repository\EvenementRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,13 +16,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EvenementController extends AbstractController
 {
+    
     /**
      * @Route("/evenement", name="evenement")
      */
-    public function index()
-    {
+    public function afficherEvenement(EvenementRepository $repository){
+
+        $actualiteArray = $repository->findAll();
         return $this->render('evenement/index.html.twig', [
             'controller_name' => 'EvenementController',
+            'evenement' => $evenementArray,
         ]);
     }
     /**
@@ -62,10 +66,14 @@ class EvenementController extends AbstractController
         return $this->render('evenement/ajoutEvenements.html.twig', array(
             'form' => $form->createView(),
         ));
-     
-
-
-       
-
     }
+/**
+     * @Route("/admin/evenement/delete/{id}", name="deleteEvenement",requirements={"id"="\d+"})
+     */
+
+    public function deleteEvenement(Evenement $evenement, ObjectManager $manager){
+        $manager -> remove ($evenement);
+        $manager->flush();
+        return $this->redirectToRoute('accueil');
+}
 }
