@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,24 +18,23 @@
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
     <title>ADMINISTRATEUR INTERFACE  </title>
- {% block stylesheets %} {% endblock %}
-    <!-- Bootstrap -->
-    <link href="{{ asset("vendors/bootstrap/dist/css/bootstrap.min.css") }}" rel="stylesheet">
+      <!-- Bootstrap -->
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{ asset("vendors/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="{{ asset("vendors/nprogress/nprogress.css") }}" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="{{ asset("vendors/iCheck/skins/flat/green.css") }}" rel="stylesheet">
+    <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-   <link href="{{ asset("vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css") }}" rel="stylesheet">
+   <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
   
     <!-- bootstrap-daterangepicker -->
-    <link href="{{ asset("vendors/bootstrap-daterangepicker/daterangepicker.css") }}" rel="stylesheet">
+    <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="{{ asset("css/custom.min.css") }}" rel="stylesheet">
+    <link href="/css/custom.min.css" rel="stylesheet">
    
   </head>
 
@@ -87,7 +87,7 @@
                   </li>
                   <li><a><i class="fas fa-user-tie"></i> Ajout Administrateur <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ path ('admin_user') }}" >liste administrateur</a></li>
+                      <li><a href="/admin/user/ajout" >liste administrateur</a></li>
                        <li><a href="tables.html">Ajout administrateur</a></li>
                       
                     </ul>
@@ -162,10 +162,14 @@
           <div class="row">
             <div class="page-title">
               <div class="title_left">
-                <h3> {% block pageTitle %}{% endblock %}</h3>
+                <h3> Ajout utilisateurs</h3>
               </div>
             </div>
-             {% block body %}{% endblock %}
+             <form name="form" method="post">
+
+<div id="form"><div class="form-group"><label for="form_nom" class="required">Nom</label><input type="text" id="form_nom" name="form[nom]" required="required" class="form-control" /></div><div class="form-group"><label for="form_password_first" class="required">Password</label><input type="password" id="form_password_first" name="form[password][first]" required="required" class="password-field form-control" /></div><div class="form-group"><label for="form_password_second" class="required">confirmer Password</label><input type="password" id="form_password_second" name="form[password][second]" required="required" class="password-field form-control" /></div><div class="form-group"><button type="submit" id="form_save" name="form[save]" class="btn-secondary btn">creer un compte admin</button></div><input type="hidden" id="form__token" name="form[_token]" value="mlqv35B6YktOnkncp9tkOtqd0ylR6D0Qnkjv8DGf8Ow" /></div>
+</form>
+
           </div>
         </div>
         <!-- /page content -->
@@ -182,27 +186,26 @@
   </div>
 
     <!-- jQuery -->
-    <script src="{{ asset("vendors/jquery/dist/jquery.min.js") }}"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="{{ asset("vendors/bootstrap/dist/js/bootstrap.min.js") }}"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- FastClick -->
-    <script src="{{ asset("vendors/fastclick/lib/fastclick.js") }}"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
 
     <!-- bootstrap-progressbar -->
-    <script src="{{ asset("vendors/bootstrap-progressbar/bootstrap-progressbar.min.js") }}"></script>
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 
     <!-- Skycons -->
-    <script src="{{ asset("vendors/skycons/skycons.js") }}"></script>
+    <script src="/vendors/skycons/skycons.js"></script>
     
     <!-- DateJS -->
-    <script src="{{ asset("vendors/DateJS/build/date.js") }}"></script>
+    <script src="/vendors/DateJS/build/date.js"></script>
     
   
     <!-- Custom Theme Scripts -->
-    <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script src="/js/custom.min.js"></script>
   
-	
-  </body>
+
 </html>
