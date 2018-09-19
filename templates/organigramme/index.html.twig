@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<head>
+        {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/organigramme.less') }}">
+        <link rel="stylesheet/less" type="text/css" href="{{ asset('css/organigramme.less') }}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        {% endblock %}
+        
+
+        {% block javascripts %}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            
+            <script src="{{ asset('js/organigramme.js') }}"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+        {% endblock %}
+</head>
+<body>
+<h1 id="titrePrincipal">Notre Equipe</h1>
+<section class="container">
+    
+    <div class="row active-with-click">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Green">
+                <h2>
+                    <span>Pierre-André Aubert</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Ingénieur-cuisinier
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{{ asset('img/equipe/pierreAndre.jpg') }}">
+                    </div>
+                    <div class="mc-description">
+                       Après des expériences d’ingénieur en aéronautique en France en Allemagne ou en Inde, Pierre-André passe son CAP de cuisine et fait ses gammes dans de nombreux restaurants, de la brasserie aux étoilés.
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                    <a class="fab fa-facebook-f"></a>
+                    <a class="fab fa-twitter"></a>
+                    <a class="fab fa-linkedin-in"></a>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Light-Green">
+                <h2>
+                    <span>Benjamin Leroy</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Ingénieur-entrepreneur
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{{ asset('img/equipe/benjaminLeroy.jpg') }}">
+                    </div>
+                    <div class="mc-description">
+                        Benjamin a travaillé sur de nombreux projets alliant innovation et écologie, il est le fondateur de la SCOP eco-SAPIENS qui promeut la consommation responsable grâce à internet depuis plus de 10 ans. Il a également présidé le Conseil d'Administration d'Inter-Made, l'incubateur d'entreprises sociale pendant 5 ans. Il assurera le montage et la gestion juridique et financière du Présage.
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                    <a class="fab fa-facebook-f"></a>
+                    <a class="fab fa-twitter"></a>
+                    <a class="fab fa-linkedin-in"></a>
+            </article>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Lime">
+                <h2>
+                    <span>Olivier Nattes</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                       Artiste-designer-jardinier
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{{ asset('img/equipe/olivierNatte.png') }}">
+                    </div>
+                    <div class="mc-description">
+                Il est notamment le créateur de la Nourrice, un Jardin Forêt comestible et habitable à Aubiet dans le Gers. Ces dernières commandes sont des réalisations de jardins en 2018 avec Mohamed Bourouissa à la Biennales d’Art Contemporain de Liverpool.
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                   <a class="fab fa-facebook-f"></a>
+                    <a class="fab fa-twitter"></a>
+                    <a class="fab fa-linkedin-in"></a>
+                </div>
+            </article>
+        </div>
+      
+</body>
+{% endblock %}
