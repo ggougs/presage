@@ -13,19 +13,20 @@
                 integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
                 crossorigin="anonymous">
             </script>
-            <script src="{{ asset('js/main.js') }}"></script>
+            <script src="{{ asset('js/accueil.js') }}"></script>
         {% endblock %}
     </head>
     <body>
+    <div id="background">
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
-
+    </div>
     <div class="container">
     <div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="serviceBox">
                 <div class="service-content">
                     <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <h3 class="title">{{ evenementAvant.titre }}</h3>
                     <p class="description">
@@ -42,6 +43,7 @@
          <p class="popupDescription">
                         {{ evenementAvant.contenu }}
                     </p>
+        <img class="popupImage" src={{ asset('img/'~evenementAvant.image)}}>
         <p><a class="close" href=/>Fermer la fenêtre</a></p>
     </div>
 

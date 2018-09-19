@@ -9,9 +9,9 @@ console.log("tutu");
         deselect($('#background')); 
      
         }else{
-                $('.serviceBox').addClass('selected');  
-                $('.contenu').addClass('selected'); 
-                $('#background').addClass('selected'); 
+            $('.serviceBox').addClass('selected');  
+            $('.contenu').addClass('selected'); 
+            $('#background').addClass('selected'); 
                
             }
     return false;

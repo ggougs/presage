@@ -13,37 +13,40 @@
                 integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
                 crossorigin="anonymous">
             </script>
-            <script src="{{ asset('js/main.js') }}"></script>
+            <script src="{{ asset('js/actualite.js') }}"></script>
         {% endblock %}
 </head>
 <body>
-{% for actu in actualite %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-newspaper"></i>
+
+    <div class="container">
+    {% for actu in actualite %}
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="title">{{ actu.titre }}</h3>
+                        <p class="description">
+                            {{ actu.contenu }}
+                        </p>
                     </div>
-                    <h3 class="title">{{ actu.titre }}</h3>
-                    <p class="description">
-                        {{ actu.contenu }}
-                    </p>
+                    <a class="read-more" href="">Afficher Plus</a>
                 </div>
-                <a class="read-more" href="">Afficher Plus</a>
             </div>
         </div>
+
+        <div class="contenu popup">
+            <h3 class="popupTitle">{{ actu.titre }}</h3>
+            <p class="popupDescription">
+                            {{ actu.contenu }}
+                        </p>
+            <p><a class="close" href=/>Fermer la fenêtre</a></p>
+        </div>
+    {% endfor %}
     </div>
 
-    <div class="contenu popup">
-        <h3 class="popupTitle">{{ actu.titre }}</h3>
-         <p class="popupDescription">
-                        {{ actu.contenu }}
-                    </p>
-        <p><a class="close" href=/>Fermer la fenêtre</a></p>
-    </div>
-{% endfor %}
 </body>
 
 

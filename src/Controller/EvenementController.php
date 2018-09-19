@@ -16,6 +16,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EvenementController extends AbstractController
  {
+
+    /**
+     * @Route("/evenement", name="evenement")
+     */
+    public function afficherActualité(EvenementRepository $repository){
+
+        $evenementArray = $repository->findAll();
+        return $this->render('actualite/index.html.twig', [
+            'controller_name' => 'ActualiteController',
+            'evenement' => $actualiteArray,
+        ]);
+
+    }
  
     /**
      * @Route("admin/evenement/ajout", name="ajoutEvenement")
