@@ -1,0 +1,74 @@
+/*css général*/
+[type="button"]
+{
+    background: #18391E;
+}
+html [type="button"]{
+    -webkit-appearance: none;
+}
+
+body{
+  height: 100%;
+}
+
+/*css nav*/
+.navbar-color
+{
+
+    background-color: #18391E;
+}
+
+.navbar-dark .navbar-nav .nav-link
+{
+    color:white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color:#ffff77;
+}
+
+
+ul.dropdown-menu.show {
+    background-color: rgb(224, 224, 149);
+    box-shadow: 1px 1px 5px black;
+}
+
+a.navbar-brand img {
+    height: 65px;
+}
+
+
+
+
+/*css footer*/
+footer{
+    position: absolute;
+    bottom: 0; 
+}
+.footer-color
+{
+
+    background-color: #18391E;
+}
+
+.page-footer .navbar-nav 
+{
+    text-align:center;
+}
+
+.footer-dark .nav-link
+{
+    color:white;
+}
+
+.footer-dark .nav-link:hover
+{
+    color:#ffff77;
+}
+
+
+
+
+
+

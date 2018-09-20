@@ -1,7 +1,6 @@
+
 {% extends 'base.html.twig' %}
 
-    {% block body %}
-    <head>
         {% block stylesheets %}
         <link href="{{ asset('css/accueilStyle.css') }}" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -15,44 +14,40 @@
             </script>
             <script src="{{ asset('js/accueil.js') }}"></script>
         {% endblock %}
-    </head>
-    <body>
+
+{% block body %}
     <div id="background">
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
     </div>
     <div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="serviceBox">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-newspaper"></i>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="title">{{ actuAvant.titre }}</h3>
+                        <p class="description">
+                            {{ actuAvant.contenu }}
+                        </p>
                     </div>
-                    <h3 class="title">{{ actuAvant.titre }}</h3>
-                    <p class="description">
-                        {{ actuAvant.contenu }}
-                    </p>
+                    <a class="read-more" href="">Afficher Plus</a>
                 </div>
-                <a class="read-more" href="">Afficher Plus</a>
             </div>
         </div>
+
+        <div class="contenu popup">
+            <h3 class="popupTitle">{{ actuAvant.titre }}</h3>
+            <p class="popupDescription">
+                            {{ actuAvant.contenu }}
+                        </p>
+            <img class="popupImage" src={{ asset('img/'~actuAvant.image)}}>
+            <p><a class="close" href=/>Fermer la fenêtre</a></p>
+        </div>
+
+        <div class="next-icon">
+        <i class="fas fa-chevron-circle-right"></i>
+        </div>
     </div>
-
-    <div class="contenu popup">
-        <h3 class="popupTitle">{{ actuAvant.titre }}</h3>
-         <p class="popupDescription">
-                        {{ actuAvant.contenu }}
-                    </p>
-        <img class="popupImage" src={{ asset('img/'~actuAvant.image)}}>
-        <p><a class="close" href=/>Fermer la fenêtre</a></p>
-    </div>
-
-    <div class="next-icon">
-       <i class="fas fa-chevron-circle-right"></i>
-    </div>
-
-
-
-        
-    </body>
 {% endblock %}
