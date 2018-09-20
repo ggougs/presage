@@ -28,25 +28,21 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="dropdown linknav">
-            <a class="nav-link" href="#" type="button" data-toggle="dropdown">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="" type="button" data-toggle="dropdown">Accueil <span class="sr-only">(current)</span></a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Présentation</a></li>
-              <div class="dropdown-divider"></div>
-              <li><a class="dropdown-item" href="#">Actualités</a></li>
-              <div class="dropdown-divider"></div>
-              <li><a class="dropdown-item" href="#">Evènements</a></li>
+              <a class="dropdown-item" href="{{ path('accueil') }}">Présentation</a>
+              <a class="dropdown-item" href="{{ path('listeactualite') }}">Actualités</a>
+              <a class="dropdown-item" href="{{ path('evenement') }}">Evènements</a>
             </ul>
           </li>
           <li class="dropdown">
+          
             <a class="nav-link" href="#" type="button" data-toggle="dropdown">Le projet</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Notre équipe</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="#">Technologies</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="#">Ambitions</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="#">Partenares</a></li>
+                <a class="dropdown-item" href="#">Notre équipe</a>    
+                <a class="dropdown-item" href="#">Technologies</a>      
+                <a class="dropdown-item" href="#">Ambitions</a>      
+                <a class="dropdown-item" href="#">Partenares</a>
               </ul>
           </li>
           <li class="nav-item">
