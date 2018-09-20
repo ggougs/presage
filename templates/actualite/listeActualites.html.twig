@@ -7,22 +7,23 @@
     <table class="table table-hover">
   <thead>
   <tr>
-     <th> Titre</th>
+     <th>Titre</th>
      <th>Contenu</th>
      <th>Image</th>
  </tr>
-   {% for actualite in allarticles %}
+   {% for actua in actualite %}
    
    
       
 
     <tr>
-       <td> {{ actualite.titre }}</td>
-       <td>{{ actualite.contenu }}</td>
-       <td>{{ actualite.image}}</td>
-       </tr>
+       <td> {{ actua.titre }}</td>
+       <td>{{ actua.contenu }}</td>
+       <td><img style="width:150px;height=150px;" src="{{asset('uploads/image/'~actua.image ) }}"</td>
+       <td><a href= {{ path('deleteActu', {'id':actua.id}) }}>supprimer une Actualité</a></td>
+    </tr>
        
-       <td><a href= {{ path('deleteActu', {'id':article.id}) }}>supprimer une Actualité</a></td>
+       
       
    </tr>
 
