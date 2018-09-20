@@ -10,6 +10,7 @@
      <th>Titre</th>
      <th>Contenu</th>
      <th>Image</th>
+     <th>Suppression actualité</th>
  </tr>
    {% for actua in actualite %}
    
@@ -20,7 +21,7 @@
        <td> {{ actua.titre }}</td>
        <td>{{ actua.contenu }}</td>
        <td><img style="width:150px;height=150px;" src="{{asset('uploads/image/'~actua.image ) }}"</td>
-       <td><a href= {{ path('deleteActu', {'id':actua.id}) }}>supprimer une Actualité</a></td>
+       <td><a href= {{ path('deleteActu', {'id':actua.id}) }}>supprimer cette Actualité</a></td>
     </tr>
        
        
