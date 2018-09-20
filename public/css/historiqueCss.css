@@ -2,6 +2,7 @@ body {
   font-family: "Source Sans Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.75;
+  
 }
 
 #timeline {
@@ -18,7 +19,7 @@ body {
   width: 25%;
   height: 100vh;
   min-height: 600px;
-  color: #fff;
+  color: #FEFE76;
   overflow: hidden;
   transition: width 0.5s ease;
 }
@@ -32,19 +33,19 @@ body {
   height: 100%;
 }
 .tl-item:after {
-  background: rgba(3, 22, 37, 0.85);
+  background: rgba(24, 57, 30, 0.50);
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 .tl-item:before {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 75%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #4CAF50 75%);
   z-index: 1;
   opacity: 0;
   transform: translate3d(0, 0, 0) translateY(50%);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .tl-item:hover {
-  width: 30% !important;
+  width: 150% !important;
 }
 .tl-item:hover:after {
   opacity: 0;
@@ -71,13 +72,16 @@ display: none;
   z-index: 1;
   text-align: center;
   margin: 0 1.618em;
-  top: 10%;
+  top: 30%;
   opacity: 0;
+  color: white; 
+ 
+  
 }
 .tl-content h1 {
   font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  color: #1779cf;
+  color: #FEFE76;
   font-size: 1.44rem;
   font-weight: normal;
 }
@@ -88,8 +92,8 @@ display: none;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid #FEFE76;
+  border-bottom: 1px solid #FEFE76;
 }
 .tl-year p {
   font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -111,3 +115,32 @@ display: none;
 }
 
 /*# sourceMappingURL=historiqueCss.css.map */
+ @media screen and (max-width: 1280px){ 
+  /* responsive mobile */
+  body{
+    font-size: 45px; 
+  }
+  #timeline {
+    display: flex;
+    background-color: #031625;
+    flex-direction: column; 
+  }
+  .tl-item {
+    width: 100%;
+    /* height: auto;  */
+  }
+  #timeline:hover .tl-item {
+    width: 150%;
+    height: auto;
+  }
+  /* .tl-item:hover:after {
+    height: ;
+  } */
+  
+  .tl-content{
+    top: 15%; 
+  }
+  .tl-year p{
+    font-size: 106px; 
+  }
+} 
