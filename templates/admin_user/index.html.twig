@@ -22,11 +22,7 @@
     <link href="{{ asset("vendors/bootstrap/dist/css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset("vendors/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="{{ asset("vendors/nprogress/nprogress.css") }}" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="{{ asset("vendors/iCheck/skins/flat/green.css") }}" rel="stylesheet">
-	
+
     <!-- bootstrap-progressbar -->
    <link href="{{ asset("vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css") }}" rel="stylesheet">
   
@@ -52,7 +48,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+
+              {# PHOTO DE PROFIL #}
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img"> 
+
+                
               </div>
               <div class="profile_info">
                 <span>Bienvenue</span>
@@ -78,7 +78,7 @@
                   </li>
                   <li><a><i class="far fa-calendar"></i> Evenements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">Liste des Evenements</a></li>
+                      <li><a href="{{ path ('evenementAdmin') }}">Liste des Evenements</a></li>
                       <li><a href="{{ path ('ajoutEvenement') }}" >Ajout Evenements</a></li>
                       <li><a href="icons.html">Mettre en avant un Evenement</a></li>
                      </ul>

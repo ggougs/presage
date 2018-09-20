@@ -19,11 +19,26 @@ class EvenementController extends AbstractController
 
     /**
      * @Route("/evenement", name="evenement")
+
      */
-    public function afficherActualité(EvenementRepository $repository){
+    public function afficherEvenements(EvenementRepository $repository){
 
         $evenementArray = $repository->findAll();
         return $this->render('evenement/listeEvenement.html.twig', [
+            'controller_name' => 'ActualiteController',
+            'evenement' => $evenementArray,
+        ]);
+
+    }
+
+    /**
+     * @Route("/admin/Evenements", name="evenementAdmin")
+
+     */
+    public function afficherEvenementsAdmin(EvenementRepository $repository){
+
+        $evenementArray = $repository->findAll();
+        return $this->render('admin_user/listEvenementsAdmin.html.twig', [
             'controller_name' => 'ActualiteController',
             'evenement' => $evenementArray,
         ]);
@@ -62,7 +77,7 @@ class EvenementController extends AbstractController
                     $manager->persist( $evenement );
                     $manager->flush();
         
-                return $this->redirectToRoute('evenement');
+                return $this->redirectToRoute('evenementAdmin');
             }
 
         return $this->render('evenement/ajoutEvenements.html.twig', array(

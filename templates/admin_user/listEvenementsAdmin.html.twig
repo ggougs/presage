@@ -1,0 +1,39 @@
+{% extends 'admin_user/index.html.twig' %}
+
+{% block pageTitle %}Liste des evenements{% endblock %}
+
+
+{% block body %}
+  
+
+    <div class="container">
+    {% for event in evenement %}
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="title">{{ event.titre }}</h3>
+                        <p class="description">
+                            {{ event.contenu }}
+                        </p>
+                    </div>
+                    <a class="read-more" href="">Afficher Plus</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenu popup">
+                <h3 class="popupTitle">{{ event.titre }}</h3>
+                <p class="popupDescription">
+                                {{ event.contenu }}
+                            </p>
+                <img class="popupImage" src="{{ asset('img/'~event.image)}}">
+            <p><a class="close" href=/>Fermer la fenêtre</a></p>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}
