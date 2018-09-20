@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<head>
+        {% block stylesheets %}
+        {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/organigramme.less') }}">#}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/historiqueCss.css') }}" /> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        {% endblock %}
+        
+
+        {% block javascripts %}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+             {# <script src="{{ asset('js/historique.js') }}"></script> #}
+            {# <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>  #}
+        {% endblock %}
+</head>
+<body>
+<section id="timeline">
+  <div class="tl-item">
+    <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+    <div class="tl-year">
+      <p class="f2 heading--sanSerif">2013</p>
+    </div>
+    <div class="tl-content">
+      <h1>de la marche à l’idée</h1>
+      <p>S’il y a un début à cette histoire, il se pourrait qu’il se situe sur le chemin de Saint Jacques de Compostelle, par la route du Nord plus exactement.
+        Après une riche et inspirante saison au café des jardiniers, dans le merveilleux jardin des Méditerranées du Domaine du Rayol, Pierre-André a ressenti le besoin de faire le point. Cela faisait déjà quelques années qu’il s’était reconverti au métier de cuisinier et il était temps de penser à l’étape d’après.
+        Et quoi de mieux pour penser que de marcher? (rester immobile peut-être mais c’est encore plus dur!). La marche a cet effet efficace, pour peu qu’elle soit pratiquée dans un relatif silence et dans des endroits agréables, de pouvoir mettre en route l’esprit. En particulier, si cette marche se continue sur plusieurs jours, voire quelques semaines, elle alors devient un outil très puissant pour réfléchir aux choses.
+        Et en Europe, s’il y a bien un chemin qui permet de marcher tout en réfléchissant (sans non plus se ruiner), c’est bien celui qui mène à St-Jacques de Compostelle.
+        C’est ainsi que Pierre-André se mit donc en route sur son chemin, un 8 décembre 2012 depuis Irun au pays Basque pour un périple qui durera finalement presque 4 mois et demi et l’amènera également à parcourir le Portugal du Nord au Sud ainsi qu’une partie de l’Andalousie, au grès des rencontres et des expériences culinaires.
+        Alors que produire et se nourrir localement semble déjà une évidence, quant est-il des énergies que l’on utilise pour cuisiner? Serait-il possible de produire localement l’énergie nécessaire pour cuire les aliments, pour les réfrigérer, sous quelle forme, avec quel impact?
+        L’idée d’un restaurant qui fonctionnerait avec les énergies disponibles localement avait déjà germé dans l’esprit de Pierre-André mais c’est cette marche qui lui a donné corps et a motivé Pierre-André à tenter cette aventure qui est devenu le projet de restaurant solaire Le Présage.
+        Le soleil est une ressource largement distribué à Marseille et c’est tout naturellement que Pierre-André, originaire de cette ville, s’intéressa aux possibilités offertes par la cuisine solaire. Après des rencontres, des tests, il se rend compte qu’il n’existe pas encore de solutions équivalente à un fourneau de cuisine professionnel… y’a plus qu’à!</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+    <div class="tl-year">
+      <p class="f2 heading--sanSerif">2014</p>
+    </div>
+    <div class="tl-content">
+      <h1 class="f3 text--accent ttu">le prototype</h1>
+      <p>Un prototype,  c’est étape de quelque chose qui n’existait pas auparavant…
+    Comment donc construire un fourneau solaire qui serait directement alimenté par le soleil, en concentrant le rayon du soleil?
+    Après quelques recherches, il existait quand un début de solution  (oui parce que on n’invente jamais rien tout seul, le génie créatif romantique est un leurre!, la créativité est plus dans l’émulation décalée! 🙂
+    Le concentrateur Scheffler, du nom de son inventeur, qui est relativement simple de conception bien que la réalisation artisanale demande un certain talent, est apparu très vite comme une piste intéressante.
+    Après la marche qui lui amena la conviction d’entreprendre ce projet, Pierre-André a également visité, le projet Tamera, et en particulier la cuisine du « Solar village Test Field » qui possède l’un de ces miroir Scheffler. ( il n’y en a qu’une petite dizaine en Europe…)
+    C’était une visite éclair pendant le périple et Pierre-André y retournera un peu plus tard « tester » ce fourneau en y cuisinant pendant 2 semaines. Résultats : le concentrateur est bien puissant mais le récepteur pas pratique. Une autre visite chez Jean-Philippe Valat dans sa ferme expérimental de Saint-Paul en Vercors, permis de tester un miroir de 16m2, carrément trop puissant pour le coup, mais ce qui confirme l’intérêt du « Scheffler » pour propulser ce fourneau.
+    Il prit donc contact avec Wolfgang Scheffler, Heike Hoedt et Adrian Conrad, les 3 associés du projet, qui l’invitèrent quelques jours en Allemagne. On est en novembre 2012. Après s’être rencontré, apprivoiser quelque peu, il est ressorti de nos calculs qu’il serait possible de chauffer une plaque coup de feu avec une de leur parabole, et ça tombe bien, ils en ont une ancienne et abîmée, rendez-vous est pris pour le printemps afin de la restaurer et de la ramener en France pour développer le fourneau.
+    19h de route entre Aisligen et Marseille, enfin Pont de l’étoile, chez Jérôme Laplane, un des tout premier soutien du projet!
+    Ensuite viennent Olivier nattes et Géraldine Marx, qui ont réalisé le dessin du fourneau, la conception et enfin la fabrication.
+    les premiers tests et performances itinérantes :
+    Sur le chantier de la Nourrice, un jardin forêt comestible et habitable, projet de l’artiste Olivier Nattes.
+    Lors de la fête des AMAPs et de la journée de la transition citoyenne du 27 septembre 2014.
+    Pendant « Gondwana », la grande fête des plantes du Domaine du Rayol, le jardin des Méditerranées, le 3 octobre 2014.
+    Lors du passage du tour Alternatiba à Aubagne, le 25 Juin 2015.
+    Pendant le Festival « A vous de jouer », étang des Aulnes.
+    A la Faculté Aix-Marseille St-Charles lors des Journées du Patrimoine.</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
+    <div class="tl-year">
+      <p class="f2 heading--sanSerif">2015</p>
+    </div>
+    <div class="tl-content">
+      <h1 class="f3 text--accent ttu">La Nourrice</h1>
+      <p>La Nourrice, Un jardin forêt comestible et habitable par l’artiste plasticien Olivier Nattes.
+        «Il s’agit de s’inspirer du caractère autonome et plastique de la nature pour créer un nouveau type
+        de lieu, un «mi-lieu», dans lequel nature et culture s’associent dans un objectif de mieux vivre
+        ensemble et de développement écosophique.»
+        Commande publique pour la commune d’Aubiet réalisée dans le cadre du parcours Art et
+        Environnement, organisée par le pays portes de Gascogne sous l’égide du ministère de la culture,
+        de la Drac, du fond Leader Européen, de la DGSA, de la région Midi Pyrénées et de la commune
+        d’Aubiet.
+        « La Nourrice » est un nouveau type de lieu, un projet pilote et expérimental, visant à installer au cœur ou à la périphérie des villes, des jardins idylliques, qui soient, à la fois des espaces semi-sauvages, laissés à eux mêmes (dans l’idée du tiers paysage de Gilles Clément) et des espaces plus productifs en termes de fruits, légumes, plantes médicinales, et autogérés par la population. L’idée étant, de par la beauté et la générosité de ces lieux, d’amener les gens à modifier leur comportement et engagement vis à vis de leur environnement proche, et qu’ainsi se tissent de nouveaux liens.</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+    <div class="tl-year">
+      <p class="f2 heading--sanSerif">2015</p>
+    </div>
+    <div class="tl-content">
+      <h1 class="f3 text--accent ttu">le crowdfunding</h1>
+      <p>Quelle campagne mes amis! Prés de 11.000€ collectés auprès de 218 contributeurs,l’une des étapes les plus épuisantes du projet mais wahou!!!
+        Merci à toutes et tous qui ont participé à cette campagne, en amont avec la réalisation du clip, pendant en contribuant et en relayant la campagne et ensuite en tant que communauté fédérée autour du projet. Vous avez été une grande source de motivation pour rendre amener le présage vers ses premières expérimentations en tant que restaurant.</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+    <div class="tl-year">
+      <p class="f2 heading--sanSerif">2016</p>
+    </div>
+    <div class="tl-content">
+      <h1 class="f3 text--accent ttu">XP1</h1>
+      <p>Grâce au soutien à la fois financier et humain apporté par la communauté qui s’est créée autour du projet lors de la campagne de crowdfunding, Le projet de restaurant solaire Le Présage, porté par l’association Rêves Germés, a pu réalisé du 7 octobre au 4 décembre 2016 à Aubagne sa phase d’expérimentation « Preuve de Concept ».
+        Cette expérimentation a pris la forme d’un restaurant expérimental éphémère, ouvert au public sous
+        réserve d’adhérer à l’association.
+       </P>
+  </div>
+  </div>
+    <div class="tl-item">
+    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+    <div class="tl-year">
+      <p class="f2 heading--sanSerif">2017</p>
+    </div>
+    <div class="tl-content">
+      <h1 class="f3 text--accent ttu">XP2</h1>
+      <p>Même si la première expérimentation fut déjà un petit succès, il était clair qu’il fallait remettre le couvert dans des conditions plus proches de celles d’un restaurant afin de valider le modèle du projet.
+        Nous voici donc au 4 Mai 2017, et la cuisine solaire est de nouveau en route pour un peu plus de 5 mois.
+        Clément Flint viendra rejoindre l’équipe en cuisine et plus de 1000 couverts seront servis le midi ainsi que 600 portions dégustations au moment des apéro Sunset, et tout ça pour seulement 2 heures de gaz conventionnel utilisé. Des résultats plus détaillés sont consultables ici.
+        Cette deuxième expérimentation fut un véritable succès et nous a permis d’engager des discussions avec la Métropole Aix Marseille Provence afin d’acquérir le terrain qui va nous permettre d’installer le projet dans sa vision globale
+       </P>
+  </div>
+</section>
+
+
+</body>
+{% endblock %}

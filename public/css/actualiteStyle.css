@@ -9,12 +9,7 @@ destok
     margin-bottom: 100px; 
 }
 .demo{ background: #e2e2e2; }
-.container{
-    display: inline;  
-}
-.row{
-    margin-left: 20%; 
-}
+
 
         .serviceBox{
             color: #606060;
@@ -51,6 +46,7 @@ destok
             position: absolute;
             bottom: -50px;
             left: 50%;
+            
         }
         .serviceBox .service-icon{
             display: inline-block;
@@ -130,7 +126,7 @@ destok
         margin-left: 50px;  
         height: 700px;  
         box-shadow: 0 0 10px #000;
-        margin-left: 23%; 
+        /* margin-left: 23%;  */
     }
     .contenu.selected{
         display: block; 
