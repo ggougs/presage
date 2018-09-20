@@ -110,7 +110,7 @@ class ActualiteController extends AbstractController
 public function deleteActualite(Actualite $actualite, ObjectManager $manager){
         $manager -> remove ($actualite);
         $manager->flush();
-        return $this->redirectToRoute('admin_interface');
+        return $this->redirectToRoute('listeactualiteadmin');
 }
 
 
