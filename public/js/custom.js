@@ -246,3 +246,10 @@ if (typeof NProgress != 'undefined') {
         NProgress.done();
     });
 }
+
+// $("#adminConfirm").click(function() {
+
+//     return confirm('Etes vous sûre de vouloir supprimer cette valeur ?');
+
+
+// })

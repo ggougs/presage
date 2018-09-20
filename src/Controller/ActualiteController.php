@@ -37,7 +37,7 @@ class ActualiteController extends AbstractController
     public function afficherActualitéAdmin(ActualiteRepository $repository){
 
         $actualiteArray = $repository->findAll();
-        return $this->render('actualite/listeActualites.html.twig', [
+        return $this->render('actualite/listeActualitesAdmin.html.twig', [
             'controller_name' => 'ActualiteController',
             'actualite' => $actualiteArray,
         ]);
