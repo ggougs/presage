@@ -72,23 +72,21 @@
                   <li><a><i class="far fa-newspaper"></i> Actualités <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form_validation.html">Liste des Actualités</a></li>
-                      <li><a href="form.html">Ajout d'une Actualité</a></li>
-                      <li><a href="form_advanced.html">supprésion d'une Actualité</a></li>
+                      <li><a href="{{ path ('ajoutActualite') }}">Ajout Actualité</a></li>
                       <li><a href="form_validation.html">Mettre en avant une actualité</a></li>
                     </ul>
                   </li>
                   <li><a><i class="far fa-calendar"></i> Evenements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">Liste des Evenements</a></li>
-                      <li><a href="media_gallery.html">Ajout d'un Evenement</a></li>
-                      <li><a href="typography.html">Suppresion Evenement</a></li>
+                      <li><a href="{{ path ('ajoutEvenement') }}" >Ajout Evenements</a></li>
                       <li><a href="icons.html">Mettre en avant un Evenement</a></li>
                      </ul>
                   </li>
                   <li><a><i class="fas fa-user-tie"></i> Ajout Administrateur <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ path ('admin_user') }}" >liste administrateur</a></li>
-                       <li><a href="tables.html">Ajout administrateur</a></li>
+                      <li><a href="{{ path ('admin_user') }}" >Ajout administrateur</a></li>
+                       <li><a href="tables.html">Liste administrateur</a></li>
                       
                     </ul>
                   </li>
@@ -166,16 +164,18 @@
               </div>
             </div>
              {% block body %}{% endblock %}
+         
+             
           </div>
         </div>
         <!-- /page content -->
 
         <!-- footer content -->
         <footer>
-        <div class="pull-right">
-          Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-        </div>
-        <div class="clearfix"></div>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
     </div>
