@@ -19,11 +19,26 @@ class EvenementController extends AbstractController
 
     /**
      * @Route("/evenement", name="evenement")
+
      */
-    public function afficherActualité(EvenementRepository $repository){
+    public function afficherEvenements(EvenementRepository $repository){
 
         $evenementArray = $repository->findAll();
         return $this->render('evenement/listeEvenement.html.twig', [
+            'controller_name' => 'ActualiteController',
+            'evenement' => $evenementArray,
+        ]);
+
+    }
+
+    /**
+     * @Route("/admin/Evenements", name="evenementAdmin")
+
+     */
+    public function afficherEvenementsAdmin(EvenementRepository $repository){
+
+        $evenementArray = $repository->findAll();
+        return $this->render('evenement/listEvenementsAdmin.html.twig', [
             'controller_name' => 'ActualiteController',
             'evenement' => $evenementArray,
         ]);
@@ -48,7 +63,7 @@ class EvenementController extends AbstractController
             ->add('contenu', TextareaType::class)
             ->add('localisation', textType::class)
             ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
-            ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
+            ->add('save', SubmitType::class, array('label' => "Inserer un Evenement "))
             ->getForm();
 
             $form->handleRequest($request);
@@ -62,7 +77,7 @@ class EvenementController extends AbstractController
                     $manager->persist( $evenement );
                     $manager->flush();
         
-                return $this->redirectToRoute('evenement');
+                return $this->redirectToRoute('evenementAdmin');
             }
 
         return $this->render('evenement/ajoutEvenements.html.twig', array(
@@ -76,6 +91,6 @@ class EvenementController extends AbstractController
     public function deleteEvenement(Evenement $evenement, ObjectManager $manager){
         $manager -> remove ($evenement);
         $manager->flush();
-        return $this->redirectToRoute('accueil');
+        return $this->redirectToRoute('evenementAdmin');
 }
 }

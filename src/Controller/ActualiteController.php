@@ -20,7 +20,8 @@ class ActualiteController extends AbstractController
    
 
      /**
-     * @Route("/actualite", name="actualite")
+     * @Route("/actualite", name="listeactualite")
+     * 
      */
     public function afficherActualité(ActualiteRepository $repository){
 
@@ -29,14 +30,24 @@ class ActualiteController extends AbstractController
             'controller_name' => 'ActualiteController',
             'actualite' => $actualiteArray,
         ]);
+    }
+     /**
+     * @Route("/admin/actualiteadmin", name="listeactualiteadmin")
+     */
+    public function afficherActualitéAdmin(ActualiteRepository $repository){
 
+        $actualiteArray = $repository->findAll();
+        return $this->render('actualite/listeActualitesAdmin.html.twig', [
+            'controller_name' => 'ActualiteController',
+            'actualite' => $actualiteArray,
+        ]);
     }
 
      /**
      * @Route("/accueil", name="accueil")
      */
     public function acutaliteMiseEnAvant(ActualiteRepository $repository, EvenementRepository $evenementRepository){
-        $idActu=1;
+        $idActu=5;
         $idEvent=null;
         if($idActu == null){
             $evenementAvantArray = $evenementRepository->findOneById($idEvent);
@@ -84,7 +95,7 @@ class ActualiteController extends AbstractController
                     $manager->persist( $actualite );
                     $manager->flush();
         
-                return $this->redirectToRoute('actualite');
+                return $this->redirectToRoute('admin_interface');
             }
 
         return $this->render('actualite/ajoutActualites.html.twig', array(
@@ -99,7 +110,7 @@ class ActualiteController extends AbstractController
 public function deleteActualite(Actualite $actualite, ObjectManager $manager){
         $manager -> remove ($actualite);
         $manager->flush();
-        return $this->redirectToRoute('accueil');
+        return $this->redirectToRoute('listeactualiteadmin');
 }
 
 

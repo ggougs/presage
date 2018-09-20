@@ -1,9 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin_user/index.html.twig' %}
 
+{% block pageTitle %}Ajout Actualité{% endblock %}
 
 {% block body %}
-<h1> Ajout d'une Actualité</h1>
-
 {{ form_start(form) }}
 
 {{ form_widget(form) }}

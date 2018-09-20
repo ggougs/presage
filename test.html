@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -16,21 +17,24 @@
 
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Interface Administrateur  </title>
- {% block stylesheets %}{% endblock %}
-    <!-- Bootstrap -->
-    <link href="{{ asset("vendors/bootstrap/dist/css/bootstrap.min.css") }}" rel="stylesheet">
+    <title>ADMINISTRATEUR INTERFACE  </title>
+      <!-- Bootstrap -->
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{ asset("vendors/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet">
-
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	
     <!-- bootstrap-progressbar -->
-   <link href="{{ asset("vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css") }}" rel="stylesheet">
+   <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
   
     <!-- bootstrap-daterangepicker -->
-    <link href="{{ asset("vendors/bootstrap-daterangepicker/daterangepicker.css") }}" rel="stylesheet">
+    <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="{{ asset("css/custom.min.css") }}" rel="stylesheet">
+    <link href="/css/custom.min.css" rel="stylesheet">
    
   </head>
 
@@ -40,7 +44,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="{{ path ('admin_interface') }}"class="site_title"><i class="fas fa-lock-open"></i> <span>Administrateur</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Administrateur</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -48,15 +52,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-
-              {# PHOTO DE PROFIL #}
-                <img src= "{{asset('img/logopresage-yellow.png')}}" alt="..." class="img-circle profile_img"> 
-
-                
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bienvenue</span>
-                {# <h2>{{app.user.avatar}}</h2> #}
+                <h2>John Doe</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -71,22 +71,24 @@
                  
                   <li><a><i class="far fa-newspaper"></i> Actualités <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ path('listeactualiteadmin')}}">Liste des Actualités</a></li>
-                      <li><a href="{{ path ('ajoutActualite') }}">Ajout Actualité</a></li>
+                      <li><a href="form_validation.html">Liste des Actualités</a></li>
+                      <li><a href="form.html">Ajout d'une Actualité</a></li>
+                      <li><a href="form_advanced.html">supprésion d'une Actualité</a></li>
                       <li><a href="form_validation.html">Mettre en avant une actualité</a></li>
                     </ul>
                   </li>
                   <li><a><i class="far fa-calendar"></i> Evenements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ path ('evenementAdmin') }}">Liste des Evenements</a></li>
-                      <li><a href="{{ path ('ajoutEvenement') }}" >Ajout Evenements</a></li>
+                      <li><a href="general_elements.html">Liste des Evenements</a></li>
+                      <li><a href="media_gallery.html">Ajout d'un Evenement</a></li>
+                      <li><a href="typography.html">Suppresion Evenement</a></li>
                       <li><a href="icons.html">Mettre en avant un Evenement</a></li>
                      </ul>
                   </li>
                   <li><a><i class="fas fa-user-tie"></i> Ajout Administrateur <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ path ('admin_user') }}" >Ajout administrateur</a></li>
-                       <li><a href="{{ path ('afficheAdmin') }}">Liste administrateur</a></li>
+                      <li><a href="/admin/user/ajout" >liste administrateur</a></li>
+                       <li><a href="tables.html">Ajout administrateur</a></li>
                       
                     </ul>
                   </li>
@@ -129,14 +131,19 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">{{app.user.nom}}
+                    <img src="images/img.jpg" alt="">John Doe
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profil</a></li>
-                    
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
                     <li><a href="javascript:;">Aide</a></li>
-                    <li><a href="{{ path('logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
                       </div>
@@ -155,49 +162,50 @@
           <div class="row">
             <div class="page-title">
               <div class="title_left">
-                <h3> {% block pageTitle %}{% endblock %}</h3>
+                <h3> Ajout utilisateurs</h3>
               </div>
             </div>
-             {% block body %}{% endblock %}
-         
-             
+             <form name="form" method="post">
+
+<div id="form"><div class="form-group"><label for="form_nom" class="required">Nom</label><input type="text" id="form_nom" name="form[nom]" required="required" class="form-control" /></div><div class="form-group"><label for="form_password_first" class="required">Password</label><input type="password" id="form_password_first" name="form[password][first]" required="required" class="password-field form-control" /></div><div class="form-group"><label for="form_password_second" class="required">confirmer Password</label><input type="password" id="form_password_second" name="form[password][second]" required="required" class="password-field form-control" /></div><div class="form-group"><button type="submit" id="form_save" name="form[save]" class="btn-secondary btn">creer un compte admin</button></div><input type="hidden" id="form__token" name="form[_token]" value="mlqv35B6YktOnkncp9tkOtqd0ylR6D0Qnkjv8DGf8Ow" /></div>
+</form>
+
           </div>
         </div>
         <!-- /page content -->
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
+        <div class="pull-right">
+          Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
     </div>
   </div>
 
     <!-- jQuery -->
-    <script src="{{ asset("vendors/jquery/dist/jquery.min.js") }}"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="{{ asset("vendors/bootstrap/dist/js/bootstrap.min.js") }}"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- FastClick -->
-    <script src="{{ asset("vendors/fastclick/lib/fastclick.js") }}"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
 
     <!-- bootstrap-progressbar -->
-    <script src="{{ asset("vendors/bootstrap-progressbar/bootstrap-progressbar.min.js") }}"></script>
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 
     <!-- Skycons -->
-    <script src="{{ asset("vendors/skycons/skycons.js") }}"></script>
+    <script src="/vendors/skycons/skycons.js"></script>
     
     <!-- DateJS -->
-    <script src="{{ asset("vendors/DateJS/build/date.js") }}"></script>
+    <script src="/vendors/DateJS/build/date.js"></script>
     
   
     <!-- Custom Theme Scripts -->
-    <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script src="/js/custom.min.js"></script>
   
-	
-  </body>
+
 </html>

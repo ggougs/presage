@@ -1,0 +1,30 @@
+{% extends 'admin_user/index.html.twig' %}
+
+{% block pageTitle %}Liste des evenements{% endblock %}
+
+
+{% block body %}
+
+
+<table class="table table-hover">
+    <tr>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>Image</th>
+        <th></th>
+    </tr>
+{% for event in evenement %}
+     <tr>
+       <td> {{ event.titre }}</td>
+       <td>{{ event.contenu }}</td>
+        <td><img style="width:150px; height=350px;" src="{{asset('uploads/image/'~event.image ) }}"> </td> 
+        <td><a href= {{ path('deleteEvenement', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cet evenement ?');">supprimer un evenement</a></td> 
+    </tr>
+
+
+    {% endfor %}
+</table>   
+
+
+
+{% endblock %}

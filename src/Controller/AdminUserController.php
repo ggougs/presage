@@ -31,6 +31,22 @@ class AdminUserController extends AbstractController
     }
 
     /**
+     * @Route("/admin/user/affiche", name="afficheAdmin")
+
+     */
+    public function afficheradmin(AdminUserRepository $repository){
+
+        $adminArray = $repository->findAll();
+        return $this->render('admin_user/listAdmin.html.twig', [
+            'controller_name' => 'AdminUserController',
+            'admins' => $adminArray,
+        ]);
+
+    }
+
+    
+
+    /**
      * @Route("admin/user/ajout", name="admin_user")
      */
 
@@ -74,4 +90,13 @@ class AdminUserController extends AbstractController
             ));
         }
     }       
+/**
+     * @Route("/admin/user/delete/{id}", name="deleteAdmin",requirements={"id"="\d+"})
+     */
+
+    public function deleteadmin(AdminUser $adminUser, ObjectManager $manager){
+        $manager -> remove ($adminUser);
+        $manager->flush();
+        return $this->redirectToRoute('afficheAdmin');
+    }
 }
