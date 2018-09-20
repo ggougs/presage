@@ -6,34 +6,24 @@
 {% block body %}
   
 
-    <div class="container">
-    {% for event in evenement %}
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="serviceBox">
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h3 class="title">{{ event.titre }}</h3>
-                        <p class="description">
-                            {{ event.contenu }}
-                        </p>
-                    </div>
-                    <a class="read-more" href="">Afficher Plus</a>
-                </div>
-            </div>
-        </div>
+<table>
+    <tr>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>Image</th>
+    </tr>
+{% for event in evenement %}
+     <tr>
+       <td> {{ event.titre }}</td>
+       <td>{{ event.contenu }}</td>
+       {# <td><img style="width:150px;height=150px;" src="{{asset('uploads/image/'~event.image ) }}"</td> #}
+      {#  <td><a href= {{ path('deleteActu', {'id':actua.id}) }}>supprimer une Actualité</a></td> #}
+    </tr>
+</table>   
 
-        <div class="contenu popup">
-                <h3 class="popupTitle">{{ event.titre }}</h3>
-                <p class="popupDescription">
-                                {{ event.contenu }}
-                            </p>
-                <img class="popupImage" src="{{ asset('img/'~event.image)}}">
-            <p><a class="close" href=/>Fermer la fenêtre</a></p>
-        </div>
     {% endfor %}
-    </div>
+
+
+
 
 {% endblock %}
