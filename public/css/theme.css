@@ -28,11 +28,55 @@ body{
     color:#ffff77;
 }
 
+.navbar-dark .navbar-nav .nav-link:focus
+{
+    color: rgb(224, 224, 149);
+}
+
+
+.dropdown-menu.show {
+
+    top: 50px;
+}
+
 
 ul.dropdown-menu.show {
+    
+    position: relative;
+    background-color: rgb(224, 224, 149);
+    box-shadow: 2px 1px 8px 0px darkslategrey;
+    margin: 0;
+    padding: 0;
+    
+}
+
+ul.dropdown-menu.show:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent rgb(224, 224, 149) transparent;
+    top: -9px;
+    left: 20px;
+}
+
+a.dropdown-item {
+    padding: 0.5rem 2rem;
+}
+
+ul.dropdown-item {
+    min-height: 150px;
+}
+
+ul.dropdown-item:hover{
     background-color: rgb(224, 224, 149);
     box-shadow: 1px 1px 5px black;
 }
+
+
 
 a.navbar-brand img {
     height: 65px;
