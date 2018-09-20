@@ -1,26 +1,21 @@
 
 {% extends 'base.html.twig' %}
 
- {% block stylesheets %}
+        {% block stylesheets %}
         <link href="{{ asset('css/accueilStyle.css') }}" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        {% endblock %}
+        {% block javascripts %}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            <script src="{{ asset('js/accueil.js') }}"></script>
+        {% endblock %}
 
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-            crossorigin="anonymous">
-        </script>
-        <script src="{{ asset('js/accueil.js') }}"></script>
-{% endblock %}
-
-
-
-
-
-    {% block body %}
-   
-  
+{% block body %}
     <div id="background">
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
     </div>
@@ -55,5 +50,4 @@
         <i class="fas fa-chevron-circle-right"></i>
         </div>
     </div>
-
 {% endblock %}

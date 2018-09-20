@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block body %}
 
-<head>
         {% block stylesheets %}
         <link href="{{ asset('css/actualiteStyle.css') }}" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -15,9 +13,8 @@
             </script>
             <script src="{{ asset('js/actualite.js') }}"></script>
         {% endblock %}
-</head>
 
-<body>
+{% block body %}
 <h1 id="titre">Nos Actualités</h1>
 
     <div class="container">
@@ -49,12 +46,6 @@
         </div>
     {% endfor %}
     </div>
-
-</body>
-
-
-
-
 {% endblock %}
 
 
