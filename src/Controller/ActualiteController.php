@@ -20,12 +20,24 @@ class ActualiteController extends AbstractController
    
 
      /**
-     * @Route("/actualite/{id}", name="listeactualite")
+     * @Route("/actualite", name="listeactualite")
+     * 
      */
     public function afficherActualité(ActualiteRepository $repository){
 
         $actualiteArray = $repository->findAll();
         return $this->render('actualite/index.html.twig', [
+            'controller_name' => 'ActualiteController',
+            'actualite' => $actualiteArray,
+        ]);
+    }
+     /**
+     * @Route("/admin/actualiteadmin", name="listeactualiteadmin")
+     */
+    public function afficherActualitéAdmin(ActualiteRepository $repository){
+
+        $actualiteArray = $repository->findAll();
+        return $this->render('actualite/listeActualites.html.twig', [
             'controller_name' => 'ActualiteController',
             'actualite' => $actualiteArray,
         ]);
@@ -83,7 +95,7 @@ class ActualiteController extends AbstractController
                     $manager->persist( $actualite );
                     $manager->flush();
         
-                return $this->redirectToRoute('actualite');
+                return $this->redirectToRoute('admin_interface');
             }
 
         return $this->render('actualite/ajoutActualites.html.twig', array(
@@ -98,7 +110,7 @@ class ActualiteController extends AbstractController
 public function deleteActualite(Actualite $actualite, ObjectManager $manager){
         $manager -> remove ($actualite);
         $manager->flush();
-        return $this->redirectToRoute('accueil');
+        return $this->redirectToRoute('admin_interface');
 }
 
 

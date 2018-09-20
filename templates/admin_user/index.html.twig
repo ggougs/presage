@@ -16,8 +16,13 @@
 
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
+<<<<<<< HEAD
     <title>Interface Administrateur  </title>
  {% block stylesheets %}{% endblock %}
+=======
+    <title>ADMINISTRATEUR INTERFACE  </title>
+ {% block stylesheets %} {% endblock %}
+>>>>>>> 1b1c7a69dc3211f1f1740230535fd8524669150a
     <!-- Bootstrap -->
     <link href="{{ asset("vendors/bootstrap/dist/css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Font Awesome -->
@@ -71,7 +76,7 @@
                  
                   <li><a><i class="far fa-newspaper"></i> Actualités <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form_validation.html">Liste des Actualités</a></li>
+                      <li><a href="{{ path('listeactualiteadmin')}}">Liste des Actualités</a></li>
                       <li><a href="{{ path ('ajoutActualite') }}">Ajout Actualité</a></li>
                       <li><a href="form_validation.html">Mettre en avant une actualité</a></li>
                     </ul>
