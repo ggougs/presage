@@ -38,7 +38,7 @@ class EvenementController extends AbstractController
     public function afficherEvenementsAdmin(EvenementRepository $repository){
 
         $evenementArray = $repository->findAll();
-        return $this->render('admin_user/listEvenementsAdmin.html.twig', [
+        return $this->render('evenement/listEvenementsAdmin.html.twig', [
             'controller_name' => 'ActualiteController',
             'evenement' => $evenementArray,
         ]);
@@ -91,6 +91,6 @@ class EvenementController extends AbstractController
     public function deleteEvenement(Evenement $evenement, ObjectManager $manager){
         $manager -> remove ($evenement);
         $manager->flush();
-        return $this->redirectToRoute('accueil');
+        return $this->redirectToRoute('evenementAdmin');
 }
 }
