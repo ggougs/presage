@@ -20,7 +20,7 @@ class ActualiteController extends AbstractController
    
 
      /**
-     * @Route("/actualite", name="actualite")
+     * @Route("/actualite/{id}", name="listeactualite")
      */
     public function afficherActualité(ActualiteRepository $repository){
 
@@ -29,7 +29,6 @@ class ActualiteController extends AbstractController
             'controller_name' => 'ActualiteController',
             'actualite' => $actualiteArray,
         ]);
-
     }
 
      /**

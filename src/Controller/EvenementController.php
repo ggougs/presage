@@ -48,7 +48,7 @@ class EvenementController extends AbstractController
             ->add('contenu', TextareaType::class)
             ->add('localisation', textType::class)
             ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
-            ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
+            ->add('save', SubmitType::class, array('label' => "Inserer un Evenement "))
             ->getForm();
 
             $form->handleRequest($request);
