@@ -5,8 +5,9 @@
     <table class="table table-hover">
   <thead>
   <tr>
+  <th>avatar</th>
      <th>nom</th>
-     <th>password</th>
+     
      <th></th>
  </tr>
    {% for admin in admins %}
@@ -15,8 +16,9 @@
       
 
     <tr>
-       <td> {{ admin.nom }}</td>
-       <td>{{ admin.password }}</td>
+      
+       <td> </td>
+        <td> {{ admin.nom }}</td>
        <td><a  href= {{ path('deleteAdmin', {'id':admin.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer ce compte ?');">supprimer ce compte</a></td>
     </tr>
        

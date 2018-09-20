@@ -18,7 +18,7 @@
        <td> {{ event.titre }}</td>
        <td>{{ event.contenu }}</td>
         <td><img style="width:150px; height=350px;" src="{{asset('uploads/image/'~event.image ) }}"> </td> 
-        <td><a href= {{ path('deleteEvenement', {'id':event.id}) }}>supprimer un evenement</a></td> 
+        <td><a href= {{ path('deleteEvenement', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cet evenement ?');">supprimer un evenement</a></td> 
     </tr>
 
 

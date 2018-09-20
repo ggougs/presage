@@ -21,7 +21,7 @@
        <td> {{ actua.titre }}</td>
        <td>{{ actua.contenu }}</td>
        <td><img style="width:150px;height=150px;" src="{{asset('uploads/image/'~actua.image ) }}"</td>
-       <td><a href= {{ path('deleteActu', {'id':actua.id}) }}>supprimer cette Actualité</a></td>
+       <td><a href= {{ path('deleteActu', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cette actualité ?');">supprimer cette Actualité</a></td>
     </tr>
        
        
