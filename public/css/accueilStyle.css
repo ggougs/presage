@@ -9,8 +9,9 @@
 #logo{
     height: 500px; 
     width: 600px; 
-     margin-left: 8%;
+    margin-left: 2%;
     margin-top: 2%;  
+    opacity: 0.9;
 }
 
 .demo{ background: #e2e2e2; }
