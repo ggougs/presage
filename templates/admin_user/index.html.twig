@@ -40,7 +40,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="{{ path ('admin_interface') }}"class="site_title"><i class="fas fa-lock-open"></i> <span>Administrateur</span></a>
+            <img src="{{ asset('img/logopresage-yellow.png') }}" style="width:55px;height=55px;" alt="logo">  <a href="{{ path ('admin_interface') }}"class="site_title"> <span>Administrateur</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -48,15 +48,16 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-
-              {# PHOTO DE PROFIL #}
-                <img src= "{{asset('img/logopresage-yellow.png')}}" alt="..." class="img-circle profile_img"> 
+{# 
+              PHOTO DE PROFIL #}
+                {# <img src= "{{asset('app.user.avatar')}}" alt="avatar" >  #}
 
                 
               </div>
               <div class="profile_info">
                 <span>Bienvenue</span>
-                {# <h2>{{app.user.avatar}}</h2> #}
+                <h2>{{app.user.nom}}</h2>
+                
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -85,7 +86,7 @@
                   </li>
                   <li><a><i class="fas fa-user-tie"></i> Ajout Administrateur <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ path ('admin_user') }}" >Ajout administrateur</a></li>
+                      <li><a href="{{ path ('ajoutAdmin') }}" >Ajout administrateur</a></li>
                        <li><a href="{{ path ('afficheAdmin') }}">Liste administrateur</a></li>
                       
                     </ul>
@@ -133,8 +134,8 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profil</a></li>
-                    
+                    <li><a href="{{ path('editAdmin', {'id':app.user.id}) }}">Profil</a></li>
+                  
                     <li><a href="javascript:;">Aide</a></li>
                     <li><a href="{{ path('logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
