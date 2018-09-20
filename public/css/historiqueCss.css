@@ -62,14 +62,16 @@ body {
 .tl-item:hover .tl-bg {
   filter: grayscale(0);
 }
-
+.tl-item:hover .tl-year{
+display: none; 
+}
 .tl-content {
   transform: translate3d(0, 0, 0) translateY(25px);
   position: relative;
   z-index: 1;
   text-align: center;
   margin: 0 1.618em;
-  top: 55%;
+  top: 10%;
   opacity: 0;
 }
 .tl-content h1 {

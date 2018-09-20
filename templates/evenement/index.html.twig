@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-    {% block body %}
-    <head>
+ 
+    
         {% block stylesheets %}
         <link href="{{ asset('css/accueilStyle.css') }}" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -15,8 +15,8 @@
             </script>
             <script src="{{ asset('js/accueil.js') }}"></script>
         {% endblock %}
-    </head>
-    <body>
+ 
+   {% block body %}
     <div id="background">
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
     </div>
@@ -51,8 +51,4 @@
        <i class="fas fa-chevron-circle-right"></i>
     </div>
 
-
-
-        
-    </body>
 {% endblock %}

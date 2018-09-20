@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<head>
+
+
         {% block stylesheets %}
         {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/organigramme.less') }}">#}
         <link rel="stylesheet" type="text/css" href="{{ asset('css/historiqueCss.css') }}" /> 
@@ -18,8 +18,8 @@
              {# <script src="{{ asset('js/historique.js') }}"></script> #}
             {# <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>  #}
         {% endblock %}
-</head>
-<body>
+{% block body %}
+
 <section id="timeline">
   <div class="tl-item">
     <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="tl-item">
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+    <div class="tl-bg" style="background-image: url({{asset('img/historique/prototype.jpg')}})"></div>
     <div class="tl-year">
       <p class="f2 heading--sanSerif">2014</p>
     </div>
@@ -64,7 +64,7 @@
     </div>
   </div>
   <div class="tl-item">
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
+    <div class="tl-bg" style="background-image: url({{asset('img/historique/nourrice.jpg')}})"></div>
     <div class="tl-year">
       <p class="f2 heading--sanSerif">2015</p>
     </div>
@@ -82,7 +82,7 @@
     </div>
   </div>
   <div class="tl-item">
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+    <div class="tl-bg" style="background-image: url({{asset('img/historique/crowfunding.jpg')}})"></div>
     <div class="tl-year">
       <p class="f2 heading--sanSerif">2015</p>
     </div>
@@ -93,7 +93,7 @@
     </div>
   </div>
   <div class="tl-item">
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+    <div class="tl-bg" style="background-image: url({{asset('img/historique/xp1.jpg')}})"></div>
     <div class="tl-year">
       <p class="f2 heading--sanSerif">2016</p>
     </div>
@@ -106,7 +106,7 @@
   </div>
   </div>
     <div class="tl-item">
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+    <div class="tl-bg" style="background-image: url({{asset('img/historique/xp2.jpg')}})"></div>
     <div class="tl-year">
       <p class="f2 heading--sanSerif">2017</p>
     </div>
@@ -121,5 +121,5 @@
 </section>
 
 
-</body>
+
 {% endblock %}
