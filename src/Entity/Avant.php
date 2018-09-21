@@ -3,12 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ActualiteRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\AvantRepository")
  */
-class Actualite
+class Avant
 {
     /**
      * @ORM\Id()
@@ -16,6 +15,11 @@ class Actualite
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $IdMisEnAvant;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -28,19 +32,25 @@ class Actualite
     private $contenu;
 
     /**
-     * @Assert\File(mimeTypes={ "image/png" ,"image/jpg","image/jpeg" })
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $ActuMisEnAvant;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getIdMisEnAvant(): ?int
+    {
+        return $this->IdMisEnAvant;
+    }
+
+    public function setIdMisEnAvant(int $IdMisEnAvant): self
+    {
+        $this->IdMisEnAvant = $IdMisEnAvant;
+
+        return $this;
     }
 
     public function getTitre(): ?string
@@ -72,21 +82,9 @@ class Actualite
         return $this->image;
     }
 
-    public function setImage(?string $image): self
+    public function setImage(string $image): self
     {
         $this->image = $image;
-
-        return $this;
-    }
-
-    public function getActuMisEnAvant(): ?string
-    {
-        return $this->ActuMisEnAvant;
-    }
-
-    public function setActuMisEnAvant(?string $ActuMisEnAvant): self
-    {
-        $this->ActuMisEnAvant = $ActuMisEnAvant;
 
         return $this;
     }

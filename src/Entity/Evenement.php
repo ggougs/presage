@@ -39,6 +39,11 @@ class Evenement
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $EvenementMisEnAvant;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -88,6 +93,18 @@ class Evenement
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getEvenementMisEnAvant(): ?string
+    {
+        return $this->EvenementMisEnAvant;
+    }
+
+    public function setEvenementMisEnAvant(?string $EvenementMisEnAvant): self
+    {
+        $this->EvenementMisEnAvant = $EvenementMisEnAvant;
 
         return $this;
     }

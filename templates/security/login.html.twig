@@ -2,41 +2,39 @@
 
 
 
- {% block stylesheets %}
- <head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% block stylesheets %}
 <link href="{{ asset('css/login.css') }}" rel="stylesheet"> 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 {% endblock %}
-{% block body %}
-  <main role="main" class="container form">       
-            {% if error %}
-                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
-<div class="custom_body">
-    
-    	<div class="row">
-    	    
-    	    <div class="login_box">
-    	        <section class="main-box">
-        	        <form action="{{ path('login') }}" method="post">
-        	        <div class="input-box">
-            	        <span class="input-group-addon i_icon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input  type="text" class="form-control input_layout"id="username" name="_username" value="{{ last_username }}" />
+
+ 
+ {% block body %}
+  {% if error %}
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>  {% endif %}
+ <main role="main" class="container form" >
+            <div class="wrapper">
+                <form action="" method="post" name="Login_Form" class="form-signin"> 
+                     <div class="row text-center bol"></div>
+                    <h3 class="form-signin-heading text-center">
+                        <img src="http://codigocomcafe.com.br/demo/form/image/logo.png" alt=""/>
+                    </h3>
+                    <hr class="spartan">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon1">
+                            <i class="fa fa-user"></i>
+                        </span>
+                       <input type="text" class="form-control" id="username" placeholder="Username" name="_username" value="{{ last_username }}"/>
                     </div>
-                    <div class="input-box">
-            	         <span class="input-group-addon i_icon"><i class="glyphicon glyphicon-lock"></i></span>
-                         <input  type="password" class="form-control input_layout" id="password" name="_password" />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon1">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                       <input type="password" class="form-control" id="password" name="_password" />         	  
                     </div>
-                    </form>
-                    <button type="button" class="btn btn-default btn_style">LOGIN</button>
-                </section>    
-    	    </div>
-    	    
-    
-    </div>
-</div>    
+                    <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Entrar" type="Submit">Valider</button>  			
+                </form>			
+            </div>
 </main>
 {% endblock %}
