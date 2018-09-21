@@ -2,11 +2,13 @@
 
 
 {% block body %}
-<h1> formulaire contact</h1>
 
-{{ form_start(form) }}
+<div class="container form_contact">
+    <h1> formulaire contact</h1>
 
-{{ form_widget(form) }}
-{{ form_end(form) }}
+    {{ form_start(form) }}
 
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</div>
 {% endblock %}

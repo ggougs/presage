@@ -131,7 +131,7 @@ display: none;
   }
   #timeline:hover .tl-item {
     width: 150%;
-    height: auto;
+    height: 100%;
   }
   /* .tl-item:hover:after {
     height: ;

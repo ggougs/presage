@@ -1,31 +1,29 @@
-document.addEventListener("DOMContentLoaded", function(){
-console.log("tutu"); 
+$(function() {
+    $('.material-card > .mc-btn-action').click(function () {
+        var card = $(this).parent('.material-card');
+        var icon = $(this).children('i');
+        icon.addClass('fa-spin-fast');
 
-    //Fonction appelée lorsque l'on clique sur le lien Afficher la fenêtre
-    $('.read-more').on('click', function(){
-            if($('.serviceBox').hasClass('selected') || $('.contenu').hasClass('selected') || $('#background').hasClass('selected') ){
-        deselect($('.serviceBox')); 
-        deselect($('.contenu')); 
-        deselect($('#background')); 
-     
-        }else{
-            $('.serviceBox').addClass('selected');  
-            $('.contenu').addClass('selected'); 
-            $('#background').addClass('selected'); 
-               
-            }
-    return false;
-    });
-    //Fonction appelée lorsque l'on clique sur le lien Fermer la fenêtre
-    $('.close').on('click', function(){
-        deselect($('.serviceBox')); 
-        deselect($('.contenu')); 
-        deselect($('#background')); 
-        
-    return false;
-    });
+        if (card.hasClass('mc-active')) {
+            card.removeClass('mc-active');
 
-   function deselect(e) {
-    e.removeClass('selected');
-   }
-}); 
+            window.setTimeout(function() {
+                icon
+                    .removeClass('fa-arrow-left')
+                    .removeClass('fa-spin-fast')
+                    .addClass('fa-bars');
+
+            }, 800);
+        } else {
+            card.addClass('mc-active');
+
+            window.setTimeout(function() {
+                icon
+                    .removeClass('fa-bars')
+                    .removeClass('fa-spin-fast')
+                    .addClass('fa-arrow-left');
+
+            }, 800);
+        }
+    });
+});
