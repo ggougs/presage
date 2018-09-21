@@ -19,12 +19,12 @@
 
 {% block body %}
 <main role="main" >
-    <div id="background">
+    
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
-    </div>
+   
     <section class="container">
-    <div class="row active-with-click">
-        <div class="col-md-4 col-sm-6 col-xs-12">
+    {# <div class="row active-with-click"> #}
+        <div class=" col-xs-12">
             <article class="material-card Green">
                 <h2>
                     <span>{{ actuAvant.titre }}</span>
@@ -54,7 +54,7 @@
                 </div>
             </article>
         </div>     
-    </div>
+    {# </div> #}
 </section>
 </main>
 {% endblock %}
