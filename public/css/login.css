@@ -1,46 +1,56 @@
-/* =====Login=====*/
-body[role="login"] {
-    font-family: 'Roboto', sans-serif;
-	
-	
-	color: #EFEFEF
+.custom_body {
+    background: linear-gradient(135deg, rgba(72, 214, 36, 0.98) 0%, rgba(56, 99, 255, 1) 107%, rgba(26, 35, 147, 1) 122%, rgba(111, 237, 46, 1) 100%);
+    float: left;
+    width: 100%;
 }
-[role="login"] .container {
-	margin-top: 100px
+.login_box {
+    margin:0 auto;
+    max-width: 400px;
+    min-width: 320px;
+    width: 100%;
 }
-[role="login"] .btn-success {
-	background: #76B831;
-	border: 1px solid #679F2C;
-	float: right
+.input-box {
+    float: left;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
 }
-[role="login"] label {
-	font-weight: normal;
-	color: #FFF
+.i_icon {
+    border: medium none;
+    border-radius: 0;
+    color: #3965a0;
+    float: left;
+    padding: 12px;
+    top: 32px;
+    width: 40px;
 }
-.panel-heading {
-	padding: 5px 15px;
+.input_layout {
+    border: medium none;
+    border-radius: 0;
+    float: left;
+    height: 40px;
+    margin: 0;
+    padding: 0 10px;
+    width: 89%;
 }
-.form-inline {
-	margin: 5px
+.main-box {
+    background: rgba(255, 251, 251, 0.41) none repeat scroll 0 0;
+    float: left;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding: 50px 15px;
+    width: 100%;
+    border: 1px solid #fff;
 }
-.panel-footer {
-	padding: 1px 15px;
-	color: #A0A0A0;
+.btn_style {
+    background-color:  rgba(57, 101, 160, 1);
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
 }
-hr {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-	margin: 5px
+.btn_style:hover {
+    background-color: rgba(57, 101, 160, 1);
+    color: #ffffff;
 }
-.profile-img {
-	margin: 0 auto 10px;
-	display: block;
-}
-.panel-default {
-    opacity: .9;
-    -webkit-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45);
-    -moz-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45);
-    box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45);
-    background: transparent url('http://3rwebtech.com/bg-white.png') repeat scroll 0% 0%;
-}
+
