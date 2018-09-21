@@ -1,13 +1,14 @@
 body {
   font-family: "Source Sans Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.75;
-  
+  /* line-height: 1.75; */
+ 
 }
 
 #timeline {
   display: flex;
   background-color: #031625;
+  /* height: 80%; */
 }
 #timeline:hover .tl-item {
   width: 23.3333%;
