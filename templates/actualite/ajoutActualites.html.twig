@@ -3,9 +3,12 @@
 {% block pageTitle %}Ajout Actualité{% endblock %}
 
 {% block body %}
-{{ form_start(form) }}
+<main role="main" class="container">
 
-{{ form_widget(form) }}
-{{ form_end(form) }}
+<div class="container">
+    {{ form_start(form) }}
 
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</div>
 {% endblock %}

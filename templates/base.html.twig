@@ -16,9 +16,13 @@
     </head>
    
 <body>
+<<<<<<< HEAD
    <header>
+=======
+<header>
+>>>>>>> d4bfd5cc9073137f5a0d723f5dde84d66c665a8f
     <nav class="navbar navbar-expand-lg navbar-dark navbar-color fixed-top">
-      <a class="navbar-brand" href="#"><img src="{{ asset('img/logopresage-yellow.png')}}"></a>
+      <a class="navbar-brand" href="{{ path('accueil') }}"><img src="{{ asset('img/logopresage-yellow.png')}}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,25 +41,64 @@
           
             <a class="nav-link" href="#" type="button" data-toggle="dropdown">Le projet</a>
               <ul class="dropdown-menu">
-                <a class="dropdown-item" href="#">Notre équipe</a>    
-                <a class="dropdown-item" href="#">Technologies</a>      
-                <a class="dropdown-item" href="#">Ambitions</a>      
-                <a class="dropdown-item" href="#">Partenares</a>
+                <a class="dropdown-item" href="{{ path('organigramme') }}">Notre équipe</a>    
+                <a class="dropdown-item" href="">Technologies</a>      
+                <a class="dropdown-item" href="">Ambitions</a>      
+                <a class="dropdown-item" href="">Partenaires</a>
               </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Historique</a>
+            <a class="nav-link" href="{{ path('historique') }}">Historique</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
           </li>
         </ul>
+         {% block body %}{% endblock %}
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" placeholder="Search" type="text">
           <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
+     
       </div>
+      
     </nav>
+<<<<<<< HEAD
+=======
+
+   
+  
+      
+    
+        <footer class="page-footer navbar navbar-expand-lg footer-dark footer-color fixed-bottom">
+            <div class="footer-collapse" id="navbarColor01">
+                <ul class="navbar-nav footer mr-auto">
+                    <li class="dropdown linkfooter">
+                    <a class="nav-link" href="#" type="button" data-toggle="dropdown">Partenaires</a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Logos</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mentions légales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Réseaux</a>
+                </li>
+                </ul>
+            </div>
+            
+        </footer>
+
+    </body>  
+    
+    {% block javascripts %}{% endblock %}
+
+    </header>
+        {% block body %}{% endblock %}
+      
+
+>>>>>>> d4bfd5cc9073137f5a0d723f5dde84d66c665a8f
   </header>
   <main>
     {% block body %}{% endblock %}

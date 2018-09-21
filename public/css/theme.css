@@ -7,9 +7,14 @@ html [type="button"]{
     -webkit-appearance: none;
 }
 
-.container.form_contact {
+.form_contact {
     position: relative;
-    top: 8rem;
+    top: 7.5rem;
+}
+
+#form{
+    position: relative;
+  
 }
 
 .navbar
@@ -87,11 +92,6 @@ a.navbar-brand img {
 }
 
 
-@media screen and (max-width: 1000px) {
-    .form-inline .mt-2 .mb-2, .my-2{
-        display: none;
-    }
-}
 
 footer {
     position: absolute;
@@ -125,4 +125,13 @@ footer {
 
 
 
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 1000px) {
+    .form-inline .mt-2 .mb-2, .my-2{
+        display: none;
+    }
+}
+
+>>>>>>> d4bfd5cc9073137f5a0d723f5dde84d66c665a8f
 

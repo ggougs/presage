@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -63,13 +64,13 @@ class AdminUserController extends AbstractController
     public function addAdminUser(AdminUser $adminUser=null,Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder,FileUploader $fileUploader)
     {
 
-        if(is_null($adminUser)) {
-        
+        if(is_null($adminUser))
             $adminUser = new AdminUser();
 
         $form = $this->createFormBuilder($adminUser)
         
             ->add('nom', TextType::class)
+            ->add('email', EmailType::class)
             ->add('avatar', FileType::class, array('label' => 'avatar (png file)','data_class' => null))
             ->add('password', RepeatedType::class, array(
                 'type' => PasswordType::class,
@@ -79,6 +80,7 @@ class AdminUserController extends AbstractController
                 'first_options'  => array('label' => 'Password'),
                 'second_options' => array('label' => 'confirmer Password'),
             ))
+            ->add('email', TextType::class)
             ->add('save', SubmitType::class, array('label' => "Valider" ))
             
             ->getForm();
@@ -106,7 +108,7 @@ class AdminUserController extends AbstractController
                 
             ));
 
-        }
+        
         
     }       
     /**
