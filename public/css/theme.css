@@ -122,13 +122,19 @@ footer {
 
 
 
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 996px) {
     .form-inline .mt-2 .mb-2, .my-2{
         display: none;
     }
+
+    .navbar {
+        height: auto;
+    }
+
+    .page-footer.navbar.footer-dark {
+        display: none;
+    }
+
 }
 
->>>>>>> d4bfd5cc9073137f5a0d723f5dde84d66c665a8f
 
