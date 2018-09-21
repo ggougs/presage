@@ -1,55 +1,65 @@
 {% extends 'base.html.twig' %}
-{% block body %}
 
-<head>
+
+
         {% block stylesheets %}
-        <link href="{{ asset('css/actualiteStyle.css') }}" type="text/css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('cssevenementStyle.less') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet/less" type="text/css" href="{{ asset('css/evenementStyle.less') }}" />
+        
         {% endblock %}
         {% block javascripts %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
             <script
                 src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
                 crossorigin="anonymous">
             </script>
-            <script src="{{ asset('js/actualite.js') }}"></script>
+            <script src="{{ asset('js/evenement.js') }}"></script>
+             
         {% endblock %}
-</head>
-<body>
+
+{% block body %}
 <h1 id="titre">Nos Evenements</h1>
 
-    <div class="container">
+<section class="container">
+    <div class="row active-with-click">
     {% for actu in evenement %}
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="serviceBox">
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h3 class="title">{{ actu.titre }}</h3>
-                        <p class="description">
-                            {{ actu.contenu }}
-                        </p>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Green">
+                <h2>
+                    <span>{{ actu.titre }}</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Evenement
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{{ asset('img/'~actu.image)}}">
                     </div>
-                    <a class="read-more" href="">Afficher Plus</a>
+                    <div class="mc-description">
+                   {{ actu.contenu }}
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="contenu popup">
-                <h3 class="popupTitle">{{ actu.titre }}</h3>
-                <p class="popupDescription">
-                                {{ actu.contenu }}
-                            </p>
-                <img class="popupImage" src={{ asset('img/'~actu.image)}}>
-            <p><a class="close" href=/>Fermer la fenêtre</a></p>
-        </div>
-    {% endfor %}
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Partager
+                    </h4>
+                    <a class="fab fa-facebook-f"></a>
+                    <a class="fab fa-twitter"></a>
+                    <a class="fab fa-linkedin-in"></a>
+                </div>
+            </article>
+        </div>   
+         {% endfor %}   
     </div>
+</section>
 
     
-</body>
+
 
 {% endblock %}
