@@ -7,14 +7,11 @@ html [type="button"]{
     -webkit-appearance: none;
 }
 
-.form_contact {
+
+
+.form{
     position: relative;
     top: 7.5rem;
-}
-
-#form{
-    position: relative;
-  
 }
 
 .navbar
