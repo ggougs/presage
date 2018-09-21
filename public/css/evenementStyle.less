@@ -280,6 +280,13 @@
     }
 }
 
+
+
+main{
+    background-color: rgba(24, 57, 30, 0.45);
+    padding-bottom: 300px; 
+    padding-top: 50px; 
+}
 .opacity(@opacity) {
     opacity: @opacity;
     @opacity-ie: (@opacity * 100);
@@ -306,11 +313,12 @@
 
 
 
-#titrePrincipal{
+#titre{
     font-size: 48px; 
     font-family: 'Quicksand', sans-serif;
     text-align: center; 
     margin-top: 100px; 
+    color: #FEFE76
 }
 .material-card {
     position: relative;
@@ -335,6 +343,7 @@
         .mc-transtition();
         span {
             display: block;
+            color: #FEFE76
         }
         strong {
             font-weight: 400;
@@ -482,6 +491,7 @@
             padding-top: 5.6em;
                 position: relative;
                 margin-right: 16px;
+                color: #18391E; 
             
         }
         .mc-description {
@@ -620,6 +630,9 @@
 
 //////////////////////////////////// responsive mobile /////////////////////////////////////////////////////
 @media screen and (max-width: 1280px){ 
+    main{
+       padding-bottom: 1800px; 
+    }
 .row {
     flex-direction: column; 
     margin-left:100px;  
@@ -643,6 +656,7 @@
             line-height: 1.6em;
             margin: 0;
             z-index: 10;
+            color: #FEFE76
             .mc-transtition();
             span {
                 display: block;
@@ -792,6 +806,7 @@
                 // @media screen and (max-width: 767px) {
                     position: relative;
                     margin-right: 16px;
+                    color: #18391E; 
                 // }
             }
             .mc-description {
