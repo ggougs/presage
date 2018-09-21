@@ -16,19 +16,9 @@ use App\Entity\Contact;
 
 class ContactController extends AbstractController
 {
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function index()
-    {
-        return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
-        ]);
-    }
-
 
 /**
-* @Route("/formulaire_contact", name="form")
+* @Route("/contact", name="contact")
 */
 
 public function contactForm (Contact $contact=null, Request $request, ObjectManager $manager,\Swift_Mailer $mailer)

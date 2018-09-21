@@ -16,13 +16,9 @@
     </head>
    
 <body>
-<<<<<<< HEAD
-   <header>
-=======
 <header>
->>>>>>> e8baffe4af1ab684495bcd6995bc5a0b82237fc7
     <nav class="navbar navbar-expand-lg navbar-dark navbar-color fixed-top">
-      <a class="navbar-brand" href="#"><img src="{{ asset('img/logopresage-yellow.png')}}"></a>
+      <a class="navbar-brand" href="{{ path('accueil') }}"><img src="{{ asset('img/logopresage-yellow.png')}}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,17 +37,17 @@
           
             <a class="nav-link" href="#" type="button" data-toggle="dropdown">Le projet</a>
               <ul class="dropdown-menu">
-                <a class="dropdown-item" href="#">Notre équipe</a>    
-                <a class="dropdown-item" href="#">Technologies</a>      
-                <a class="dropdown-item" href="#">Ambitions</a>      
-                <a class="dropdown-item" href="#">Partenares</a>
+                <a class="dropdown-item" href="{{ path('organigramme') }}">Notre équipe</a>    
+                <a class="dropdown-item" href="">Technologies</a>      
+                <a class="dropdown-item" href="">Ambitions</a>      
+                <a class="dropdown-item" href="">Partenaires</a>
               </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Historique</a>
+            <a class="nav-link" href="{{ path('historique') }}">Historique</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -60,16 +56,10 @@
         </form>
       </div>
     </nav>
-<<<<<<< HEAD
-    </header>
-        {% block body %}{% endblock %}
-      
-=======
   </header>
   <main>
     {% block body %}{% endblock %}
   </main> 
->>>>>>> e8baffe4af1ab684495bcd6995bc5a0b82237fc7
        
     <footer class="page-footer navbar navbar-expand-lg footer-dark footer-color fixed-bottom">
         <div class="footer-collapse" id="navbarColor01">

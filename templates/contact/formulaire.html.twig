@@ -3,12 +3,17 @@
 
 {% block body %}
 
-<div class="container form_contact">
+<main role="main">
+
+    
+    <div class="container form_contact text-center col-md-8 col-md-offset-2">
     <h1> formulaire contact</h1>
-
-    {{ form_start(form) }}
-
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
-</div>
+    <p>Contactez nous pour toute demande</p>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div> 
+</main>
+                  
+        
 {% endblock %}
