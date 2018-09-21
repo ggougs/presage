@@ -15,10 +15,8 @@
         {% block stylesheets %}{% endblock %}
     </head>
    
-   
-    
-
 <body>
+   <header>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-color fixed-top">
       <a class="navbar-brand" href="#"><img src="{{ asset('img/logopresage-yellow.png')}}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,29 +56,29 @@
         </form>
       </div>
     </nav>
-    
-    {% block body %}{% endblock %}
+    </header>
+        {% block body %}{% endblock %}
       
        
-        <footer class="page-footer navbar navbar-expand-lg footer-dark footer-color fixed-bottom">
-            <div class="footer-collapse" id="navbarColor01">
-                <ul class="navbar-nav footer mr-auto">
-                    <li class="dropdown linkfooter">
-                    <a class="nav-link" href="#" type="button" data-toggle="dropdown">Partenaires</a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Logos</a></li>
-                </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Mentions légales</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Réseaux</a>
-                </li>
-                </ul>
-            </div>
-        </footer>
+    <footer class="page-footer navbar navbar-expand-lg footer-dark footer-color fixed-bottom">
+        <div class="footer-collapse" id="navbarColor01">
+            <ul class="navbar-nav footer mr-auto">
+                <li class="dropdown linkfooter">
+                <a class="nav-link" href="#" type="button" data-toggle="dropdown">Partenaires</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Logos</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mentions légales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Réseaux</a>
+            </li>
+            </ul>
+        </div>
+    </footer>
 
-    </body>  
-    {% block javascripts %}{% endblock %}
+</body>  
+{% block javascripts %}{% endblock %}
 </html>
