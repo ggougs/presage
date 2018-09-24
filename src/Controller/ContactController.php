@@ -35,7 +35,7 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
             ->add('email', TextType::class)
             ->add('sujet', TextType::class)
             ->add('message', TextareaType::class)
-            ->add('save', SubmitType::class, array('label' => "Valider "))
+
             ->getForm();
 
             $form->handleRequest($request);
