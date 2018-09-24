@@ -129,7 +129,7 @@
 @gm-Green-200: #A5D6A7;
 @gm-Green-300: #81C784;
 @gm-Green-400: #66BB6A;
-@gm-Green-500: #4CAF50;
+@gm-Green-500: #18391E;
 @gm-Green-600: #43A047;
 @gm-Green-700: #388E3C;
 @gm-Green-800: #2E7D32;
@@ -137,7 +137,7 @@
 @gm-Green-A100: #B9F6CA;
 @gm-Green-A200: #69F0AE;
 @gm-Green-A400: #00E676;
-@gm-Green-A700: #00C853;
+@gm-Green-A700: #18391E;
 @gm-Light-Green-50: #F1F8E9;
 @gm-Light-Green-100: #DCEDC8;
 @gm-Light-Green-200: #C5E1A5;
@@ -638,17 +638,33 @@ main{
 //   font-weight: 200;
 // }
 
+
+
+
 //////////////////////////////////// responsive mobile /////////////////////////////////////////////////////
 @media screen and (max-width: 1280px){ 
 .row {
     flex-direction: column; 
-    margin-left:100px;  
+    position: relative; 
+   top: 300px; 
+    right: 200px;
 }
 
-#background{
-    background-size: 3000px;
-    
-}
+main{
+    background: url("../img/presage-163.jpg") no-repeat ; 
+   background-size: 3000px; 
+
+} 
+
+.container{
+    // position: relative; 
+    // top: -200px; 
+    // left: 200px;
+  //   margin-left: 55%;  
+    width: 400px; 
+    height: 400px;
+  }
+
 #logo{
     height: 500px; 
     width: 600px; 

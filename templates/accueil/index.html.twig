@@ -23,12 +23,11 @@
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
    
     <section class="container">
-    
+   
     <div class="row active-with-click">
-     {% for actu in actuAvant | slice(0,1) %}
-        <div class="col-md-4 col-sm-6 col-xs-12">
-    {# <div class="row active-with-click"> #}
-        <div class=" col-xs-12">
+      {% for actu in actuAvant | slice(0,1) %}
+        <div class="col-md-12 col-sm-6 col-xs-12">
+        
             <article class="material-card Green">
                 <h2>
                     <span>{{ actu.titre }}</span>
@@ -58,9 +57,15 @@
                 </div>
             </article>
         </div>     
-         {% endfor %} 
+      {% endfor %} 
+        </div>
+           
     </div>
     {# </div> #}
 </section>
+
+    {# <div class="nextPage">
+    <i class="fas fa-chevron-circle-right"></i>
+    </div> #}
 </main>
 {% endblock %}
