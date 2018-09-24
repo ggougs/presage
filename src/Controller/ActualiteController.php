@@ -48,7 +48,7 @@ class ActualiteController extends AbstractController
      /**
      * @Route("/accueil", name="accueil")
      */
-    public function acutaliteMiseEnAvant(AvantRepository $repository ){
+    public function acutaliteMiseEnAvant(AvantRepository $repository, EvenementRepository $repo ){
        
       
             // $evenementAvantArray = $evenementRepository->findOneById($idEvent);
@@ -85,7 +85,7 @@ class ActualiteController extends AbstractController
 
         $form = $this->createFormBuilder($actualite)
             ->add('titre', TextType::class)
-            ->add('contenu', TextareaType::class)
+            ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
             ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
             ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
             ->getForm();
