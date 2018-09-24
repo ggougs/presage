@@ -1,8 +1,7 @@
-
 {% extends 'base.html.twig' %}
 
         {% block stylesheets %}
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/accueilStyle.less') }}">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/acceuilStyle.less') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet/less" type="text/css" href="{{ asset('css/accueilStyle.less') }}" />
         {% endblock %}
@@ -10,19 +9,33 @@
          <!-- Changez la source par la position réelle du fichier chez vous -->
             <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
             <script
-                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-                crossorigin="anonymous">
-            </script>
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
             <script src="{{ asset('js/accueil.js') }}"></script>
         {% endblock %}
 
 {% block body %}
-<main role="main" >
-    
-        <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
+<div id="startscreen">
+  <div id="title"><img id="titleImg" src="{{asset('img/logopresage-yellow.png')}}"></div>
+  <div id="triangle-down"></div>
+  <div id="triangle-up"></div>
+  <button id="button">⟷</button>
+</div>
+
+<div id="menuContent">
+  <ul>
+    <li><a href=".section1">Accueil</a></li>
+    <li><a href=".section2">Ambition</a></li>
+  </ul>
+  <div id="menuClose">✕</div>
+</div>
+
+<content>
+  <section class="section1">
+           <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
    
-    <section class="container">
+    <div class="container">
    
     <div class="row active-with-click">
       {% for actu in actuAvant | slice(0,1) %}
@@ -45,7 +58,7 @@
                     </div>
                 </div>
                 <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-plus"></i>
                 </a>
                 <div class="mc-footer">
                     <h4>
@@ -62,10 +75,26 @@
            
     </div>
     {# </div> #}
-</section>
-
-    {# <div class="nextPage">
-    <i class="fas fa-chevron-circle-right"></i>
-    </div> #}
-</main>
+</div>
+  </section>
+  <section class="section2">
+    <h1> Nos ambitions</h1>
+<div class="wrapper">
+	<div class="containerAmbition" id="c0">
+		<div class="image" id="i0">
+			
+			<div class="city">
+			<?xml version="1.0" encoding="utf-8"?>
+			</div>
+		</div>
+		<div class="story" id="s0">
+			<div class="info">
+			<h3>Le Présage</h3>
+			<p>Bâtir et mettre en fonctionnement le premier restaurant avec fourneau solaire de France, voilà l’ambition du Présage. Et pas seulement un restaurant, mais tout un environnement qui utilise l'énergie solaire, la met en scène, la révèle. Puis cuisiner dans son paysage local, avec des produits de qualité et aller jusqu’à cultiver en créant une forêt comestible et un environnement en permaculture. Oui, l’énergie solaire, c’est aussi le végétal qui s’en nourrit avant d’arriver dans notre assiette.</p>
+			</div>
+		</div>
+	</div>
+</div>
+  </section>
+</content>
 {% endblock %}
