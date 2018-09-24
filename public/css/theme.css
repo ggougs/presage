@@ -9,7 +9,6 @@ html [type="button"]{
 
 
 
-
 /*css nav*/
 .navbar-color
 {
@@ -114,10 +113,12 @@ a.navbar-brand img {
     top: 7.5rem;
 }
 
+
 .form contact {
     background:#333333;
 	color:#f4f4f4;
-	padding-bottom:80px;
+    padding-bottom:80px;
+    
 }
 
 .form h1, .form h2, .form h3 {
