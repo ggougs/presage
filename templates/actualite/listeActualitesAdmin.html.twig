@@ -23,8 +23,8 @@
        <td>{{ actua.contenu }}</td>
        
        <td><img style="width:150px;height=150px;" src="{{asset('uploads/image/'~actua.image ) }}"</td>
-       <td><a href= {{ path('deleteActu', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cette actualité ?');">supprimer cette Actualité</a></td>
-       <td><a href= {{ path('avant', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir mettre en avant cette actualité ?');">Mettre en avant</td>
+       <td><a class='lien_perso' href= {{ path('deleteActu', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cette actualité ?');">supprimer cette Actualité</a></td>
+       <td><a class='lien_perso' href= {{ path('avant', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir mettre en avant cette actualité ?');">Mettre en avant</td>
      </tr>
        
        
