@@ -44,6 +44,11 @@ class Evenement
      */
     private $EvenementMisEnAvant;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $dateEvenement;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +110,18 @@ class Evenement
     public function setEvenementMisEnAvant(?string $EvenementMisEnAvant): self
     {
         $this->EvenementMisEnAvant = $EvenementMisEnAvant;
+
+        return $this;
+    }
+
+    public function getDateEvenement(): ?string
+    {
+        return $this->dateEvenement;
+    }
+
+    public function setDateEvenement(string $dateEvenement): self
+    {
+        $this->dateEvenement = $dateEvenement;
 
         return $this;
     }
