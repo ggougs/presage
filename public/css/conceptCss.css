@@ -60,7 +60,7 @@
 .slideshow {
   position: relative;
   color: #FEFE76;
-  background-color: rgba(24, 57, 30, 0.85);
+  background-color: rgba(24, 57, 30, 0.45);
   overflow: hidden;
   height: 100vh;
   min-height: 400px;

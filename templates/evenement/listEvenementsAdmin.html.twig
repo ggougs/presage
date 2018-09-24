@@ -19,6 +19,7 @@
        <td>{{ event.contenu }}</td>
         <td><img style="width:150px; height=350px;" src="{{asset('uploads/image/'~event.image ) }}"> </td> 
         <td><a href= {{ path('deleteEvenement', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cet evenement ?');">supprimer un evenement</a></td> 
+        <td><a href= {{ path('eventAvant', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir mettre en avant cet evenement ?');"> Mettre en avant></td>
     </tr>
 
 

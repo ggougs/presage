@@ -1,0 +1,40 @@
+.wrapper{
+    margin-top: 45px;
+}
+.form-signin{
+  max-width: 420px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  border: 1px solid #ffff77;
+}
+.input-group{
+    height: 45px;
+    margin-bottom: 15px;
+    border-radius: 0px;
+    color:  #18391E;
+}
+.form-control{
+    height: 45px;
+    color:  #18391E;
+}
+.input-group:hover span i{
+    color:  #18391E;
+}
+.btn-block{
+    border-radius: 0px;
+    margin-top: 25px;
+    background-color:  #18391E;
+    border: none;
+}
+.btn-block:hover{
+    background-color: #D3CE3D;
+}
+.bol{
+    position: relative;
+    margin-top: -40px;
+    color:  #18391E;
+}
+#sizing-addon1{
+
+    margin : 10px;
+}

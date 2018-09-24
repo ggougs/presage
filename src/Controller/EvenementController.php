@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Avant;
 use App\Entity\Evenement;
 use App\Service\FileUploader;
 use App\Repository\EvenementRepository;
@@ -92,5 +93,27 @@ class EvenementController extends AbstractController
         $manager -> remove ($evenement);
         $manager->flush();
         return $this->redirectToRoute('evenementAdmin');
+}
+
+/**
+     * @Route("/admin/actualite/eventAvant/{id}", name="eventAvant",requirements={"id"="\d+"})
+     */
+
+    public function miseEnAvant(Evenement $evenement,ObjectManager $manager,Avant $avant=null ) {
+    
+        $id= $evenement -> getId();
+        $titre = $evenement->getTitre();
+        $contenu = $evenement->getContenu();
+        $image = $evenement ->getImage();
+        $avant = new Avant();
+
+        $avant->setIdMisEnAvant($id)
+               ->setTitre($titre)
+               ->setContenu($contenu)
+               ->setImage($image);
+        $manager -> persist ($avant);
+       $manager->flush();
+       return $this->redirectToRoute('listeactualiteadmin');
+      
 }
 }

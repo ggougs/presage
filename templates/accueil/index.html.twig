@@ -19,15 +19,19 @@
 
 {% block body %}
 <main role="main" >
-    <div id="background">
+    
         <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
-    </div>
+   
     <section class="container">
+    
     <div class="row active-with-click">
+     {% for actu in actuAvant | slice(0,1) %}
         <div class="col-md-4 col-sm-6 col-xs-12">
+    {# <div class="row active-with-click"> #}
+        <div class=" col-xs-12">
             <article class="material-card Green">
                 <h2>
-                    <span>{{ actuAvant.titre }}</span>
+                    <span>{{ actu.titre }}</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
                         Article
@@ -35,10 +39,10 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="{{ asset('img/'~actuAvant.image)}}">
+                        <img class="img-responsive" src="{{ asset('img/'~actu.image)}}">
                     </div>
                     <div class="mc-description">
-                   {{ actuAvant.contenu }}
+                   {{ actu.contenu }}
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -54,7 +58,9 @@
                 </div>
             </article>
         </div>     
+         {% endfor %} 
     </div>
+    {# </div> #}
 </section>
 </main>
 {% endblock %}

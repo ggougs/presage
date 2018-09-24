@@ -217,19 +217,10 @@ div.reseaux a:hover {
 
 /* MEDIA QUERIES RESPONSIVE DESIGN*/
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1000px) {
     .form-inline .mt-2 .mb-2, .my-2{
         display: none;
     }
-
-    .navbar {
-        height: auto;
-    }
-
-    .page-footer.navbar.footer-dark {
-        display: none;
-    }
-
 }
 
 

@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Avant;
 use App\Entity\Actualite;
 use App\Service\FileUploader;
+use App\Repository\AvantRepository;
 use App\Repository\ActualiteRepository;
 use App\Repository\EvenementRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -46,22 +48,26 @@ class ActualiteController extends AbstractController
      /**
      * @Route("/accueil", name="accueil")
      */
-    public function acutaliteMiseEnAvant(ActualiteRepository $repository, EvenementRepository $evenementRepository){
-        $idActu=1;
-        $idEvent=null;
-        if($idActu == null){
-            $evenementAvantArray = $evenementRepository->findOneById($idEvent);
-            return $this->render('evenement/index.html.twig', [
-                'controller_name' => 'ActualiteController',
-                'evenementAvant' => $evenementAvantArray,
-                ]);
-        }else{
-            $actuAvantArray = $repository->findOneById($idActu);
+    public function acutaliteMiseEnAvant(AvantRepository $repository ){
+       
+      
+            // $evenementAvantArray = $evenementRepository->findOneById($idEvent);
+            // return $this->render('evenement/index.html.twig', [
+            //     'controller_name' => 'ActualiteController',
+            //     'evenementAvant' => $evenementAvantArray,
+            //     ]);
+       
+            $actuAvantArray = $repository->findBy(array(), array('id' => 'desc'));
+                
+        
             return $this->render('accueil/index.html.twig', [
                 'controller_name' => 'ActualiteController',
                 'actuAvant' => $actuAvantArray,
+                dump($actuAvantArray),
+                
             ]);
-        } 
+           
+        
        
     }
     /**
@@ -112,6 +118,25 @@ public function deleteActualite(Actualite $actualite, ObjectManager $manager){
         $manager->flush();
         return $this->redirectToRoute('listeactualiteadmin');
 }
+/**
+     * @Route("/admin/actualite/avant/{id}", name="avant",requirements={"id"="\d+"})
+     */
 
+public function miseEnAvant(Actualite $actualite,ObjectManager $manager,Avant $avant=null ) {
+    
+         $id= $actualite -> getId();
+         $titre = $actualite->getTitre();
+         $contenu = $actualite->getContenu();
+         $image = $actualite ->getImage();
+         $avant = new Avant();
 
+         $avant->setIdMisEnAvant($id)
+                ->setTitre($titre)
+                ->setContenu($contenu)
+                ->setImage($image);
+         $manager -> persist ($avant);
+        $manager->flush();
+        return $this->redirectToRoute('listeactualiteadmin');
+       
+}
 }

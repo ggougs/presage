@@ -11,6 +11,7 @@
      <th>Contenu</th>
      <th>Image</th>
      <th></th>
+     <th>Mettre en avant l'actualité</th>
  </tr>
    {% for actua in actualite %}
    
@@ -20,9 +21,11 @@
     <tr>
        <td> {{ actua.titre }}</td>
        <td>{{ actua.contenu }}</td>
+       
        <td><img style="width:150px;height=150px;" src="{{asset('uploads/image/'~actua.image ) }}"</td>
        <td><a href= {{ path('deleteActu', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cette actualité ?');">supprimer cette Actualité</a></td>
-    </tr>
+       <td><a href= {{ path('avant', {'id':actua.id}) }} onclick="return confirm('Etes vous sûre de vouloir mettre en avant cette actualité ?');">Mettre en avant</td>
+     </tr>
        
        
       

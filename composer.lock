@@ -1526,11 +1526,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-<<<<<<< HEAD
-            "time": "2017-05-04T11:12:50+00:00"
-=======
             "time": "2018-08-26T15:07:25+00:00"
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -5007,11 +5003,7 @@
                 "parser",
                 "php"
             ],
-<<<<<<< HEAD
-            "time": "2018-07-15T17:25:16+00:00"
-=======
             "time": "2018-09-18T07:03:24+00:00"
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
         },
         {
             "name": "symfony/browser-kit",
@@ -5664,18 +5656,6 @@
         },
         {
             "name": "symfony/test-pack",
-<<<<<<< HEAD
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/test-pack.git",
-                "reference": "958d23627214f5268d211c25031650d0dd6bdf60"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/test-pack/zipball/958d23627214f5268d211c25031650d0dd6bdf60",
-                "reference": "958d23627214f5268d211c25031650d0dd6bdf60",
-=======
             "version": "v1.0.3",
             "source": {
                 "type": "git",
@@ -5686,17 +5666,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/test-pack/zipball/d09097e80a0166776e03fa145cc433c75ba2290b",
                 "reference": "d09097e80a0166776e03fa145cc433c75ba2290b",
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0",
                 "symfony/browser-kit": "^3.3|^4.0",
                 "symfony/css-selector": "^3.3|^4.0",
-<<<<<<< HEAD
-=======
                 "symfony/panther": "^0.1",
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
                 "symfony/phpunit-bridge": "*"
             },
             "type": "symfony-pack",
@@ -5704,13 +5680,8 @@
             "license": [
                 "MIT"
             ],
-<<<<<<< HEAD
-            "description": "A pack for functional testing within a Symfony app",
-            "time": "2018-04-30T06:17:59+00:00"
-=======
             "description": "A pack for functional and end-to-end testing within a Symfony app",
             "time": "2018-09-13T06:50:21+00:00"
->>>>>>> 3b7f89d4dc3db75ee79e88aaf16082901264a8a8
         },
         {
             "name": "symfony/var-dumper",
