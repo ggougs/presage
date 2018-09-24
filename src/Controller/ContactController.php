@@ -33,6 +33,7 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('email', TextType::class)
+            ->add('sujet', TextType::Class)
             ->add('message', TextareaType::class)
 
             ->getForm();
@@ -59,7 +60,7 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
                     $manager->persist( $contact );
                     $manager->flush();
         
-                return $this->redirectToRoute('form');
+                return $this->redirectToRoute('contact');
             }
 
         return $this->render('contact/formulaire.html.twig', array(

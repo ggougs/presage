@@ -7,11 +7,39 @@
     <div class="container form_contact text-center col-md-8 col-md-offset-2 form" id="contact">
         <h1> formulaire contact</h1>
         <p>Contactez nous pour toute demande</p>
+        
             {{ form_start(form) }}
             {{ form_widget(form) }} 
+
+
             <button role='submit' class='btn' value='envoyer'>Envoyer</button>      
             {{ form_end(form) }}      
      </div>
+
+
+     {# <div class="cont-contactBtn">
+					<div class="cont-flip">
+						<div class="front">
+							<a href="#" class="btn btn-white flip">Send Message</a>
+						</div>
+						<div class="back">
+							<a href="#" class="flip close"></a>
+                            {{ form_start(form) }}
+							<form class="contact-form" action="">
+								<input class="gutter" type="text" id="form_nom" name="form[nom]" placeholder="Name">
+								<input type="text" id="form_prenom" name="form[prenom]" placeholder="Prénom">
+								<input class="gutter"  id="form_email" type="emal" name="form[email]" placeholder="Email">
+								<input  type="text" id="form_sujet" name="form[sujet]" placeholder="Sujet">
+								<textarea name="form[message]" id="form_messgae" placeholder="Leave a message"></textarea>
+								<input type="submit" value="Send">
+							</form>
+                            {{ form_end(form) }} 
+						</div>
+					</div> #}
+
+
+
+
 </main>
                   
         
