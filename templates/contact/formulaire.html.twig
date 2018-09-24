@@ -1,44 +1,42 @@
 {% extends 'base.html.twig' %}
 
+        {% block stylesheets %}
+        {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/organigramme.less') }}">#}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/contactCss.css') }}" /> 
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        {% endblock %}
+        {% block javascripts %}
+         <!-- Changez la source par la position réelle du fichier chez vous -->
+            {# <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script> #}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            <script src="{{ asset('js/contact.js') }}"></script>
+        {% endblock %}
 
 {% block body %}
 
 <main role="main">
-    <div class="container form_contact text-center col-md-8 col-md-offset-2 form" id="contact">
-        <h1> formulaire contact</h1>
-        <p>Contactez nous pour toute demande</p>
-        
-            {{ form_start(form) }}
-            {{ form_widget(form) }} 
 
 
-            <button role='submit' class='btn' value='envoyer'>Envoyer</button>      
-            {{ form_end(form) }}      
-     </div>
-
-
-     {# <div class="cont-contactBtn">
+     <div class="cont-contactBtn">
 					<div class="cont-flip">
 						<div class="front">
-							<a href="#" class="btn btn-white flip">Send Message</a>
+							<a href="#" class="btnForm btn-white flip">Envoyer Nous Message</a>
 						</div>
 						<div class="back">
 							<a href="#" class="flip close"></a>
+							<div class="contact-form">
                             {{ form_start(form) }}
-							<form class="contact-form" action="">
-								<input class="gutter" type="text" id="form_nom" name="form[nom]" placeholder="Name">
-								<input type="text" id="form_prenom" name="form[prenom]" placeholder="Prénom">
-								<input class="gutter"  id="form_email" type="emal" name="form[email]" placeholder="Email">
-								<input  type="text" id="form_sujet" name="form[sujet]" placeholder="Sujet">
-								<textarea name="form[message]" id="form_messgae" placeholder="Leave a message"></textarea>
-								<input type="submit" value="Send">
-							</form>
+                            {{ form_widget(form) }} 
+                            <input id="submit" type="submit" value="envoyer">
                             {{ form_end(form) }} 
+							</div>
 						</div>
-					</div> #}
-
-
-
+					</div>
 
 </main>
                   

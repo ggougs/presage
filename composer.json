@@ -22,7 +22,7 @@
         "symfony/twig-bundle": "*",
         "symfony/validator": "*",
         "symfony/web-link": "*",
-        "symfony/yaml": "*",
+        "symfony/yaml": "*"
    
     },
     "require-dev": {
