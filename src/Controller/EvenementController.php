@@ -106,12 +106,14 @@ class EvenementController extends AbstractController
         $titre = $evenement->getTitre();
         $contenu = $evenement->getContenu();
         $image = $evenement ->getImage();
+        $date = $evenement ->getDateEvenement();
         $avant = new Avant();
 
         $avant->setIdMisEnAvant($id)
                ->setTitre($titre)
                ->setContenu($contenu)
-               ->setImage($image);
+               ->setImage($image)
+               ->setDate($date);
         $manager -> persist ($avant);
        $manager->flush();
        return $this->redirectToRoute('listeactualiteadmin');

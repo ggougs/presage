@@ -129,12 +129,14 @@ public function miseEnAvant(Actualite $actualite,ObjectManager $manager,Avant $a
          $titre = $actualite->getTitre();
          $contenu = $actualite->getContenu();
          $image = $actualite ->getImage();
+         $date = $actualite ->getDateActualite();
          $avant = new Avant();
 
          $avant->setIdMisEnAvant($id)
                 ->setTitre($titre)
                 ->setContenu($contenu)
-                ->setImage($image);
+                ->setImage($image)
+                ->setDate($date);
          $manager -> persist ($avant);
         $manager->flush();
         return $this->redirectToRoute('listeactualiteadmin');
