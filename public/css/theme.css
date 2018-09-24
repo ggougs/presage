@@ -56,6 +56,19 @@ ul.dropdown-menu.show {
     
 }
 
+ul.dropdown-menu.show:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent rgb(224, 224, 149) transparent;
+    top: -9px;
+    left: 20px;
+}
+
 a.dropdown-item {
     
     padding: 0.5rem 2rem;
