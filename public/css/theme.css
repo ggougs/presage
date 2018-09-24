@@ -168,8 +168,6 @@ a.navbar-brand img {
     background-color: #18391E;
     border: none;
     color: #FFFFFF;
-    width: 90px;
-    height: 2.5rem;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -182,6 +180,11 @@ a.navbar-brand img {
     color: black;
     border: 1px solid lightgray;
     box-shadow: 0px 0px 3px black;
+}
+
+
+a.fab {
+    text-align: center;
 }
 
 
