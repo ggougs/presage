@@ -40,7 +40,9 @@ html [type="button"]{
     color: rgb(224, 224, 149);
 }
 
-.dropdown-menu.show {
+
+
+.dropdown-menu.show { 
     
     top: 50px;
 }
@@ -50,16 +52,18 @@ ul.dropdown-menu.show {
     position: relative;
     background-color: rgb(224, 224, 149);
     box-shadow: 2px 1px 8px 0px darkslategrey;
-    margin: 0;
     padding: 0;
     
 }
 
 a.dropdown-item {
+    
     padding: 0.5rem 2rem;
+    
 }
 
 .dropdown-item:active {
+    
     background-color: rgb(224, 224, 149);
     color: black;
 }
@@ -94,6 +98,7 @@ a.nav-link.top:hover:before, a.nav-link.top:hover:after
 }
 
 ul.dropdown-item {
+    
     min-height: 150px;
 }
 
