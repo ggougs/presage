@@ -12,7 +12,7 @@ $(function() {
                 icon
                     .removeClass('fa-arrow-left')
                     .removeClass('fa-spin-fast')
-                    .addClass('fa-bars');
+                    .addClass('fa-plus');
 
             }, 800);
         } else {
@@ -20,7 +20,7 @@ $(function() {
 
             window.setTimeout(function() {
                 icon
-                    .removeClass('fa-bars')
+                    .removeClass('fa-plus')
                     .removeClass('fa-spin-fast')
                     .addClass('fa-arrow-left');
 

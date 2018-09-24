@@ -9,6 +9,24 @@
 
         <link href="{{ asset('css/theme.css') }}" rel="stylesheet"> 
 
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+        <script>
+        window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#216942",
+              "text": "#b2d192"
+            },
+            "button": {
+              "background": "#afed71"
+            }
+          }
+        })});
+        </script>
+
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -39,9 +57,7 @@
             <a class="nav-link top" href="#" type="button" data-toggle="dropdown">Le projet</a>
               <ul class="dropdown-menu">
                 <a class="dropdown-item" href="{{ path('organigramme') }}">Notre équipe</a>    
-                <a class="dropdown-item" href="">Technologies</a>      
-                <a class="dropdown-item" href="">Ambitions</a>      
-                <a class="dropdown-item" href="">Partenaires</a>
+                <a class="dropdown-item" href="{{ path('concept') }}">Concept</a>        
               </ul>
           </li>
           <li class="dropdown">

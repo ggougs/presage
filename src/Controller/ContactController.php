@@ -33,7 +33,6 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('email', TextType::class)
-            ->add('sujet', TextType::class)
             ->add('message', TextareaType::class)
 
             ->getForm();

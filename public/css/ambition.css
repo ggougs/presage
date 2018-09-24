@@ -42,8 +42,11 @@ main{
   top: 0%;
   width: 100%;
   height: 100%;
-  background-color: #18391E; 
-  /* background: linear-gradient(to bottom, #245730 30%, #97A69A 100%); */
+  background: url("../img/ambition/ambition.jpg") no-repeat ;  
+  background-size: 100%;
+  background-position-y: -100px; 
+   /* background-color: #18391E;   */
+   /* background: linear-gradient(to bottom, #245730 30%, #97A69A 100%);  */
   z-index: 300;
   box-shadow: 0px 20px 100px #555;
 }
@@ -62,7 +65,8 @@ main{
   left: 0%;
   width: 100%;
   height: 45%;
-  background-color: #18391E; 
+  background: url("../img/ambition/ambition.jpg") cover; 
+   /* background-color: #18391E;   */
   /* background: linear-gradient(to top, #245730 30%, #97A69A 100%); */
 }
 
@@ -91,7 +95,8 @@ span {
   left: 0%;
   height: 55%;
   width: 100%;
-  background-color: #18391E; 
+  /* background: url("../img/ambition/ambition.jpg") ;  */
+  background: linear-gradient(to bottom, #245730 30%, #97A69A 100%); 
   /* background: linear-gradient(to bottom, #245730 0%, #97A69A 40%); */
   z-index: 30;
 }
