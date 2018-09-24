@@ -61,6 +61,7 @@ class EvenementController extends AbstractController
 
         $form = $this->createFormBuilder($evenement)
             ->add('titre', TextType::class)
+            ->add('dateEvenement', TextType::class)
             ->add('contenu', TextareaType::class)
             ->add('localisation', textType::class)
             ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))

@@ -38,6 +38,11 @@ class Actualite
      */
     private $ActuMisEnAvant;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $dateActualite;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,18 @@ class Actualite
     public function setActuMisEnAvant(?string $ActuMisEnAvant): self
     {
         $this->ActuMisEnAvant = $ActuMisEnAvant;
+
+        return $this;
+    }
+
+    public function getDateActualite(): ?string
+    {
+        return $this->dateActualite;
+    }
+
+    public function setDateActualite(?string $dateActualite): self
+    {
+        $this->dateActualite = $dateActualite;
 
         return $this;
     }

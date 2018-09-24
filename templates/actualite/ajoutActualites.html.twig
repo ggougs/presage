@@ -1,22 +1,23 @@
 {% extends 'admin_user/index.html.twig' %}
 {% block stylesheets %}
- <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
+<script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+
 <script type="text/javascript">
     $(function() {
-        $('#ckeditor').ckeditor();
+        $('textarea.ckeditor').ckeditor();
     });
-</script>
+    </script>
   {% endblock %}
-{% block pageTitle %}Ajout Actualité{% endblock %}
+{% block pageTitle %}Ajout Actualité {% endblock %}
 
 {% block body %}
 <main role="main" class="container">
 
 <div class="container">
     {{ form_start(form) }}
+    {{ form_widget(form)  }}
 
-    {{ form_widget(form) }}
     {{ form_end(form) }}
 </div>
 {% endblock %}
