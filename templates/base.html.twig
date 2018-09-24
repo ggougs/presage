@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Le Présage{% endblock %}</title>
+
         <link href="https://bootswatch.com/4/journal/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
 
@@ -26,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="dropdown linknav">
-            <a class="nav-link" href="" type="button" data-toggle="dropdown">Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link top" href="" type="button" data-toggle="dropdown">Accueil <span class="sr-only">(current)</span></a>
             <ul class="dropdown-menu">
               <a class="dropdown-item" href="{{ path('accueil') }}">Présentation</a>
               <a class="dropdown-item" href="{{ path('listeactualite') }}">Actualités</a>
@@ -35,7 +36,7 @@
           </li>
           <li class="dropdown">
           
-            <a class="nav-link" href="#" type="button" data-toggle="dropdown">Le projet</a>
+            <a class="nav-link top" href="#" type="button" data-toggle="dropdown">Le projet</a>
               <ul class="dropdown-menu">
                 <a class="dropdown-item" href="{{ path('organigramme') }}">Notre équipe</a>    
                 <a class="dropdown-item" href="">Technologies</a>      
@@ -43,11 +44,11 @@
                 <a class="dropdown-item" href="">Partenaires</a>
               </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path('historique') }}">Historique</a>
+          <li class="dropdown">
+            <a class="nav-link top" href="{{ path('historique') }}">Historique</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+          <li class="dropdown">
+            <a class="nav-link top" href="{{ path('contact') }}">Contact</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -59,24 +60,34 @@
       
     </nav>
   </header>
-  <main>
+ 
     {% block body %}{% endblock %}
-  </main> 
        
     <footer class="page-footer navbar navbar-expand-lg footer-dark footer-color fixed-bottom ">
-        <div class="footer-collapse" id="navbarColor01">
+      <div class="container-fluid">
+
+        <div class="col-4">
             <ul class="navbar-nav footer mr-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#" type="button" data-toggle="dropdown">Partenaires</a>
+              <li class="nav-item dropdown">
+                  <a class="nav-link top" href="#">Partenaires</a>
               </li>    
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Mentions légales</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Réseaux</a>
+              <li class="nav-item dropdown">
+                  <a class="nav-link top" href="#">Mentions légales</a>
               </li>
             </ul>
+            
         </div>
+        
+         
+          <div class='col-4 reseaux'>
+            <a href='#'><i class="fab fa-facebook-square"></i></a>
+            <a href='#'><i class="fab fa-twitter-square"></i></a>
+            <a href='#'><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="col-4">
+            <p id='copyright'>Copyright Le Présage 2018</p>
+          </div>
+        </div>      
     </footer>
 
 </body>  

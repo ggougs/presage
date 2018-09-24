@@ -9,9 +9,11 @@ html [type="button"]{
 
 
 
-.form{
-    position: relative;
-    top: 7.5rem;
+
+/*css nav*/
+.navbar-color
+{
+    background-color: #18391E;
 }
 
 .navbar
@@ -19,11 +21,10 @@ html [type="button"]{
     height: 80px;
 }
 
-/*css nav*/
-.navbar-color
-{
-    background-color: #18391E;
+#navbarColor01.collapse {
+    margin-left: 100px;
 }
+
 
 .navbar-dark .navbar-nav .nav-link
 {
@@ -41,10 +42,9 @@ html [type="button"]{
 }
 
 .dropdown-menu.show {
-
+    
     top: 50px;
 }
-
 
 ul.dropdown-menu.show {
     
@@ -56,21 +56,42 @@ ul.dropdown-menu.show {
     
 }
 
-ul.dropdown-menu.show:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 5px 10px 5px;
-    border-color: transparent transparent rgb(224, 224, 149) transparent;
-    top: -9px;
-    left: 20px;
-}
-
 a.dropdown-item {
     padding: 0.5rem 2rem;
+}
+
+.dropdown-item:active {
+    background-color: rgb(224, 224, 149);
+    color: black;
+}
+
+a.nav-link.top:before, a.nav-link.top:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+a.nav-link.top:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+a.nav-link.top:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+a.nav-link.top:hover:before, a.nav-link.top:hover:after
+{
+    opacity: 1;
+    width: 80%;
 }
 
 ul.dropdown-item {
@@ -82,20 +103,76 @@ ul.dropdown-item:hover{
     box-shadow: 1px 1px 5px black;
 }
 
-
-
 a.navbar-brand img {
     height: 65px;
 }
 
 
+/* formulaires*/
+.form{
+    position: relative;
+    top: 7.5rem;
+}
 
+.form contact {
+    background:#333333;
+	color:#f4f4f4;
+	padding-bottom:80px;
+}
+
+.form h1, .form h2, .form h3 {
+    margin:0 0 35px 0;
+	text-transform: uppercase;
+    letter-spacing:1px;
+    
+}
+
+.form p {
+    margin:0 0 25px;
+	font-size:18px;
+	line-height:1.6em;
+}
+
+
+.list-inline.banner-social-buttons {
+    display: flex;
+    position: relative;
+    bottom: 4rem;
+}
+
+.network-name {
+   color: #18391E;
+}
+
+.btn {
+    border-radius: 4px;
+    background-color: #18391E;
+    border: none;
+    color: #FFFFFF;
+    width: 90px;
+    height: 2.5rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #ffff77;
+    width: 90px;
+    height: 50px;
+    color: black;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px black;
+}
+
+
+/* FOOTER */
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 60px;
+    /* height: 60px; */
     line-height: 60px; /* Vertically center the text there */
 
 }
@@ -105,14 +182,11 @@ footer {
     background-color: #18391E;
 }
 
-.page-footer .navbar-nav 
-{
-    text-align:center;
-}
 
-.footer-dark .nav-link
+.footer-dark .nav-link, #copyright
 {
     color:white;
+    font-size: 1rem;
 }
 
 .footer-dark .nav-link:hover
@@ -120,7 +194,28 @@ footer {
     color:#ffff77;
 }
 
+#copyright {
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    margin-right: 1rem;
+}
 
+div.reseaux {
+    font-size: 30px;
+    text-align:center;
+}
+
+div.reseaux a {
+    color: white;
+    margin-left: 25px;
+}
+
+div.reseaux a:hover {
+    color: #ffff77;
+}
+
+/* MEDIA QUERIES RESPONSIVE DESIGN*/
 
 @media screen and (max-width: 996px) {
     .form-inline .mt-2 .mb-2, .my-2{

@@ -1,18 +1,17 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
 
 <main role="main">
+    <div class="container form_contact text-center col-md-8 col-md-offset-2 form" id="contact">
 
-    
-    <div class="container form_contact text-center col-md-8 col-md-offset-2 form">
-    <h1> formulaire contact</h1>
-    <p>Contactez nous pour toute demande</p>
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    </div> 
+        <h1> formulaire contact</h1>
+        <p>Contactez nous pour toute demande</p>
+            {{ form_start(form) }}
+            {{ form_widget(form) }} 
+            <button role='submit' class='btn' value='envoyer'>Envoyer</button>      
+            {{ form_end(form) }}      
+     </div>
 </main>
                   
         
