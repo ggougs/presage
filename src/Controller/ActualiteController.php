@@ -46,7 +46,7 @@ class ActualiteController extends AbstractController
     }
 
      /**
-     * @Route("/accueil", name="accueil")
+     * @Route("/", name="entrer")
      */
     public function acutaliteMiseEnAvant(AvantRepository $repository, EvenementRepository $repo ){
        
