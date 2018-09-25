@@ -23,10 +23,6 @@
         "symfony/validator": "*",
         "symfony/web-link": "*",
         "symfony/yaml": "*"
-<<<<<<< HEAD
-   
-=======
->>>>>>> b3e88f98a0949c799711c347c421ec9ec3eb47c9
     },
     "require-dev": {
         "symfony/debug-pack": "*",

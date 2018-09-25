@@ -1,0 +1,20 @@
+main{
+    background-color: rgba(24, 57, 30, 0.45);
+    padding-bottom: 750px; 
+    padding-top: 100px; 
+    font-size: 20px;
+}
+
+.imgMentions {
+    width : 70px;
+    height: 70px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+p {
+
+    margin-bottom : 20px;
+
+}
