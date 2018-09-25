@@ -389,7 +389,7 @@ main{
 #encart {
   position: relative;
   left: -600px;
-  width: 50%;
+  width: 58%;
   margin: 2rem auto;
   padding: 2em;
   
@@ -437,6 +437,7 @@ color:#FEFE7C;
     position: relative;
     left: 0px; 
     top: 600px; 
+    width: 600px;
     
   }
   #titreEncart{
