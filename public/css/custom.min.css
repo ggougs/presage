@@ -415,7 +415,7 @@ body .container.body .right_col {
     padding: 0;
 }
 .top_nav .nav .open>a, .top_nav .nav .open>a:focus, .top_nav .nav .open>a:hover, .top_nav .nav>li>a:focus, .top_nav .nav>li>a:hover {
-    background: #d9dee4;
+    background: rgb(8, 46, 15);
 }
 body {
     color: #73879c;
@@ -503,6 +503,7 @@ table.no-margin .progress {
 a {
     color: white;
 }
+
 a.lien_perso{
     color: #73879c;
 }

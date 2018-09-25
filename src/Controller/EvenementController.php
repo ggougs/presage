@@ -48,6 +48,7 @@ class EvenementController extends AbstractController
  
     /**
      * @Route("admin/evenement/ajout", name="ajoutEvenement")
+     * @Route("/admin/evenement/edit/{id}", name="editevenement",requirements={"id"="\d+"})
      
      */
 

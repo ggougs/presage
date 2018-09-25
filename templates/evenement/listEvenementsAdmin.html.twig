@@ -11,6 +11,7 @@
         <th>Titre</th>
         <th>Contenu</th>
         <th>Image</th>
+        <th>modification evenement</th>
         <th></th>
         <th>Mettre en avant l'evenement</th>
     </tr>
@@ -19,8 +20,9 @@
        <td> {{ event.titre }}</td>
        <td>{{ event.contenu }}</td>
         <td><img style="width:150px; height=350px;" src="{{asset('uploads/image/'~event.image ) }}"> </td> 
+        <td><a class='lien_perso' href= {{ path('editevenement', {'id':event.id}) }} >Modifier evenement</td>
         <td><a class="lien_perso" href= {{ path('deleteEvenement', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir supprimer cet evenement ?');">supprimer un evenement</a></td> 
-        <td><a class="lien_perso" href= {{ path('eventAvant', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir mettre en avant cet evenement ?');"> Mettre en avant></td>
+        <td><a class="lien_perso" href= {{ path('eventAvant', {'id':event.id}) }} onclick="return confirm('Etes vous sûre de vouloir mettre en avant cet evenement ?');"> Mettre en avant</td>
     </tr>
 
 
