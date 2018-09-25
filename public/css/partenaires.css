@@ -1,0 +1,74 @@
+main{
+    
+    padding-top:50px;
+}
+
+body
+{
+    background-color: rgba(24, 57, 30, 0.45); 
+}
+
+.container
+{
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+h1
+{
+    text-align:center;
+    margin-top:15px;
+    color:white;
+
+}
+
+.item
+{
+    width:30%;
+}
+
+img 
+{
+    max-width:100%;
+}
+
+.row
+{
+    margin-top: 5px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.partenaire
+{
+    background-color:#FFFFFF;
+    display: block;
+    margin-bottom:10px;
+    text-align: center;
+}
+
+a
+{
+    -webkit-transition: all 0.5s ease; /* Safari et Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
+
+a:hover
+{
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.partenaire .img10 .img11
+{
+    background-position: center;
+    text-align: center;
+    margin-right: 150px;
+}
+
