@@ -277,6 +277,13 @@ div.reseaux a:hover {
     ul.dropdown-menu.show:after {
         display: none;
     }
+
+    div.container {
+        width: max-content;
+        height: max-content;
+    }
 }
+
+
 
 
