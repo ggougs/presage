@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+        {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/organigramme.less') }}">#}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/mentionsLegales.css') }}" /> 
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        {% endblock %}
+        
+      
+{% block title %}Mentions Legales{% endblock %}
+
+{% block body %}
+<main role='main'>
+
+<img class="imgMentions" src="{{ asset('img/logopresage-yellow.png') }}" 
+
+<p>Propriétaire du site lepresage.fr
+l’Association, loi 1901, Rêves Germés, enregsitrée sous le numéro de SIRET : 798 408 357 00027</p>
+
+<p>Siège Social
+Inter-Made, Couveuse d’Entreprises Solidaires
+18, rue du Transvaal
+13004 Marseille</p>
+
+<p>Directeur de la publication
+Président de l’Association : Christophe PINEL</p>
+
+<p>Site développé par Benjamin Vanhaudenarde, Gregory Garabedian, Mathieu Delclos, Julien michel.</p>
+
+</main>
+{% endblock %}

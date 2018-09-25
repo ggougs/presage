@@ -10,7 +10,7 @@ $(document).ready(function() {
         $("#button").attr("id", "menu");
       }, 1);
     });
-  
+
     $("#menuClose, #menuContent a").click(function() {
       $("#menu").removeClass("menuTransition");
       $("#menuContent").fadeOut(300);
