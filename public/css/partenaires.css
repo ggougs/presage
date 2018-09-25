@@ -17,9 +17,8 @@ body
 h1
 {
     text-align:center;
-    margin-top:15px;
-    color:white;
-
+    margin-top:60px;
+    color:#FEFE76;
 }
 
 .item
@@ -35,7 +34,7 @@ img
 .row
 {
     margin-top: 5px;
-    padding-top: 100px;
+    padding-top: 75px;
     padding-bottom: 100px;
 }
 
@@ -47,7 +46,11 @@ img
     text-align: center;
 }
 
+<<<<<<< HEAD
 a.partenaire
+=======
+a.partenaire 
+>>>>>>> 72c996f69ae527d937c255dd0837ed7eb2e9e70f
 {
     -webkit-transition: all 0.5s ease; /* Safari et Chrome */
     -moz-transition: all 0.5s ease; /* Firefox */
@@ -72,3 +75,7 @@ a.partenaire:hover
     margin-right: 150px;
 }
 
+/* i.fab.fa-facebook-square:before a  {
+    width: 26.5px;
+    height: 32px;
+} */
