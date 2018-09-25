@@ -203,17 +203,6 @@ main{
 
 
 
-<<<<<<< HEAD
-.btn-white:hover{
-  
-  box-shadow: 10px 5px 5px #FEFE7C;
-  letter-spacing: 1px;
-  /* font-size: 24px; */
-  text-decoration: none;
-  background-color: #18391E; 
-  color: #FEFE7C; 
-  padding: 20px 20px 20px 20px; 
-=======
 /*# sourceMappingURL=contactCss.css.map */
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -402,7 +391,6 @@ main{
   width: 50%;
   margin: 2rem auto;
   padding: 2em;
->>>>>>> 7f65e75ecc70ac4b1ea39aa775b3b152b8958b00
   
   background-repeat: no-repeat;
   background-image:   linear-gradient(to right, #FEFE7C 100%, #FEFE7C 100%),
