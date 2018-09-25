@@ -169,12 +169,12 @@ a, p {
 		padding: 0 10%;
 		margin-top: 50px;
 		width: 80%;
-
 		input, textarea {
 			border: 1px solid #808080;
 			font-size: 12px;
 			padding: 10px 0;
 			text-transform: uppercase;
+			
 		}
 
 		input[type="text"] {
@@ -203,6 +203,7 @@ a, p {
 			width: 100%;
 			max-width:93px;
 			text-align: center;
+			
 		}
 
 	}
@@ -233,5 +234,6 @@ a, p {
 	text-transform: uppercase;
   text-decoration: none;
 	width: 100%;
-	transition: all 0.5s;
+	
 }
+
