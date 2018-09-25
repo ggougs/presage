@@ -72,6 +72,7 @@ class ActualiteController extends AbstractController
     }
     /**
      * @Route("admin/actualite/ajout", name="ajoutActualite")
+     * @Route("/admin/actualite/edit/{id}", name="editactu",requirements={"id"="\d+"})
      
      */
 
