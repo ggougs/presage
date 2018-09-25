@@ -107,7 +107,7 @@ main{
   
 }
 .cont-contactBtn .cont-flip .front {
-  background: url("../img/contact/contact.jpg") no-repeat ;
+  background-color: #97A69A;
   background-size: 100%; 
   width: 100%; 
   text-decoration: none;
@@ -200,14 +200,8 @@ main{
   
 }
 
-.front:hover {
-  box-shadow: 5px 5px 5px #18391E;
 
-}
-/* .cont-contactBtn .cont-flip .front:hover{
-  filter: blur(4px); 
-} */
-/* 
+
 
 /*# sourceMappingURL=contactCss.css.map */
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -424,4 +418,31 @@ color:#FEFE7C;
 
 #pEncart{
   color: white; 
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1280px){ 
+
+  main{
+    background-color: rgba(24, 57, 30, 0.45);
+    padding-bottom: 2000px; 
+    padding-top: 250px; 
+    display: flex; 
+    flex-direction: column; 
+    
+  }
+
+  #encart{
+    position: relative;
+    left: 0px; 
+    top: 600px; 
+    
+  }
+  #titreEncart{
+    font-size: 48px; 
+  }
+
+  #pEncart{
+    font-size: 28px; 
+  }
 }

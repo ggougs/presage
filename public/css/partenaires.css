@@ -47,7 +47,7 @@ img
     text-align: center;
 }
 
-a
+a.partenaire
 {
     -webkit-transition: all 0.5s ease; /* Safari et Chrome */
     -moz-transition: all 0.5s ease; /* Firefox */
@@ -56,7 +56,7 @@ a
     transition: all 0.5s ease;
 }
 
-a:hover
+a.partenaire:hover
 {
     -webkit-transform:scale(1.25); /* Safari et Chrome */
     -moz-transform:scale(1.25); /* Firefox */
