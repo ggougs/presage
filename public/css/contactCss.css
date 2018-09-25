@@ -4,7 +4,10 @@ main{
   padding-bottom: 350px; 
   padding-top: 250px; 
 }
-
+.front{
+  width: 700px; 
+  height: 600px;
+}
 .cont-contactInfo {
   float: left;
   padding-right: 5%;
@@ -92,6 +95,7 @@ main{
 .cont-contactBtn .cont-flip .front, .cont-contactBtn .cont-flip .back {
   display: block;
   margin: 0;
+  margin-bottom: -200px; 
   height: 100%;
   width: 800px;
   position: absolute;
@@ -100,6 +104,7 @@ main{
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-left: -15%; 
+  
 }
 .cont-contactBtn .cont-flip .front {
   background: url("../img/contact/contact.jpg") no-repeat ;
@@ -117,7 +122,7 @@ main{
 }
 .cont-contactBtn .btnForm {
   margin-top: 155px;
-  background-color: #FEFE7C;
+  /* background-color: #FEFE7C; */
   color: #18391E; 
   border: #18391E; 
   z-index: 1;
@@ -202,16 +207,221 @@ main{
 /* .cont-contactBtn .cont-flip .front:hover{
   filter: blur(4px); 
 } */
+/* 
 
-.btn-white:hover{
-  
-  box-shadow: 10px 5px 5px #FEFE7C
-  letter-spacing: 1px;
-  /* font-size: 24px; */
-  text-decoration: none;
-  background-color: #18391E; 
-  color: #FEFE7C; 
-  padding: 20px 20px 20px 20px; 
-  
-}
 /*# sourceMappingURL=contactCss.css.map */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.letter-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.animated-mail {
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+}
+.animated-mail .body {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 200px;
+  border-color: transparent transparent #18391E transparent;
+  z-index: 2;
+}
+.animated-mail .top-fold {
+  position: absolute;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100px 0 100px;
+  -webkit-transform-origin: 50% 0%;
+  -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  -moz-transform-origin: 50% 0%;
+  -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  transform-origin: 50% 0%;
+  transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  border-color: #255832 transparent transparent transparent;
+  z-index: 2;
+}
+.animated-mail .back-fold {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 100px;
+  background: #255832;
+  z-index: 0;
+}
+.animated-mail .left-fold {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 50px 100px;
+  border-color: transparent transparent transparent #18391E;
+  z-index: 2;
+}
+.animated-mail .letter {
+  left: 20px;
+  bottom: 0px;
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: 0.4s 0.2s;
+  -moz-transition: 0.4s 0.2s;
+  transition: 0.4s 0.2s;
+}
+.animated-mail .letter .letter-border {
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(-45deg, #255832, #255832 8px, transparent 8px, transparent 18px);
+}
+.animated-mail .letter .letter-title {
+  margin-top: 10px;
+  margin-left: 5px;
+  height: 10px;
+  width: 40%;
+  background: #255832;
+}
+.animated-mail .letter .letter-context {
+  margin-top: 10px;
+  margin-left: 5px;
+  height: 10px;
+  width: 20%;
+  background: #255832;
+}
+.animated-mail .letter .letter-stamp {
+  margin-top: 30px;
+  margin-left: 120px;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background: #255832;
+  opacity: 0.3;
+}
+
+.shadow {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 400px;
+  height: 30px;
+  transition: 0.4s;
+  transform: translateX(-50%);
+  -webkit-transition: 0.4s;
+  -webkit-transform: translateX(-50%);
+  -moz-transition: 0.4s;
+  -moz-transform: translateX(-50%);
+  border-radius: 100%;
+  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.letter-image:hover .animated-mail {
+  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+}
+.letter-image:hover .animated-mail .top-fold {
+  transition: transform 0.4s, z-index 0.2s;
+  transform: rotateX(180deg);
+  -webkit-transition: transform 0.4s, z-index 0.2s;
+  -webkit-transform: rotateX(180deg);
+  -moz-transition: transform 0.4s, z-index 0.2s;
+  -moz-transform: rotateX(180deg);
+  z-index: 0;
+}
+.letter-image:hover .animated-mail .letter {
+  height: 180px;
+}
+.letter-image:hover .shadow {
+  width: 250px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@keyframes bg {
+  0% {
+      background-size:    0 3px,
+                          3px 0,
+                          0 3px,
+                          3px 0;
+  }
+  25% {
+      background-size:    100% 3px,
+                          3px 0,
+                          0 3px,
+                          3px 0;
+  }
+  50% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          0 3px,
+                          3px 0;
+  }
+  75% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          100% 3px,
+                          3px 0;
+  }
+  100% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          100% 3px,
+                          3px 100%;
+  }
+}
+
+#encart {
+  position: relative;
+  left: -600px;
+  width: 50%;
+  margin: 2rem auto;
+  padding: 2em;
+  
+  background-repeat: no-repeat;
+  background-image:   linear-gradient(to right, #FEFE7C 100%, #FEFE7C 100%),
+                      linear-gradient(to bottom, #FEFE7C 100%, #FEFE7C 100%),
+                      linear-gradient(to right, #FEFE7C 100%, #FEFE7C 100%),
+                      linear-gradient(to bottom, #FEFE7C 100%, #FEFE7C 100%);
+  background-size:    100% 3px,
+                      3px 100%,
+                      100% 3px,
+                      3px 100%;
+  background-position:    0 0,
+                          100% 0,
+                          100% 100%,
+                          0 100%;
+  animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  animation-play-state: paused;
+}
+
+#encart:hover {
+  animation-play-state: running;
+}
+#titreEncart{
+color:#FEFE7C;  
+}
+
+#pEncart{
+  color: white; 
+}
