@@ -196,10 +196,11 @@ main{
 }
 .cont-contactBtn .contact-form #submit:hover{
   background-color: #FEFE7C; 
-  color: #18391E; 
-  
+  color: black; 
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.5s;
 }
-
 
 
 
