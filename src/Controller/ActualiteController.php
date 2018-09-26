@@ -79,12 +79,10 @@ class ActualiteController extends AbstractController
     public function ajoutActualite(Actualite $actualite=null,Request $request, ObjectManager $manager, FileUploader $fileUploader )
     {
         
-        if(is_null($actualite)) 
+        if(is_null($actualite)) {
             $actualite = new Actualite();
-           
-       
 
-        $form = $this->createFormBuilder($actualite)
+            $form = $this->createFormBuilder($actualite)
             ->add('titre', TextType::class)
             ->add('dateActualite', TextType::class)
             ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
@@ -106,11 +104,39 @@ class ActualiteController extends AbstractController
                 return $this->redirectToRoute('listeactualiteadmin');
             }
 
-        return $this->render('actualite/ajoutActualites.html.twig', array(
-            'form' => $form->createView(),
-        ));
-    }
+            return $this->render('actualite/ajoutActualites.html.twig', array(
+                'form' => $form->createView(),
+            ));
+        }   
+        else {
+            $form = $this->createFormBuilder($actualite)
+            ->add('titre', TextType::class)
+            ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
+            ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
+            ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
+            ->getForm();
 
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid())  {
+                $file = $form['image']->getData();
+                $fileName = $fileUploader->upload($file);
+        
+                $actualite->setImage($fileName);
+              
+                    $manager->persist( $actualite );
+                    $manager->flush();
+        
+                return $this->redirectToRoute('admin_interface');
+            }
+
+            return $this->render('actualite/ajoutActualites.html.twig', array(
+                'form' => $form->createView(),
+            ));
+        }
+           
+    }
+    
 /**
      * @Route("/admin/actualite/delete/{id}", name="deleteActu",requirements={"id"="\d+"})
      */

@@ -119,5 +119,5 @@ class EvenementController extends AbstractController
        $manager->flush();
        return $this->redirectToRoute('listeactualiteadmin');
       
-}
+    }
 }
