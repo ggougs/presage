@@ -6,6 +6,7 @@
   padding: 30px 38px 66px;
   margin: 0 auto;
   border: 1px solid #18391E;
+  background-color: beige;
 }
 .input-group{
     height: 45px;
@@ -40,4 +41,8 @@
 
 h3.form-signin-heading {
     padding: 1rem;
+}
+
+body {
+    background-color: rgba(24, 57, 30, 0.45);
 }
