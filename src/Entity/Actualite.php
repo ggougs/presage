@@ -28,10 +28,14 @@ class Actualite
     private $contenu;
 
     /**
-     * @Assert\File(mimeTypes={ "image/png" ,"image/jpg","image/jpeg" })
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
+
+    /**
+     * @Assert\File(mimeTypes={ "image/png" ,"image/jpg","image/jpeg" })
+     */
+    private $imageUpload;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -80,6 +84,18 @@ class Actualite
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getImageUpload(): ?string
+    {
+        return $this->imageUpload;
+    }
+
+    public function setImageUpload(?string $imageUpload): self
+    {
+        $this->imageUpload = $imageUpload;
 
         return $this;
     }
