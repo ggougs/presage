@@ -2,6 +2,7 @@ main{
   background-color: rgba(24, 57, 30, 0.45);
   padding-bottom: 520px; 
   padding-top: 250px; 
+  width: 100%;
 }
 
 #titre{
@@ -14,8 +15,8 @@ main{
 
 .loader{
   position: relative;
-  left: 45%;
-  
+  left: 50%;
+  width: 400px;
 }
   .wineglass {
     height: 36px;
@@ -131,4 +132,10 @@ main{
       opacity: 0;
       transform: scaleY(.3);
     }
+  }
+
+  @media screen and (max-width: 1280px){
+main{
+  height: 1800px;
+}
   }
