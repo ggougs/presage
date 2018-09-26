@@ -100,7 +100,7 @@ class AdminUserController extends AbstractController
                 $manager->flush();
 
          
-                 return $this->redirectToRoute('admin_interface');
+                 return $this->redirectToRoute('afficheAdmin');
              }
  
    
