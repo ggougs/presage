@@ -51,7 +51,7 @@
             <a class="nav-link top pc" href="{{ path('accueil') }}">ACCUEIL</a>
           </li>
           <li class="dropdown">
-            <a class="nav-link top pc" href="{{ path('listeactualite') }}">ACUTALITES</a>
+            <a class="nav-link top pc" href="{{ path('listeactualite') }}">ACTUALITES</a>
           </li>
            <li class="dropdown">
             <a class="nav-link top pc" href="{{ path('evenement') }}">EVENEMENTS</a>
@@ -70,8 +70,8 @@
             <a class="nav-link top pc" href="{{ path('contact') }}">CONTACT</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search.html.twig" method="GET">
-          <input class="form-control mr-sm-2" placeholder="Search" type="text">
+        <form class="form-inline my-2 my-lg-0" action="{{ path('search') }}" method="GET">
+          <input class="form-control mr-sm-2" placeholder="Search" type="text" name="search">
           <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
      
