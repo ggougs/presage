@@ -26,7 +26,7 @@ class SearchController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $query = $em->createQueryBuilder();
             $query
-                ->select('a.titre, a.contenu')
+                ->select('a.titre, a.contenu','a.image','a.dateActualite')
                 ->from(Actualite::class, 'a');
             $i = 0;
           

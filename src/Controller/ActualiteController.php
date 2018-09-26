@@ -13,6 +13,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -81,6 +82,7 @@ class ActualiteController extends AbstractController
         
         if(is_null($actualite)) {
             $actualite = new Actualite();
+            
 
             $form = $this->createFormBuilder($actualite)
             ->add('titre', TextType::class)
@@ -88,6 +90,7 @@ class ActualiteController extends AbstractController
             ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
             ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
             ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
+   
             ->getForm();
 
             $form->handleRequest($request);
@@ -98,8 +101,8 @@ class ActualiteController extends AbstractController
         
                 $actualite->setImage($fileName);
               
-                    $manager->persist( $actualite );
-                    $manager->flush();
+                $manager->persist( $actualite );
+                $manager->flush();
         
                 return $this->redirectToRoute('listeactualiteadmin');
             }
@@ -112,22 +115,28 @@ class ActualiteController extends AbstractController
             $form = $this->createFormBuilder($actualite)
             ->add('titre', TextType::class)
             ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
-            ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
+            ->add('image', HiddenType::class)
+            ->add('imageUpload', FileType::class, array('label' => 'Image (png file)','data_class' => null, 'required' => false))
             ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
             ->getForm();
-
+           
             $form->handleRequest($request);
-
+            
             if ($form->isSubmitted() && $form->isValid())  {
-                $file = $form['image']->getData();
-                $fileName = $fileUploader->upload($file);
-        
-                $actualite->setImage($fileName);
-              
-                    $manager->persist( $actualite );
-                    $manager->flush();
-        
-                return $this->redirectToRoute('admin_interface');
+               
+                dump($actualite);
+                dump($form['imageUpload']->getData());
+                if($form['imageUpload']->getData() != null){
+                    $file = $form['imageUpload']->getData();
+                    $fileName = $fileUploader->upload($file);
+                    $actualite->setImage($fileName); 
+                    //$actualite->setImage($form['imageUpload']->getData());  
+                }
+                dump($actualite);
+                
+                $manager->persist( $actualite );
+                $manager->flush();
+                return $this->redirectToRoute('listeactualiteadmin');
             }
 
             return $this->render('actualite/ajoutActualites.html.twig', array(
@@ -136,7 +145,7 @@ class ActualiteController extends AbstractController
         }
            
     }
-    
+
 /**
      * @Route("/admin/actualite/delete/{id}", name="deleteActu",requirements={"id"="\d+"})
      */
