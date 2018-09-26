@@ -93,7 +93,7 @@ display: none;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
-  border-top: 1px solid #FEFE76;
+  /* border-top: 1px solid #FEFE76; */
   border-bottom: 1px solid #FEFE76;
 }
 .tl-year p {
