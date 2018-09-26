@@ -19,7 +19,7 @@ main{
 .cont-contactInfo h4 {
   font-size: 22px;
   font-weight: normal;
-  text-transform: uppercase;
+  
 }
 .cont-contactInfo h4.section {
   margin: 30px 0 0;
@@ -28,7 +28,7 @@ main{
   margin: 0;
 }
 .cont-contactInfo p > a {
-  text-transform: uppercase;
+ 
   font-weight: bold;
 }
 .cont-contactInfo .social-icons {
@@ -141,7 +141,7 @@ main{
   border: 1px solid #808080;
   font-size: 12px;
   padding: 10px 0;
-  text-transform: uppercase;
+  
   width: 800px;
 }
 .cont-contactBtn .contact-form  {
