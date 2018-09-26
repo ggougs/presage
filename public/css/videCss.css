@@ -237,3 +237,10 @@ h1 {
 }
 
 /*# sourceMappingURL=videCss.css.map */
+@media screen and (max-width: 1280px){ 
+
+  main {
+      height: -webkit-fill-available;
+      width: 1310px;
+  }
+}
