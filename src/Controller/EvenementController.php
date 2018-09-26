@@ -63,7 +63,7 @@ class EvenementController extends AbstractController
         $form = $this->createFormBuilder($evenement)
             ->add('titre', TextType::class)
             ->add('dateEvenement', TextType::class)
-            ->add('contenu', TextareaType::class)
+            ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
             ->add('localisation', textType::class)
             ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
             ->add('save', SubmitType::class, array('label' => "Inserer un Evenement "))
