@@ -639,10 +639,14 @@ main{
 
 //////////////////////////////////// responsive mobile /////////////////////////////////////////////////////
 @media screen and (max-width: 1280px){ 
-.row {
-    flex-direction: column; 
-    margin-left:100px;  
-}
+
+    main {
+        height: -webkit-fill-available;
+    }
+    .row {
+        flex-direction: column; 
+        
+    }
     .material-card {
         position: relative;
         height: 0;
