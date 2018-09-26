@@ -15,6 +15,7 @@ class SearchController extends AbstractController
     
     /**
      * @Route("/search", name="search")
+     * 
      */
     public function searchActua(Request $request) {
         $results = array();
@@ -37,12 +38,17 @@ class SearchController extends AbstractController
                $i++;
             }
             $results = $query->getQuery()->getResult();
-           if ($results == null) {
+         
+           if ($results == null)  {
+            $results = array();
+            dump($results);
             return $this->render('search/searchVide.html.twig', array(
                 'results' => $results
+            
             ));
+           
            }
-            dump($results);
+            // dump($results);
         }
         return $this->render('search/search.html.twig', array(
             'results' => $results
