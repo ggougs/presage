@@ -103,7 +103,7 @@ class ActualiteController extends AbstractController
                     $manager->persist( $actualite );
                     $manager->flush();
         
-                return $this->redirectToRoute('admin_interface');
+                return $this->redirectToRoute('listeactualiteadmin');
             }
 
         return $this->render('actualite/ajoutActualites.html.twig', array(
