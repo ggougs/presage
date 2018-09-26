@@ -44,16 +44,19 @@
 
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="dropdown linknav">
-            <a class="nav-link top pc" href="" type="button" data-toggle="dropdown">ACCUEIL <span class="sr-only">(current)</span></a>
-            <ul class="dropdown-menu">
-              <a class="dropdown-item" href="{{ path('accueil') }}">Présentation</a>
-              <a class="dropdown-item" href="{{ path('listeactualite') }}">Actualités</a>
-              <a class="dropdown-item" href="{{ path('evenement') }}">Evènements</a>
-            </ul>
+          {# <li class="dropdown linknav">
+            <a class="nav-link top pc" href="{{ path('accueil') }}" type="button" data-toggle="dropdown">ACCUEIL <span class="sr-only">(current)</span></a>
+          </li> #}
+           <li class="dropdown">
+            <a class="nav-link top pc" href="{{ path('accueil') }}">ACCUEIL</a>
           </li>
           <li class="dropdown">
-          
+            <a class="nav-link top pc" href="{{ path('listeactualite') }}">ACUTALITES</a>
+          </li>
+           <li class="dropdown">
+            <a class="nav-link top pc" href="{{ path('evenement') }}">EVENEMENTS</a>
+          </li>
+          <li class="dropdown">
             <a class="nav-link top pc" href="#" type="button" data-toggle="dropdown">LE PROJET</a>
               <ul class="dropdown-menu">
                 <a class="dropdown-item" href="{{ path('organigramme') }}">Notre équipe</a>    
