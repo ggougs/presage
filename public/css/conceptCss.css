@@ -706,10 +706,10 @@ h6, .o-h6 {
 }
 
 .o-hsub {
-  font-size: 0.75rem;
+  font-size: 1rem;
   padding: 1.25rem 0;
   display: inline-block;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.12em;
   font-weight: 500;
 }
@@ -1012,7 +1012,7 @@ h6, .o-h6 {
   height: 100%;
   color: #b3b3b3;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 0.875rem;
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1230,7 +1230,7 @@ h6, .o-h6 {
   }
 }
 .o-checkbox-label.-uppsercase, .-uppsercase.o-radio-label {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .o-checkbox-label::before, .o-radio-label::before, .o-checkbox-label::after, .o-radio-label::after {
@@ -1524,7 +1524,7 @@ h6, .o-h6 {
   transform: translateX(0);
   line-height: 1.4;
   z-index: 2;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.12em;
   font-weight: 500;
   font-size: 0.75rem;
