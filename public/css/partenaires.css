@@ -6,6 +6,9 @@ main{
 body
 {
     background-color: rgba(24, 57, 30, 0.45); 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+        /* line-height: 1.75; */
 }
 
 .container
