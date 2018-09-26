@@ -81,7 +81,6 @@ class ActualiteController extends AbstractController
         
         if(is_null($actualite)) {
             $actualite = new Actualite();
-            
 
             $form = $this->createFormBuilder($actualite)
             ->add('titre', TextType::class)
@@ -148,10 +147,36 @@ class ActualiteController extends AbstractController
             return $this->render('actualite/ajoutActualites.html.twig', array(
                 'form' => $form->createView(),
             ));
+        }   
+        else {
+            $form = $this->createFormBuilder($actualite)
+            ->add('titre', TextType::class)
+            ->add('contenu', TextAreaType::class, array ('attr' => array('class' => 'ckeditor',)))
+            ->add('image', FileType::class, array('label' => 'Image (png file)','data_class' => null))
+            ->add('save', SubmitType::class, array('label' => "Inserer l'actualité "))
+            ->getForm();
+
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid())  {
+                $file = $form['image']->getData();
+                $fileName = $fileUploader->upload($file);
+        
+                $actualite->setImage($fileName);
+              
+                    $manager->persist( $actualite );
+                    $manager->flush();
+        
+                return $this->redirectToRoute('admin_interface');
+            }
+
+            return $this->render('actualite/ajoutActualites.html.twig', array(
+                'form' => $form->createView(),
+            ));
         }
            
     }
-
+    
 /**
      * @Route("/admin/actualite/delete/{id}", name="deleteActu",requirements={"id"="\d+"})
      */
