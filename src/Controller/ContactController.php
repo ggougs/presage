@@ -44,8 +44,8 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
 
                 $message = (new \Swift_Message())
                 ->setSubject('Formulaire de contact')
-                ->setFrom('garabedian.g@gmail.com')
-                ->setTo('garabedian.g@gmail.com');
+                ->setFrom('testwebforce3mail@gmail.com')
+                ->setTo('testwebforce3mail@gmail.com');
                 
                 $message->setBody(
                     $this->renderView(
