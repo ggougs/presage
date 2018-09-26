@@ -39,7 +39,7 @@
                         <img class="img-responsive" src="{{ asset('uploads/image/'~evenementAvant.image)}}">
                     </div>
                     <div class="mc-description">
-                  {{ evenementAvant.contenu }}
+                  {{ evenementAvant.contenu | raw }}
                     </div>
                 </div>
                 <a class="mc-btn-action">
