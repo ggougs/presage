@@ -38,7 +38,11 @@ class SearchController extends AbstractController
                $i++;
             }
             $results = $query->getQuery()->getResult();
-           
+           if ($results == null) {
+            return $this->render('search/searchVide.html.twig', array(
+                'results' => $results
+            ));
+           }
             dump($results);
         }
         return $this->render('search/search.html.twig', array(
