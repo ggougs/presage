@@ -41,7 +41,7 @@ class SearchController extends AbstractController
          
            if ($results == null)  {
             $results = array();
-            dump($results);
+          
             return $this->render('search/searchVide.html.twig', array(
                 'results' => $results
             
