@@ -15,6 +15,7 @@ class SearchController extends AbstractController
     
     /**
      * @Route("/search", name="search")
+     * 
      */
     public function searchActua(Request $request) {
         $results = array();
