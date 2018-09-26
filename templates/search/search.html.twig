@@ -1,5 +1,63 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+        {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/actualiteStyle.less') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet/less" type="text/css" href="{{ asset('css/actualiteStyle.less') }}" />
+        
+        {% endblock %}
+        {% block javascripts %}
+        <!-- Changez la source par la position réelle du fichier chez vous -->
+            <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            <script src="{{ asset('js/actualite.js') }}"></script>
+        {% endblock %}
 
+{% block body %}
+<main role="main">
+<h1 id="titre">Resultats de votre Recherche</h1>
+    <div class="container">
+   
+    <div class="row active-with-click">
+      {% for result in results %}
+        <div class="col-md-6 col-sm-6 col-xs-12">
+        
+            <article class="material-card Green">
+                <h2>
+                    <span>{{ result.titre }}</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        {{ result.dateActualite}}
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{{ asset('uploads/image/'~result.image)}}">
+                    </div>
+                    <div class="mc-description">
+                   {{ result.contenu | raw }}
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Partager
+                    </h4>
+                    <a href='https://www.facebook.com/RestaurantLePresage/' target='_blank'><i class="fab fa-facebook-square"></i></a>
+                    <a href='https://twitter.com/le_presage' target='_blank'><i class="fab fa-twitter-square"></i></a>
+                    <a href='https://www.youtube.com/user/loubeber' target='_blank'><i class="fab fa-youtube"></i></a>
+                </div>
+            </article>
+        </div>     
+      {% endfor %} 
+        </div>
+           
+    </div>
+</main>
 {% endblock %}

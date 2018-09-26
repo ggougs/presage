@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+        {% block stylesheets %}
+        {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/vide.css') }}"> #}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/vide.css') }}" />
+        
+        {% endblock %}
+     
+
+{% block body %}
+<main role="main">
+<h1 id="titre">Le resultats de votre recherche est vide. Veuillez réessayer </h1>
+    <div class="loader">
+        <ul class="searchUl">
+            <li class="searchLi"></li>
+            <li class="searchLi"></li>
+            <li class="searchLi"></li>
+        </ul>
+        <div class="wineglass left">
+            <div class="topSearch"></div>
+        </div>
+        <div class="wineglass right">
+            <div class="topSearch"></div>
+        </div>
+    </div>
+   
+</main>
+{% endblock %}
