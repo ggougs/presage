@@ -124,7 +124,7 @@ a, p {
 
 .cont-contactBtn {
 	height: 359px;
-  margin: 0 auto;
+  	margin: 0 auto;
 	width: 574px;
 	position: relative;
 
@@ -169,6 +169,8 @@ a, p {
 		padding: 0 10%;
 		margin-top: 50px;
 		width: 80%;
+		position: absolute;
+    top: -100px;
 		input, textarea {
 			border: 1px solid #808080;
 			font-size: 12px;

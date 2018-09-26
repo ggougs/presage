@@ -17,110 +17,75 @@
 
 {% block body %}
 
-    {# <div id="startscreen">
-    <div id="title"><img id="titleImg" src="{{asset('img/logopresage-yellow.png')}}"></div>
-    <div id="triangle-down"></div>
-    <div id="triangle-up"></div>
-    <button id="button">⟷</button>
-    </div>
-
-    <div id="menuContent">
-    <ul>
-        <li><a href=".section1">Accueil</a></li>
-        <li><a href=".section2">Ambition</a></li>
-    </ul>
-    <div id="menuClose">✕</div>
-    </div> #}
-
 <content>
-  <section class="section1">
-           <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
+    <section class="section1">
+        <img id="logo" src ="{{ asset('img/logopresage-yellow.png')}}">
    
-    <div class="container">
-   
-    <div class="row active-with-click">
-      {% for actu in actuAvant | slice(0,1) %}
-        <div class="col-md-12 col-sm-6 col-xs-12">
-        
-            <article class="material-card Green">
-                <h2>
-                    <span>{{ actu.titre }}</span>
-                    <strong>
-                        <i class="fa fa-fw fa-star"></i>
-                        {{ actu.date}}
-                    </strong>
-                </h2>
-                <div class="mc-content">
-                    <div class="img-container">
-                        <img class="img-responsive" src="{{ asset('uploads/image/'~actu.image)}}">
-                    </div>
-                    <div class="mc-description">
-                   {{ actu.contenu | raw }}
-                    </div>
-                </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-plus"></i>
-                </a>
-                <div class="mc-footer">
-                    <h4>
-                        Partager
-                    </h4>
-                    <a href="http://twitter.com/share" target="_blank" data-count="vertical" data-via="InfoWebMaster" class="fab fa-twitter"></a>
-                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <div class="container">
+    
+            <div class="row active-with-click">
+                {% for actu in actuAvant | slice(0,1) %}
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                    
+                        <article class="material-card Green">
+                            <h2>
+                                <span>{{ actu.titre }}</span>
+                                <strong>
+                                    <i class="fa fa-fw fa-star"></i>
+                                    {{ actu.date}}
+                                </strong>
+                            </h2>
+                            <div class="mc-content">
+                                <div class="img-container">
+                                    <img class="img-responsive" src="{{ asset('uploads/image/'~actu.image)}}">
+                                </div>
+                                <div class="mc-description">
+                            {{ actu.contenu | raw }}
+                                </div>
+                            </div>
+                            <a class="mc-btn-action">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                            <div class="mc-footer">
+                                <h4>
+                                    Partager
+                                </h4>
+                                <a href="http://twitter.com/share" target="_blank" data-count="vertical" data-via="InfoWebMaster" class="fab fa-twitter"></a>
+                                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
-                    <a name="fb_share"  target="_blank" href="http://facebook.com/share" class="fab fa-facebook-f"></a>
-                    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+                                <a name="fb_share"  target="_blank" href="http://facebook.com/share" class="fab fa-facebook-f"></a>
+                                <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 
-                    <a name="ln_share" class="fab fa-linkedin-in"  target="_blank" href="http://linkedin.com/share"><script type="in/share" data-counter="top"></script></a>
-                </div>
-            </article>
-        </div>     
-      {% endfor %} 
+                                <a name="ln_share" class="fab fa-linkedin-in"  target="_blank" href="http://linkedin.com/share"><script type="in/share" data-counter="top"></script></a>
+                            </div>
+                        </article>
+                    </div>     
+                {% endfor %} 
+            </div>
+            
         </div>
-           
-    </div>
-    {# </div> #}
-</div>
-  </section>
-  <section class="section2">
-    <h1> Nos Ambitions</h1>
-<div class="wrapper">
-	<div class="containerAmbition" id="c0">
-		<div class="image" id="i0">
-			
-			<div class="city">
-			<?xml version="1.0" encoding="utf-8"?>
-			</div>
-		</div>
-		<div class="story" id="s0">
-			<div class="info">
-			<h3>Le Présage</h3>
-			<p class="pAmbition"  >Bâtir et mettre en fonctionnement le premier restaurant avec fourneau solaire de France, voilà l’ambition du Présage. Et pas seulement un restaurant, mais tout un environnement qui utilise l'énergie solaire, la met en scène, la révèle. Puis cuisiner dans son paysage local, avec des produits de qualité et aller jusqu’à cultiver en créant une forêt comestible et un environnement en permaculture. Oui, l’énergie solaire, c’est aussi le végétal qui s’en nourrit avant d’arriver dans notre assiette.</p>
-			</div>
-		</div>
-	</div>
-</div>
-  </section>
-{# 
-   <section class="section3">
-    <h1> Notre Derniere Actu</h1>
-<div class="wrapper">
-	<div class="containerAmbition" id="c0">
-		<div class="image" id="i0">
-			
-			<div class="city">
-			<?xml version="1.0" encoding="utf-8"?>
-			</div>
-		</div>
-		<div class="story" id="s0">
-			<div class="info">
-			<h3>Le Présage</h3>
-			<p>Bâtir et mettre en fonctionnement le premier restaurant avec fourneau solaire de France, voilà l’ambition du Présage. Et pas seulement un restaurant, mais tout un environnement qui utilise l'énergie solaire, la met en scène, la révèle. Puis cuisiner dans son paysage local, avec des produits de qualité et aller jusqu’à cultiver en créant une forêt comestible et un environnement en permaculture. Oui, l’énergie solaire, c’est aussi le végétal qui s’en nourrit avant d’arriver dans notre assiette.</p>
-			</div>
-		</div>
-	</div>
-</div>
-  </section> #}
+        
+        </div>
+        </section>
+        <section class="section2">
+            <h1> Nos Ambitions</h1>
+        <div class="wrapper">
+            <div class="containerAmbition" id="c0">
+                <div class="image" id="i0">
+                    
+                    <div class="city">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    </div>
+                </div>
+                <div class="story" id="s0">
+                    <div class="info">
+                    <h3>Le Présage</h3>
+                    <p class="pAmbition"  >Bâtir et mettre en fonctionnement le premier restaurant avec fourneau solaire de France, voilà l’ambition du Présage. Et pas seulement un restaurant, mais tout un environnement qui utilise l'énergie solaire, la met en scène, la révèle. Puis cuisiner dans son paysage local, avec des produits de qualité et aller jusqu’à cultiver en créant une forêt comestible et un environnement en permaculture. Oui, l’énergie solaire, c’est aussi le végétal qui s’en nourrit avant d’arriver dans notre assiette.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </content>
 {% endblock %}
 
