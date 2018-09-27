@@ -387,7 +387,7 @@ main{
 #encart {
   position: relative;
   left: -600px;
-  width: 58%;
+  width: 78%;
   margin: 2rem auto;
   padding: 2em;
   
@@ -418,10 +418,13 @@ color:#FEFE7C;
 
 #pEncart{
   color: white; 
+  padding-top: 80px;
+  padding-bottom: 15px;
 }
-#map{
-  height: 200px;
-  width: 200px;
+#mapid{
+  height: 300px;
+  width: 400px;
+  left: -15px;
 }
 /* ////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 1280px){ 
