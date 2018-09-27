@@ -287,6 +287,8 @@
   .slideshow__slide-caption-title {
     font-size: 5.625rem;
     margin-bottom: 1.25rem;
+    position: relative;
+    top: -20%;
   }
 }
 @media (min-width: 700px) and (max-width: 749px) {
@@ -330,6 +332,7 @@ body[data-route-option=prev-section] .slideshow__slide-caption-subtitle.-load, b
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateZ(0);
   display: inline-block;
+  font-size: 24px;
 }
 
 .o-hsub.-link:hover .slideshow__slide-caption-subtitle-label, .o-hsub-wrap:hover .slideshow__slide-caption-subtitle-label {
