@@ -60,7 +60,7 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
                     $manager->persist( $contact );
                     $manager->flush();
         
-                return $this->redirectToRoute('contact');
+                return $this->redirectToRoute('message_envoye');
             }
 
         return $this->render('contact/formulaire.html.twig', array(
