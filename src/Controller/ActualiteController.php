@@ -26,14 +26,22 @@ class ActualiteController extends AbstractController
      * @Route("/actualite", name="listeactualite")
      * 
      */
-    public function afficherActualité(ActualiteRepository $repository){
+    public function afficherActualité(ActualiteRepository $repository, $limit=10, $asArray=false){
 
         $actualiteArray = $repository->findAll();
         return $this->render('actualite/index.html.twig', [
             'controller_name' => 'ActualiteController',
             'actualite' => $actualiteArray,
         ]);
+
+        $qb = $this->createQueryBuilder('a')
+        ->from(Actualite::class, 'a')
+        ->orderBy('a.date_actualite', 'DESC')
+        ->getQuery()
+        ->setMaxResults($limit);
     }
+
+
      /**
      * @Route("/admin/actualiteadmin", name="listeactualiteadmin")
      */
