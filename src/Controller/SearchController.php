@@ -19,6 +19,7 @@ class SearchController extends AbstractController
      */
     public function searchActua(Request $request) {
         $results = array();
+        $evenement = array();
         if ($request->getMethod() == "GET") {
             $search = $request->query->get('search');
        
@@ -38,8 +39,28 @@ class SearchController extends AbstractController
                $i++;
             }
             $results = $query->getQuery()->getResult();
+
+            if ($request->getMethod() == "GET") {
+                $search = $request->query->get('search');
+           
+                $datas = explode(" ", $search);
+           
+                $em = $this->getDoctrine()->getManager();
+                $query = $em->createQueryBuilder();
+                $query
+                    ->select('e.titre, e.contenu','e.image','e.dateEvenement')
+                    ->from(Evenement::class, 'e');
+                $i = 0;
+              
+                foreach ($datas as $data) {
+                    $query
+                        ->andWhere('e.titre LIKE :data'.$i.' OR e.contenu LIKE :data'.$i)
+                        ->setParameter('data'.$i, '%'.$data.'%');
+                   $i++;
+                }
+                $evenement = $query->getQuery()->getResult();
          
-           if ($results == null)  {
+           if ($results == null AND $evenement == null)  {
             $results = array();
           
             return $this->render('search/searchVide.html.twig', array(
@@ -51,8 +72,10 @@ class SearchController extends AbstractController
             // dump($results);
         }
         return $this->render('search/search.html.twig', array(
-            'results' => $results
+            'results' => $results, 
+            'evenement' => $evenement
         ));
     }
 
-} 
+    } 
+}

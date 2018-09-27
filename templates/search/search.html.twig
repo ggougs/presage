@@ -20,6 +20,7 @@
 {% block body %}
 <main role="main">
 <h1 id="titre">Resultats de votre Recherche</h1>
+<h2 id="titre_section1"> Actualités </h2>
     <div class="container">
    
     <div class="row active-with-click">
@@ -32,6 +33,48 @@
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
                         {{ result.dateActualite}}
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{{ asset('uploads/image/'~result.image)}}">
+                    </div>
+                    <div class="mc-description">
+                   {{ result.contenu | raw }}
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Partager
+                    </h4>
+                    <a href="http://twitter.com/share" target="_blank" data-count="vertical" data-via="InfoWebMaster" class="fab fa-twitter"></a>
+                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+                    <a name="fb_share"  target="_blank" href="http://facebook.com/share" class="fab fa-facebook-f"></a>
+                    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+
+                    <a name="ln_share" class="fab fa-linkedin-in"  target="_blank" href="http://linkedin.com/share"><script type="in/share" data-counter="top"></script></a>
+                </div>
+            </article>
+        </div>     
+      {% endfor %} 
+        </div>
+        </div>
+    <div class="container">
+    <h2 id="titre_section2"> Evenements </h2>
+           <div class="row active-with-click">
+      {% for result in evenement %}
+        <div class="col-md-6 col-sm-6 col-xs-12">
+        
+            <article class="material-card Green">
+                <h2>
+                    <span>{{ result.titre }}</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        {{ result.dateEvenement}}
                     </strong>
                 </h2>
                 <div class="mc-content">
