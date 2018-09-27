@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var point = [43.2883, 5.5439];
+    var point = [43.290500 , 5.544007];
     var mymap = L.map('mapid').setView(point, 14);
 
 // Trouvé sur http://leaflet-extras.github.io/leaflet-providers/preview/index.html
@@ -7,7 +7,7 @@ $(document).ready(function(){
         maxZoom: 20,
         attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(mymap);
-    
+    var marker = L.marker([43.2883, 5.5439]).addTo(mymap);
 // Ajouter le point
 // var marker = L.marker(point, {title: "Le présage"}).addTo(mymap);
     var popup = L.popup()
