@@ -1,11 +1,13 @@
+
 .pagination {
   position: absolute !important;
   width: 100%;
   text-align: center;
   right: 0;
   padding: 0 !important;
-  bottom: 30px;
+  bottom: 130px;
   z-index: 999;
+
 }
 .pagination__item {
   cursor: pointer;
@@ -24,6 +26,7 @@
 
 .container {
   position: relative;
+  
   margin: 0 auto;
 }
 @media (max-width: 699px) {
@@ -34,9 +37,9 @@
 }
 @media (min-width: 700px) and (max-width: 1599px) {
   .container {
-    padding-right: 7.5rem;
-    padding-left: 7.5rem;
-    max-width: 140rem;
+    /* padding-right: 7.5rem;
+    padding-left: 7.5rem; */
+    /* max-width: 140rem; */
   }
 }
 @media (min-width: 1600px) {
@@ -46,6 +49,8 @@
     max-width: 144.125rem;
   }
 }
+
+
 
 .background-absolute {
   position: absolute;
