@@ -3,5 +3,7 @@ $(document).ready(function(){
       $('.cont-flip').toggleClass('flipped');
       return false;
     });
+
+    
   });
 

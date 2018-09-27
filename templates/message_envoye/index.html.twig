@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+        {% block stylesheets %}
+        {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/vide.css') }}"> #}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/messageEnvoye.css') }}" />
+        
+        {% endblock %}
+     
+
+{% block body %}
+<main role="main">
+<h1>Votre Message a bien été envoyé.</h1>
+<div class="loader">
+  <ul class="ulMessage">
+    <li class="liMessage"></li>
+    <li class="liMessage"></li>
+    <li class="liMessage"></li>
+  </ul>
+  <div class="wineglass left">
+    <div class="topMessage"></div>
+  </div>
+  <div class="wineglass right">
+    <div class="topMessage"></div>
+  </div>
+</div>
+</main>
+{% endblock %}

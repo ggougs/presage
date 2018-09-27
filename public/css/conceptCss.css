@@ -335,7 +335,7 @@ body[data-route-option=prev-section] .slideshow__slide-caption-subtitle.-load, b
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateZ(0);
   display: inline-block;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 @media screen and (max-width: 1280px){ 
   .slideshow__slide-caption-subtitle-label{
