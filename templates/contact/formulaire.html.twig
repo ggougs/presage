@@ -5,6 +5,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/contactCss.css') }}" /> 
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('/map/js/leaflet.css') }}"> />
+	    <link rel="stylesheet" type="text/css" href="{{ asset('/map/site.css') }}">
         {% endblock %}
         {% block javascripts %}
          <!-- Changez la source par la position réelle du fichier chez vous -->
@@ -12,12 +14,17 @@
             <script
                 src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-                crossorigin="anonymous">
-            </script>
+                crossorigin="anonymous"> </script>
+            <script src="{{ asset('/map/js/jquery-1.8.2.min.js') }}"></script>
+            <script src="{{ asset('/map/js/leaflet.js') }}"></script>
+            <script src="{{ asset('/map/js/map.js') }}"></script>
+           
             <script src="{{ asset('js/contact.js') }}"></script>
         {% endblock %}
 
 {% block body %}
+
+
 
 <main role="main">
 
@@ -56,6 +63,8 @@
 						</div>
 					</div>
 
+ <div id="map" style="; border: 1px solid #ccc"></div>
+
 
 <div id="encart">
     <h1 id="titreEncart">Contactez Nous ! </h1>          
@@ -67,4 +76,5 @@
 
 </main>
         
+<div id="map" style="; border: 1px solid #ccc"></div>
 {% endblock %}

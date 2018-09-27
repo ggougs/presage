@@ -1,0 +1,42 @@
+
+
+body {
+	margin: 0;
+}
+
+form {
+	padding: 0;
+}
+div#search {
+	background-color: white;
+	
+	bottom: 40px;
+	left: 40px; 
+	width: auto;
+	height: auto;
+	padding: 10px;
+}
+div#search input {
+	width: 200px;
+}
+div#results {
+	font-style: sans-serif;
+	color: black;
+	font-size: 75%;
+}
+
+.btn{
+	border-radius: 1rem;
+  } 
+.btn-outline-secondary-blue{
+  color: #005C7D;
+  background-color: white;
+  border: solid 0.1rem  #005C7D;
+  margin: 1rem;
+}
+.btn-outline-secondary-blue:hover{
+  background-color: #005C7D;
+  border-color: #005C7D;
+  color: white;
+ 
+}
