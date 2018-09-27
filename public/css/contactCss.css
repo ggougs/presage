@@ -413,13 +413,15 @@ main{
   animation-play-state: running;
 }
 #titreEncart{
-color:#FEFE7C;  
+  color:#FEFE7C;  
+  margin-top: unset;
 }
 
 #pEncart{
   color: white; 
   padding-top: 80px;
   padding-bottom: 15px;
+  padding-top: unset;
 }
 #mapid{
   height: 300px;
@@ -447,10 +449,16 @@ color:#FEFE7C;
     
   }
   #titreEncart{
+    margin-top: 1.7rem;
     font-size: 48px; 
   }
 
   #pEncart{
     font-size: 28px; 
+    padding-top: unset;
+  }
+
+  #mapid {
+    display: none;
   }
 }
