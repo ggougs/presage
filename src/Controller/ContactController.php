@@ -68,13 +68,4 @@ public function contactForm (Contact $contact=null, Request $request, ObjectMana
            
         ));
     }
-
-     /**
-    * @Route("/carte", name="carte")
-    */
-
-    public function carte(){
-        return $this->render('contact/carte.html.twig');
-    }
-
 }
