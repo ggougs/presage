@@ -35,13 +35,7 @@
     padding-left: 40px;
   }
 }
-@media (min-width: 700px) and (max-width: 1599px) {
-  .container {
-    /* padding-right: 7.5rem;
-    padding-left: 7.5rem; */
-    /* max-width: 140rem; */
-  }
-}
+
 @media (min-width: 1600px) {
   .container {
     padding-right: 9.5625rem;
@@ -1250,9 +1244,7 @@ h6, .o-h6 {
     padding-left: 1.1875rem;
   }
 }
-.o-checkbox-label.-uppsercase, .-uppsercase.o-radio-label {
-  /* text-transform: uppercase; */
-}
+
 
 .o-checkbox-label::before, .o-radio-label::before, .o-checkbox-label::after, .o-radio-label::after {
   position: absolute;
