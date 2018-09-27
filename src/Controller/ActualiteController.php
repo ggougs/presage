@@ -26,7 +26,7 @@ class ActualiteController extends AbstractController
      * @Route("/actualite", name="listeactualite")
      * 
      */
-    public function afficherActualité(ActualiteRepository $repository){
+    public function afficherActualité(ActualiteRepository $repository, $limit=10, $asArray=false){
 
         $actualiteArray = $repository->findAll();
         return $this->render('actualite/index.html.twig', [
@@ -34,6 +34,8 @@ class ActualiteController extends AbstractController
             'actualite' => $actualiteArray,
         ]);
     }
+
+
      /**
      * @Route("/admin/actualiteadmin", name="listeactualiteadmin")
      */
