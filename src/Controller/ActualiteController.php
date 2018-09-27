@@ -33,12 +33,6 @@ class ActualiteController extends AbstractController
             'controller_name' => 'ActualiteController',
             'actualite' => $actualiteArray,
         ]);
-
-        $qb = $this->createQueryBuilder('a')
-        ->from(Actualite::class, 'a')
-        ->orderBy('a.date_actualite', 'DESC')
-        ->getQuery()
-        ->setMaxResults($limit);
     }
 
 
