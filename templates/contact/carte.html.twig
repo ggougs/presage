@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+        {% block stylesheets %}
+        {# <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="{{ asset('css/organigramme.less') }}">#}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/contactCss.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/carte.css') }}" /> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+        {% endblock %}
+        {% block javascripts %}
+         <!-- Changez la source par la position réelle du fichier chez vous -->
+            {# <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script> #}
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                crossorigin="anonymous">
+            </script>
+            <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+            <script src="{{ asset('js/carte.js') }}"></script>
+        {% endblock %}
+
+{% block body %}
+
+<main role="main">
+    <div class="cont-contactBtn">
+        <div id="encart">
+            <h1 id="titreEncart">Coordonnées</h1>          
+            <p id="pEncart">
+            Pierre-André Aubert au <strong> 06 17 941 942 </strong>
+            <br />
+            contact@restaurantlepresage.fr
+            <br /> 
+            ou venez nous rendre visite les jours de beaux temps : </br> 1460 route de la Légion,13400 Aubagne 
+            </p>
+        </div>
+         <div id="mapid"></div>
+         <!--<a href="https://www.openstreetmap.org/#map=15/43.2883/5.5439">Ouvrir dans OpenStreetMap</a>-->
+    </div>
+</main>
+        
+{% endblock %}
