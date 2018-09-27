@@ -135,6 +135,18 @@ class EvenementController extends AbstractController
 
     public function miseEnAvant(Evenement $evenement,ObjectManager $manager,Avant $avant=null ) {
     
+        /*
+        DQL update all event enAvant to false
+        
+        
+        $evenement->setAvant(true);
+        $evenement -> persist ($avant);
+        $evenement->flush();
+        */
+
+
+        
+        
         $id= $evenement -> getId();
         $titre = $evenement->getTitre();
         $contenu = $evenement->getContenu();

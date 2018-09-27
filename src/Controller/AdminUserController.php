@@ -24,7 +24,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 class AdminUserController extends AbstractController
 {
     /**
-     * @Route("/admin/user/adminuser", name="admin_interface")
+     * @Route("/admin", name="admin_interface")
      */
     public function index()
     {
