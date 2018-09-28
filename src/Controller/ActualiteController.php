@@ -162,6 +162,31 @@ public function deleteActualite(Actualite $actualite, ObjectManager $manager){
      */
 
 public function miseEnAvant(Actualite $actualite,ObjectManager $manager,Avant $avant=null ) {
+
+
+    $em = $this->getDoctrine()->getManager();
+    $query = $em->createQueryBuilder()
+    ->UPDATE ('App\Entity\Evenement', 'e')
+    ->SET ('e.EvenementMisEnAvant','0')
+    ->Where ('e.EvenementMisEnAvant = 1')
+    ->getQuery();
+    $r = $query->execute();
+
+    $em = $this->getDoctrine()->getManager();
+    $query = $em->createQueryBuilder()
+    ->UPDATE ('App\Entity\Actualite','a')
+    ->SET ('a.ActuMisEnAvant','0')
+    ->Where ('a.ActuMisEnAvant =1')
+    ->getQuery();
+    $r = $query->execute();
+    $actualite->setActuMisEnAvant(1);
+
+    $em = $this->getDoctrine()->getManager();
+    $query= $em->createQueryBuilder()
+    ->delete('App\Entity\Avant', 'v')
+    ->getQuery();
+    $r = $query->execute();
+    
     
          $id= $actualite -> getId();
          $titre = $actualite->getTitre();
@@ -181,3 +206,11 @@ public function miseEnAvant(Actualite $actualite,ObjectManager $manager,Avant $a
        
 }
 }
+
+
+   
+    
+    
+    // $actualite->setActuMisEnAvant(1);
+    // $manager -> persist ($actualite);
+    // $manager->flush();

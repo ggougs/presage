@@ -135,15 +135,28 @@ class EvenementController extends AbstractController
 
     public function miseEnAvant(Evenement $evenement,ObjectManager $manager,Avant $avant=null ) {
     
-        /*
-        DQL update all event enAvant to false
+    $em = $this->getDoctrine()->getManager();
+        $query = $em->createQueryBuilder()
+        ->UPDATE ('App\Entity\Actualite', 'a')
+        ->SET ('a.ActuMisEnAvant','0')
+        ->Where ('a.ActuMisEnAvant =1')
+        ->getQuery();
+        $r = $query->execute();
         
-        
-        $evenement->setAvant(true);
-        $evenement -> persist ($avant);
-        $evenement->flush();
-        */
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQueryBuilder()
+        ->UPDATE ('App\Entity\Evenement', 'e')
+        ->SET ('e.EvenementMisEnAvant','0')
+        ->Where ('e.EvenementMisEnAvant = 1')
+        ->getQuery();
+        $r = $query->execute();
+        $evenement->setEvenementMisEnAvant(1);
 
+        $em = $this->getDoctrine()->getManager();
+        $query= $em->createQueryBuilder()
+        ->delete('App\Entity\Avant', 'v')
+        ->getQuery();
+        $r = $query->execute();
 
         
         
@@ -165,3 +178,12 @@ class EvenementController extends AbstractController
       
     }
 }
+
+
+    
+       
+        
+        
+        // $evenement->setEvenementMisEnAvant(1);
+        // $manager -> persist ($actualite);
+        // $manager->flush();
